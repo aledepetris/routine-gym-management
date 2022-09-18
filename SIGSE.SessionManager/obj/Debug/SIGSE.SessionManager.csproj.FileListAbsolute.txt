@@ -1,0 +1,10 @@
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.SessionManager\bin\Debug\SIGSE.SessionManager.dll
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.SessionManager\bin\Debug\SIGSE.SessionManager.pdb
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.SessionManager\bin\Debug\SIGSE.Entities.dll
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.SessionManager\bin\Debug\SIGSE.Entities.pdb
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.SessionManager\bin\Debug\SIGSE.Entities.dll.config
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.SessionManager\obj\Debug\SIGSE.SessionManager.csproj.AssemblyReference.cache
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.SessionManager\obj\Debug\SIGSE.SessionManager.csproj.CoreCompileInputs.cache
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.SessionManager\obj\Debug\SIGSE.SessionManager.csproj.CopyComplete
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.SessionManager\obj\Debug\SIGSE.SessionManager.dll
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.SessionManager\obj\Debug\SIGSE.SessionManager.pdb

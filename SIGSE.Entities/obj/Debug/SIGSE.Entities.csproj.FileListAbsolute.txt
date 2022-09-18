@@ -1,0 +1,12 @@
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.Entities\bin\Debug\SIGSE.Entities.dll
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.Entities\bin\Debug\SIGSE.Entities.pdb
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.Entities\obj\Debug\SIGSE.Entities.csproj.CoreCompileInputs.cache
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.Entities\obj\Debug\SIGSE.Entities.dll
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.Entities\obj\Debug\SIGSE.Entities.pdb
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.Entities\bin\Debug\SIGSE.Entities.dll.config
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.Entities\bin\Debug\EntityFramework.dll
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.Entities\bin\Debug\EntityFramework.xml
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.Entities\obj\Debug\SIGSE.Entities.csproj.AssemblyReference.cache
+C:\Users\alejandro.depetris\source\repos\SIGSEv2\SIGSE.Entities\obj\Debug\SIGSE.Entities.csproj.CopyComplete
