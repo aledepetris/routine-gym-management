@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SIGSE.FormsUI.Views.Parametrizacion
+namespace SIGSE.FormsUI.Views
 {
     public partial class FrmTiposEntrenamientos : MetroFramework.Forms.MetroForm
     {

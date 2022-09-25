@@ -16,7 +16,7 @@ namespace SIGSE.FormsUI
         [STAThread]
         static void Main()
         {
-            /*
+            /**
             #region cargaDatos
             Alumno alumno = new Alumno();
             Profesor profesor = new Profesor();
@@ -48,7 +48,7 @@ namespace SIGSE.FormsUI
             Usuario user = new Usuario();
             user.activo = true;
             user.username = "aledepetris";
-            user.password = "123";
+            user.password = "123456";
             user.persona = alumno;
 
             UsuarioManager.agregarUsuario(sigse, user);

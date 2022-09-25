@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SIGSE.FormsUI.Views.Profesores
+namespace SIGSE.FormsUI.Views
 {
     public partial class FrmAlumnoMedida : MetroFramework.Forms.MetroForm
     {

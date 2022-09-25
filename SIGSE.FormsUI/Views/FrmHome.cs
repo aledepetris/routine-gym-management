@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SIGSE.Entities;
 using SIGSE.Controller;
-
+using SIGSE.FormsUI.Views;
 
 namespace SIGSE.FormsUI.Views
 {
@@ -44,24 +44,66 @@ namespace SIGSE.FormsUI.Views
             Utilities.Navegar.Open(this, new FrmLogin());
         }
 
+        private void tspCambiarPassword_Click(object sender, EventArgs e)
+        {
+            Utilities.Navegar.Open(this, new FrmCambiarPassword());
+        }
+
+        #region SubMenuAdministrar
+        private void tspGestionarPersonas_Click(object sender, EventArgs e)
+        {
+            Utilities.Navegar.OpenNewTab(new FrmPersonas());
+        }
+
         private void tspGestionarRoles_Click(object sender, EventArgs e)
         {
-            Utilities.Navegar.OpenNewTab(new Seguridad.FrmRoles());
+            Utilities.Navegar.OpenNewTab(new FrmRoles());
         }
 
         private void tspGestionarUsuarios_Click(object sender, EventArgs e)
         {
-            Utilities.Navegar.OpenNewTab(new Seguridad.FrmUsuarios());
-        }
-
-        private void tspGestionarPersonas_Click(object sender, EventArgs e)
-        {
-            Utilities.Navegar.OpenNewTab(new Personas.FrmPersonas());
+            Utilities.Navegar.OpenNewTab(new FrmUsuarios());
         }
 
         private void tspGestionarAlumnos_Click(object sender, EventArgs e)
         {
-            Utilities.Navegar.OpenNewTab(new Profesores.FrmAlumnos());
+            Utilities.Navegar.OpenNewTab(new FrmAlumnos());
         }
+        #endregion
+
+
+        #region SubMenuParametrizacion
+        private void tspGestionarEjercicios_Click(object sender, EventArgs e)
+        {
+            Utilities.Navegar.OpenNewTab(new FrmEjercicios());
+        }
+
+        private void tspGestionarMusculos_Click(object sender, EventArgs e)
+        {
+            Utilities.Navegar.OpenNewTab(new FrmMusculos());
+        }
+
+        private void tspGestionarObjetivos_Click(object sender, EventArgs e)
+        {
+            Utilities.Navegar.OpenNewTab(new FrmObjetivos());
+        }
+
+        private void tspGestionarTipoEjercicios_Click(object sender, EventArgs e)
+        {
+            Utilities.Navegar.OpenNewTab(new FrmTipoEjercicios());
+        }
+
+        private void tspGestionarTipoEntrenamientos_Click(object sender, EventArgs e)
+        {
+            Utilities.Navegar.OpenNewTab(new FrmTiposEntrenamientos());
+        }
+        #endregion
+
+        #region SubMenuProfesores
+
+
+
+        #endregion
+
     }
 }

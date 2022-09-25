@@ -59,29 +59,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202208282304578_inicial.cs" />
-    <Compile Include="Migrations\202208282304578_inicial.designer.cs">
-      <DependentUpon>202208282304578_inicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202208282309365_inicia2.cs" />
-    <Compile Include="Migrations\202208282309365_inicia2.designer.cs">
-      <DependentUpon>202208282309365_inicia2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202208301500323_inicia3.cs" />
-    <Compile Include="Migrations\202208301500323_inicia3.designer.cs">
-      <DependentUpon>202208301500323_inicia3.cs</DependentUpon>
+    <Compile Include="Migrations\202209242048521_inicial1.cs" />
+    <Compile Include="Migrations\202209242048521_inicial1.designer.cs">
+      <DependentUpon>202209242048521_inicial1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SigseContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\202208282304578_inicial.resx">
-      <DependentUpon>202208282304578_inicial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202208282309365_inicia2.resx">
-      <DependentUpon>202208282309365_inicia2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202208301500323_inicia3.resx">
-      <DependentUpon>202208301500323_inicia3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202209242048521_inicial1.resx">
+      <DependentUpon>202209242048521_inicial1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

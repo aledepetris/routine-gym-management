@@ -21,6 +21,7 @@ namespace SIGSE.Entities
         public DateTime fechaInicio { get; set; }
         public bool activo { get; set; }
         public List<Medida> medidas { get; set; }
+        public List<Ciclo> planEntrenamiento { get; set; }
 
     }
 

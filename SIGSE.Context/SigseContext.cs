@@ -1,6 +1,9 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using SIGSE.Entities;
+using SIGSE.Entities.Auditoria;
 
 namespace SIGSE.Context
 {
@@ -30,6 +33,8 @@ namespace SIGSE.Context
         public virtual DbSet<Dia> dias { get; set; }
         public virtual DbSet<EjercicioIntensidad> ejercicios_instesidad { get; set; }
         public virtual DbSet<Medida> medidas { get; set; }
+        public virtual DbSet<AuditoriaLogin> auditoria_login { get; set; }
+
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -94,6 +99,9 @@ namespace SIGSE.Context
 
             modelBuilder.Entity<Medida>()
                 .HasKey(m => m.IdMedida);
+
+            modelBuilder.Entity<AuditoriaLogin>()
+                .HasKey(a => a.idLogin);
 
         }
 

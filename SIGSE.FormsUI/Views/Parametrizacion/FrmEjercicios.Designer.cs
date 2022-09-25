@@ -1,5 +1,5 @@
 ﻿
-namespace SIGSE.FormsUI.Views.Parametrizacion
+namespace SIGSE.FormsUI.Views
 {
     partial class FrmEjercicios
     {

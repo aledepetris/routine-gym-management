@@ -16,27 +16,23 @@ namespace SIGSE.Bussines
 
         public static Entities.Usuario obtenerUsuario(Context.SigseContext sigseContext, string user)
         {
-            return sigseContext.Set<Entities.Usuario>().SingleOrDefault(u => u.username == user);
-        }
+            Entities.Usuario userToReturn = sigseContext.Set<Entities.Usuario>().SingleOrDefault(u => u.username == user);
 
-        public static Entities.Usuario loguearseConUsuarioContraseña(Context.SigseContext sigseContext, string user, string pass)
-        {
+            userToReturn.password = Encrypter.Decrypt(userToReturn.password);
 
-            return sigseContext.Set<Entities.Usuario>()
-                .Where(u => u.username == user && u.password == pass)
-                .Include(u => u.persona)
-                .Include(u => u.roles.Select(r => r.permisos))
-                .SingleOrDefault();
+            return userToReturn;
         }
 
         public static void agregarUsuario(Context.SigseContext sigseContext, Entities.Usuario usuario)
         {
+            usuario.password = Encrypter.Encrypt(usuario.password);
             sigseContext.usuarios.Add(usuario);
             sigseContext.SaveChanges();
         }
 
         public static void modificarUsuario(Context.SigseContext sigseContext, Entities.Usuario usuario)
         {
+            usuario.password = Encrypter.Encrypt(usuario.password);
             sigseContext.Entry(usuario).State = System.Data.Entity.EntityState.Modified;
             sigseContext.SaveChanges();
         }

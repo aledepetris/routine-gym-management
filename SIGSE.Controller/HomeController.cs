@@ -37,7 +37,23 @@ namespace SIGSE.Controller
 
         public void realizarLogOut()
         {
-            sesion.currentUser = null;
+            sesion.cerrarSesion(context);
+            
+        }
+
+        public bool cambiarPassword(Usuario user, string actualPwd, string nuevaPwd, string repetirPwd)
+        {
+            actualPwd = Encrypter.Encrypt(actualPwd);
+            if (user.password == actualPwd)
+            {
+                if (nuevaPwd == repetirPwd)
+                {
+                    user.password = nuevaPwd;
+                    UsuarioManager.modificarUsuario(context, user);
+                    return true;
+                }
+            }
+            return false;
         }
 
     }

@@ -33,7 +33,6 @@
             this.pLoginForm = new System.Windows.Forms.Panel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.btnLogin = new MetroFramework.Controls.MetroButton();
-            this.lblOlvidoPass = new MetroFramework.Controls.MetroLink();
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.btnSalir = new MetroFramework.Controls.MetroButton();
             this.txtUsuario = new MetroFramework.Controls.MetroTextBox();
@@ -51,7 +50,6 @@
             // pLoginForm
             // 
             this.pLoginForm.Controls.Add(this.metroPanel2);
-            this.pLoginForm.Controls.Add(this.lblOlvidoPass);
             this.pLoginForm.Controls.Add(this.txtPassword);
             this.pLoginForm.Controls.Add(this.btnSalir);
             this.pLoginForm.Controls.Add(this.txtUsuario);
@@ -94,19 +92,6 @@
             this.btnLogin.UseSelectable = true;
             this.btnLogin.UseStyleColors = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // lblOlvidoPass
-            // 
-            this.lblOlvidoPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblOlvidoPass.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.lblOlvidoPass.Location = new System.Drawing.Point(0, 147);
-            this.lblOlvidoPass.Name = "lblOlvidoPass";
-            this.lblOlvidoPass.Size = new System.Drawing.Size(133, 26);
-            this.lblOlvidoPass.TabIndex = 6;
-            this.lblOlvidoPass.Text = "Olvidé mi contraseña..";
-            this.lblOlvidoPass.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblOlvidoPass.UseSelectable = true;
-            this.lblOlvidoPass.Click += new System.EventHandler(this.lblOlvidoPass_Click);
             // 
             // txtPassword
             // 
@@ -288,7 +273,6 @@
         private MetroFramework.Controls.MetroTextBox txtUsuario;
         private MetroFramework.Controls.MetroLabel lblPassword;
         private MetroFramework.Controls.MetroLabel lblUsuario;
-        private MetroFramework.Controls.MetroLink lblOlvidoPass;
         private MetroFramework.Controls.MetroPanel mpFooter;
         private MetroFramework.Controls.MetroButton btnSalir;
         private MetroFramework.Controls.MetroButton btnLogin;

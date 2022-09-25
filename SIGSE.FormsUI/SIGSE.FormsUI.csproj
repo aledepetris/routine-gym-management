@@ -122,17 +122,23 @@
     <Compile Include="Views\Parametrizacion\FrmTiposEntrenamientos.Designer.cs">
       <DependentUpon>FrmTiposEntrenamientos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Personas\FrmPersonas.cs">
+    <Compile Include="Views\Administrar\FrmPersonas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Personas\FrmPersonas.Designer.cs">
+    <Compile Include="Views\Administrar\FrmPersonas.Designer.cs">
       <DependentUpon>FrmPersonas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Personas\FrmPersona.cs">
+    <Compile Include="Views\Administrar\FrmPersona.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Personas\FrmPersona.Designer.cs">
+    <Compile Include="Views\Administrar\FrmPersona.Designer.cs">
       <DependentUpon>FrmPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Perfil\FrmCambiarPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Perfil\FrmCambiarPassword.Designer.cs">
+      <DependentUpon>FrmCambiarPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Profesores\FrmAlumnoNuevo.cs">
       <SubType>Form</SubType>
@@ -164,22 +170,22 @@
     <Compile Include="Views\Profesores\FrmCrearAlumno.Designer.cs">
       <DependentUpon>FrmCrearAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Seguridad\FrmRoles.cs">
+    <Compile Include="Views\Administrar\FrmRoles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Seguridad\FrmRoles.Designer.cs">
+    <Compile Include="Views\Administrar\FrmRoles.Designer.cs">
       <DependentUpon>FrmRoles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Seguridad\FrmUsuario.cs">
+    <Compile Include="Views\Administrar\FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Seguridad\FrmUsuario.Designer.cs">
+    <Compile Include="Views\Administrar\FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Seguridad\FrmUsuarios.cs">
+    <Compile Include="Views\Administrar\FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Seguridad\FrmUsuarios.Designer.cs">
+    <Compile Include="Views\Administrar\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -211,11 +217,14 @@
     <EmbeddedResource Include="Views\Parametrizacion\FrmTiposEntrenamientos.resx">
       <DependentUpon>FrmTiposEntrenamientos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Personas\FrmPersonas.resx">
+    <EmbeddedResource Include="Views\Administrar\FrmPersonas.resx">
       <DependentUpon>FrmPersonas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Personas\FrmPersona.resx">
+    <EmbeddedResource Include="Views\Administrar\FrmPersona.resx">
       <DependentUpon>FrmPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Perfil\FrmCambiarPassword.resx">
+      <DependentUpon>FrmCambiarPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Profesores\FrmAlumnoNuevo.resx">
       <DependentUpon>FrmAlumnoNuevo.cs</DependentUpon>
@@ -232,13 +241,13 @@
     <EmbeddedResource Include="Views\Profesores\FrmCrearAlumno.resx">
       <DependentUpon>FrmCrearAlumno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Seguridad\FrmRoles.resx">
+    <EmbeddedResource Include="Views\Administrar\FrmRoles.resx">
       <DependentUpon>FrmRoles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Seguridad\FrmUsuario.resx">
+    <EmbeddedResource Include="Views\Administrar\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Seguridad\FrmUsuarios.resx">
+    <EmbeddedResource Include="Views\Administrar\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

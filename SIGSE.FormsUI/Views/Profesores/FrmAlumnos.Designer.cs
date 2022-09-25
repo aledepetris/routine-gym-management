@@ -1,5 +1,5 @@
 ﻿
-namespace SIGSE.FormsUI.Views.Profesores
+namespace SIGSE.FormsUI.Views
 {
     partial class FrmAlumnos
     {

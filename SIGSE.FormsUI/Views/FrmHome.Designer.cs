@@ -107,7 +107,7 @@ namespace SIGSE.FormsUI.Views
             this.lblNombreApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreApellido.Location = new System.Drawing.Point(310, 39);
             this.lblNombreApellido.Name = "lblNombreApellido";
-            this.lblNombreApellido.Size = new System.Drawing.Size(149, 16);
+            this.lblNombreApellido.Size = new System.Drawing.Size(148, 16);
             this.lblNombreApellido.TabIndex = 19;
             this.lblNombreApellido.Text = "NOMBRE APELLIDO";
             this.lblNombreApellido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -172,6 +172,7 @@ namespace SIGSE.FormsUI.Views
             this.tspCambiarPassword.Name = "tspCambiarPassword";
             this.tspCambiarPassword.Size = new System.Drawing.Size(182, 22);
             this.tspCambiarPassword.Text = "Cambiar Contraseña";
+            this.tspCambiarPassword.Click += new System.EventHandler(this.tspCambiarPassword_Click);
             // 
             // tsmAdministrar
             // 
@@ -221,30 +222,35 @@ namespace SIGSE.FormsUI.Views
             this.tspGestionarEjercicios.Name = "tspGestionarEjercicios";
             this.tspGestionarEjercicios.Size = new System.Drawing.Size(257, 22);
             this.tspGestionarEjercicios.Text = "Gestionar Ejercicios";
+            this.tspGestionarEjercicios.Click += new System.EventHandler(this.tspGestionarEjercicios_Click);
             // 
             // tspGestionarMusculos
             // 
             this.tspGestionarMusculos.Name = "tspGestionarMusculos";
             this.tspGestionarMusculos.Size = new System.Drawing.Size(257, 22);
             this.tspGestionarMusculos.Text = "Gestionar Musculos";
+            this.tspGestionarMusculos.Click += new System.EventHandler(this.tspGestionarMusculos_Click);
             // 
             // tspGestionarObjetivos
             // 
             this.tspGestionarObjetivos.Name = "tspGestionarObjetivos";
             this.tspGestionarObjetivos.Size = new System.Drawing.Size(257, 22);
             this.tspGestionarObjetivos.Text = "Gestionar Objetivos";
+            this.tspGestionarObjetivos.Click += new System.EventHandler(this.tspGestionarObjetivos_Click);
             // 
             // tspGestionarTipoEjercicios
             // 
             this.tspGestionarTipoEjercicios.Name = "tspGestionarTipoEjercicios";
             this.tspGestionarTipoEjercicios.Size = new System.Drawing.Size(257, 22);
             this.tspGestionarTipoEjercicios.Text = "Gestionar Tipos de Ejercicio";
+            this.tspGestionarTipoEjercicios.Click += new System.EventHandler(this.tspGestionarTipoEjercicios_Click);
             // 
             // tspGestionarTipoEntrenamientos
             // 
             this.tspGestionarTipoEntrenamientos.Name = "tspGestionarTipoEntrenamientos";
             this.tspGestionarTipoEntrenamientos.Size = new System.Drawing.Size(257, 22);
             this.tspGestionarTipoEntrenamientos.Text = "Gestionar Tipos de Entrenamientos";
+            this.tspGestionarTipoEntrenamientos.Click += new System.EventHandler(this.tspGestionarTipoEntrenamientos_Click);
             // 
             // tsmProfesores
             // 
@@ -276,19 +282,19 @@ namespace SIGSE.FormsUI.Views
             // tsp2PlantillaCiclo
             // 
             this.tsp2PlantillaCiclo.Name = "tsp2PlantillaCiclo";
-            this.tsp2PlantillaCiclo.Size = new System.Drawing.Size(180, 22);
+            this.tsp2PlantillaCiclo.Size = new System.Drawing.Size(177, 22);
             this.tsp2PlantillaCiclo.Text = "Plantilla de Ciclo";
             // 
             // tsp2PlantillaSemana
             // 
             this.tsp2PlantillaSemana.Name = "tsp2PlantillaSemana";
-            this.tsp2PlantillaSemana.Size = new System.Drawing.Size(180, 22);
+            this.tsp2PlantillaSemana.Size = new System.Drawing.Size(177, 22);
             this.tsp2PlantillaSemana.Text = "Plantilla de Semana";
             // 
             // tsp2PlantillaDias
             // 
             this.tsp2PlantillaDias.Name = "tsp2PlantillaDias";
-            this.tsp2PlantillaDias.Size = new System.Drawing.Size(180, 22);
+            this.tsp2PlantillaDias.Size = new System.Drawing.Size(177, 22);
             this.tsp2PlantillaDias.Text = "Plantilla de Días";
             // 
             // tspInformes

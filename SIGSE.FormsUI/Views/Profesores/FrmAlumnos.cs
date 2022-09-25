@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SIGSE.FormsUI.Views.Profesores
+namespace SIGSE.FormsUI.Views
 {
     public partial class FrmAlumnos : MetroFramework.Forms.MetroForm
     {

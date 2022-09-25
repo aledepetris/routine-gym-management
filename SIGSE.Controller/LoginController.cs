@@ -32,9 +32,11 @@ namespace SIGSE.Controller
 
         public Usuario realizarLogin(string user, string pass)
         {
-            Usuario usuario = UsuarioManager.loguearseConUsuarioContraseña(context, user, pass);
+            Usuario usuario = sesion.loguearseConUsuarioContraseña(context, user, pass);
             if (usuario != null && usuario.activo)
-                sesion.currentUser = usuario;
+            {
+                sesion.registrarSesion(context, usuario);
+            }
             return usuario;
         }
 
