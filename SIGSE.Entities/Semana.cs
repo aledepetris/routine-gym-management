@@ -14,9 +14,7 @@ namespace SIGSE.Entities
         public EstadoSemana estado { get; set; }
         #endregion
 
-
         #region Metodos
-
         public Semana()
         {
             dias = new List<Dia>();
@@ -51,5 +49,6 @@ namespace SIGSE.Entities
             return dias.Find(x => x.idDia == codDia);
         }
         #endregion
+
     }
 }

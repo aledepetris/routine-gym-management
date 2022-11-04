@@ -30,7 +30,7 @@ namespace SIGSE.FormsUI.Views
         private void InitializeComponent()
         {
             this.tbxHome = new MetroFramework.Controls.MetroLink();
-            this.lvlExercises = new System.Windows.Forms.ListView();
+            this.gridUsuarios = new System.Windows.Forms.ListView();
             this.IdUsuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Username = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Persona = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -61,27 +61,27 @@ namespace SIGSE.FormsUI.Views
             this.tbxHome.UseCustomForeColor = true;
             this.tbxHome.UseSelectable = true;
             // 
-            // lvlExercises
+            // gridUsuarios
             // 
-            this.lvlExercises.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gridUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvlExercises.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.gridUsuarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.IdUsuario,
             this.Username,
             this.Persona,
             this.PersonaEmail,
             this.Activo});
-            this.lvlExercises.FullRowSelect = true;
-            this.lvlExercises.GridLines = true;
-            this.lvlExercises.HideSelection = false;
-            this.lvlExercises.Location = new System.Drawing.Point(23, 103);
-            this.lvlExercises.MultiSelect = false;
-            this.lvlExercises.Name = "lvlExercises";
-            this.lvlExercises.Size = new System.Drawing.Size(573, 341);
-            this.lvlExercises.TabIndex = 54;
-            this.lvlExercises.UseCompatibleStateImageBehavior = false;
-            this.lvlExercises.View = System.Windows.Forms.View.Details;
+            this.gridUsuarios.FullRowSelect = true;
+            this.gridUsuarios.GridLines = true;
+            this.gridUsuarios.HideSelection = false;
+            this.gridUsuarios.Location = new System.Drawing.Point(23, 103);
+            this.gridUsuarios.MultiSelect = false;
+            this.gridUsuarios.Name = "gridUsuarios";
+            this.gridUsuarios.Size = new System.Drawing.Size(573, 341);
+            this.gridUsuarios.TabIndex = 54;
+            this.gridUsuarios.UseCompatibleStateImageBehavior = false;
+            this.gridUsuarios.View = System.Windows.Forms.View.Details;
             // 
             // IdUsuario
             // 
@@ -156,7 +156,7 @@ namespace SIGSE.FormsUI.Views
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminar.BackColor = System.Drawing.Color.Silver;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
             this.btnEliminar.DisplayFocus = true;
             this.btnEliminar.Location = new System.Drawing.Point(466, 73);
             this.btnEliminar.MaximumSize = new System.Drawing.Size(300, 35);
@@ -168,11 +168,12 @@ namespace SIGSE.FormsUI.Views
             this.btnEliminar.UseCustomBackColor = true;
             this.btnEliminar.UseSelectable = true;
             this.btnEliminar.UseStyleColors = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.BackColor = System.Drawing.Color.Silver;
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
             this.btnModificar.DisplayFocus = true;
             this.btnModificar.Location = new System.Drawing.Point(330, 73);
             this.btnModificar.MaximumSize = new System.Drawing.Size(300, 35);
@@ -184,11 +185,12 @@ namespace SIGSE.FormsUI.Views
             this.btnModificar.UseCustomBackColor = true;
             this.btnModificar.UseSelectable = true;
             this.btnModificar.UseStyleColors = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.BackColor = System.Drawing.Color.Silver;
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
             this.btnAgregar.DisplayFocus = true;
             this.btnAgregar.Location = new System.Drawing.Point(194, 73);
             this.btnAgregar.MaximumSize = new System.Drawing.Size(300, 35);
@@ -212,12 +214,13 @@ namespace SIGSE.FormsUI.Views
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tbxHome);
-            this.Controls.Add(this.lvlExercises);
+            this.Controls.Add(this.gridUsuarios);
             this.Controls.Add(this.mpFooter);
             this.MaximizeBox = false;
             this.Name = "FrmUsuarios";
             this.Resizable = false;
             this.Text = "Gestionar Usuarios";
+            this.Activated += new System.EventHandler(this.FrmUsuarios_Activated);
             this.mpFooter.ResumeLayout(false);
             this.mpFooter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -228,7 +231,7 @@ namespace SIGSE.FormsUI.Views
         #endregion
 
         private MetroFramework.Controls.MetroLink tbxHome;
-        private System.Windows.Forms.ListView lvlExercises;
+        private System.Windows.Forms.ListView gridUsuarios;
         private System.Windows.Forms.ColumnHeader IdUsuario;
         private System.Windows.Forms.ColumnHeader Username;
         private System.Windows.Forms.ColumnHeader Persona;

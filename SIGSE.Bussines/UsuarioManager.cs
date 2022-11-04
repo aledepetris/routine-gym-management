@@ -11,8 +11,9 @@ namespace SIGSE.Bussines
     {
         public static List<Entities.Usuario> obtenerUsuarios(Context.SigseContext sigseContext)
         {
-            return sigseContext.usuarios.ToList();
+            return sigseContext.usuarios.Include(p => p.persona).ToList();
         }
+
 
         public static Entities.Usuario obtenerUsuario(Context.SigseContext sigseContext, string user)
         {
@@ -21,6 +22,19 @@ namespace SIGSE.Bussines
             userToReturn.password = Encrypter.Decrypt(userToReturn.password);
 
             return userToReturn;
+        }
+
+        public static Entities.Usuario obtenerUsuarioPorId(Context.SigseContext sigseContext, int id)
+        {
+            return sigseContext.usuarios.Where(x => x.idUsuario == id)
+                .Include(x => x.roles)
+                .FirstOrDefault();
+                        
+        }
+
+        public static Entities.Usuario obtenerUsuarioPorEmail(Context.SigseContext sigseContext, string emailPersona)
+        {
+            return sigseContext.usuarios.SingleOrDefault(p => p.persona.mail == emailPersona);
         }
 
         public static void agregarUsuario(Context.SigseContext sigseContext, Entities.Usuario usuario)

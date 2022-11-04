@@ -47,7 +47,7 @@ namespace SIGSE.FormsUI.Views
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(23, 249);
+            this.btnGuardar.Location = new System.Drawing.Point(23, 255);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(267, 34);
             this.btnGuardar.TabIndex = 53;
@@ -83,7 +83,7 @@ namespace SIGSE.FormsUI.Views
             this.mpFooter.HorizontalScrollbarBarColor = true;
             this.mpFooter.HorizontalScrollbarHighlightOnWheel = false;
             this.mpFooter.HorizontalScrollbarSize = 10;
-            this.mpFooter.Location = new System.Drawing.Point(-3, 298);
+            this.mpFooter.Location = new System.Drawing.Point(-3, 311);
             this.mpFooter.Margin = new System.Windows.Forms.Padding(0);
             this.mpFooter.Name = "mpFooter";
             this.mpFooter.Size = new System.Drawing.Size(325, 30);
@@ -223,7 +223,7 @@ namespace SIGSE.FormsUI.Views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(313, 325);
+            this.ClientSize = new System.Drawing.Size(313, 338);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.txtRepetirPassword);
             this.Controls.Add(this.metroLabel2);
@@ -234,6 +234,7 @@ namespace SIGSE.FormsUI.Views
             this.Controls.Add(this.mpFooter);
             this.Controls.Add(this.btnGuardar);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmCambiarPassword";
             this.Resizable = false;
             this.Text = "Cambiar contraseña";

@@ -59,15 +59,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202209242048521_inicial1.cs" />
-    <Compile Include="Migrations\202209242048521_inicial1.designer.cs">
-      <DependentUpon>202209242048521_inicial1.cs</DependentUpon>
+    <Compile Include="Migrations\202210022233197_inicial0001.cs" />
+    <Compile Include="Migrations\202210022233197_inicial0001.designer.cs">
+      <DependentUpon>202210022233197_inicial0001.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SigseContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\202209242048521_inicial1.resx">
-      <DependentUpon>202209242048521_inicial1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202210022233197_inicial0001.resx">
+      <DependentUpon>202210022233197_inicial0001.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

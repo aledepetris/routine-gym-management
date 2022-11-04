@@ -16,7 +16,6 @@ namespace SIGSE.Entities
         public int diasMaximo { get; set; }
         #endregion
 
-
         #region Metodos
         public Objetivo()
         {

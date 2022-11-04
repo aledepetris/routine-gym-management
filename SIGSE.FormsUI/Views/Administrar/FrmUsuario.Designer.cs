@@ -34,23 +34,23 @@ namespace SIGSE.FormsUI.Views
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.btnSalir = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.btnDesasignar = new MetroFramework.Controls.MetroButton();
+            this.btnAsignar = new MetroFramework.Controls.MetroButton();
+            this.lvAsignado = new System.Windows.Forms.ListView();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvSinAsignar = new System.Windows.Forms.ListView();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.cbxActivo = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.tbxExerciseSet = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.tbxExerciseDay = new MetroFramework.Controls.MetroTextBox();
+            this.txtUsuario = new MetroFramework.Controls.MetroTextBox();
+            this.lblPassword = new MetroFramework.Controls.MetroLabel();
+            this.txtPassword = new MetroFramework.Controls.MetroTextBox();
             this.btnAgregarPersona = new MetroFramework.Controls.MetroButton();
-            this.btnSave = new MetroFramework.Controls.MetroButton();
-            this.cbxParts = new MetroFramework.Controls.MetroComboBox();
+            this.btnGuardar = new MetroFramework.Controls.MetroButton();
+            this.cbxPersonas = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.tbxExerciseName = new MetroFramework.Controls.MetroTextBox();
+            this.txtIdUsuario = new MetroFramework.Controls.MetroTextBox();
             this.mpFooter = new MetroFramework.Controls.MetroPanel();
             this.lblFooter = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,23 +72,23 @@ namespace SIGSE.FormsUI.Views
             this.groupBox1.Controls.Add(this.metroLabel8);
             this.groupBox1.Controls.Add(this.metroLabel7);
             this.groupBox1.Controls.Add(this.btnSalir);
-            this.groupBox1.Controls.Add(this.metroButton2);
-            this.groupBox1.Controls.Add(this.metroButton1);
-            this.groupBox1.Controls.Add(this.listView2);
+            this.groupBox1.Controls.Add(this.btnDesasignar);
+            this.groupBox1.Controls.Add(this.btnAsignar);
+            this.groupBox1.Controls.Add(this.lvAsignado);
             this.groupBox1.Controls.Add(this.metroLabel4);
-            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.lvSinAsignar);
             this.groupBox1.Controls.Add(this.metroLabel2);
-            this.groupBox1.Controls.Add(this.metroComboBox1);
+            this.groupBox1.Controls.Add(this.cbxActivo);
             this.groupBox1.Controls.Add(this.metroLabel3);
-            this.groupBox1.Controls.Add(this.tbxExerciseSet);
-            this.groupBox1.Controls.Add(this.metroLabel5);
-            this.groupBox1.Controls.Add(this.tbxExerciseDay);
+            this.groupBox1.Controls.Add(this.txtUsuario);
+            this.groupBox1.Controls.Add(this.lblPassword);
+            this.groupBox1.Controls.Add(this.txtPassword);
             this.groupBox1.Controls.Add(this.btnAgregarPersona);
-            this.groupBox1.Controls.Add(this.btnSave);
-            this.groupBox1.Controls.Add(this.cbxParts);
+            this.groupBox1.Controls.Add(this.btnGuardar);
+            this.groupBox1.Controls.Add(this.cbxPersonas);
             this.groupBox1.Controls.Add(this.metroLabel6);
             this.groupBox1.Controls.Add(this.metroLabel1);
-            this.groupBox1.Controls.Add(this.tbxExerciseName);
+            this.groupBox1.Controls.Add(this.txtIdUsuario);
             this.groupBox1.Location = new System.Drawing.Point(23, 69);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(408, 548);
@@ -128,37 +128,41 @@ namespace SIGSE.FormsUI.Views
             this.btnSalir.UseCustomBackColor = true;
             this.btnSalir.UseSelectable = true;
             this.btnSalir.UseStyleColors = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // metroButton2
+            // btnDesasignar
             // 
-            this.metroButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
-            this.metroButton2.ForeColor = System.Drawing.Color.White;
-            this.metroButton2.Location = new System.Drawing.Point(174, 385);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(54, 29);
-            this.metroButton2.TabIndex = 25;
-            this.metroButton2.Text = "<";
-            this.metroButton2.UseSelectable = true;
+            this.btnDesasignar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
+            this.btnDesasignar.ForeColor = System.Drawing.Color.White;
+            this.btnDesasignar.Location = new System.Drawing.Point(174, 385);
+            this.btnDesasignar.Name = "btnDesasignar";
+            this.btnDesasignar.Size = new System.Drawing.Size(54, 29);
+            this.btnDesasignar.TabIndex = 25;
+            this.btnDesasignar.Text = "<";
+            this.btnDesasignar.UseSelectable = true;
+            this.btnDesasignar.Click += new System.EventHandler(this.btnDesasignar_Click);
             // 
-            // metroButton1
+            // btnAsignar
             // 
-            this.metroButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
-            this.metroButton1.ForeColor = System.Drawing.Color.White;
-            this.metroButton1.Location = new System.Drawing.Point(174, 321);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(54, 29);
-            this.metroButton1.TabIndex = 24;
-            this.metroButton1.Text = ">";
-            this.metroButton1.UseSelectable = true;
+            this.btnAsignar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
+            this.btnAsignar.ForeColor = System.Drawing.Color.White;
+            this.btnAsignar.Location = new System.Drawing.Point(174, 321);
+            this.btnAsignar.Name = "btnAsignar";
+            this.btnAsignar.Size = new System.Drawing.Size(54, 29);
+            this.btnAsignar.TabIndex = 24;
+            this.btnAsignar.Text = ">";
+            this.btnAsignar.UseSelectable = true;
+            this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
             // 
-            // listView2
+            // lvAsignado
             // 
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(234, 275);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(161, 178);
-            this.listView2.TabIndex = 23;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.lvAsignado.HideSelection = false;
+            this.lvAsignado.Location = new System.Drawing.Point(234, 275);
+            this.lvAsignado.Name = "lvAsignado";
+            this.lvAsignado.Size = new System.Drawing.Size(161, 178);
+            this.lvAsignado.TabIndex = 23;
+            this.lvAsignado.UseCompatibleStateImageBehavior = false;
+            this.lvAsignado.View = System.Windows.Forms.View.List;
             // 
             // metroLabel4
             // 
@@ -170,14 +174,15 @@ namespace SIGSE.FormsUI.Views
             this.metroLabel4.TabIndex = 22;
             this.metroLabel4.Text = "Roles:";
             // 
-            // listView1
+            // lvSinAsignar
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(7, 275);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(161, 178);
-            this.listView1.TabIndex = 21;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lvSinAsignar.HideSelection = false;
+            this.lvSinAsignar.Location = new System.Drawing.Point(7, 275);
+            this.lvSinAsignar.Name = "lvSinAsignar";
+            this.lvSinAsignar.Size = new System.Drawing.Size(161, 178);
+            this.lvSinAsignar.TabIndex = 21;
+            this.lvSinAsignar.UseCompatibleStateImageBehavior = false;
+            this.lvSinAsignar.View = System.Windows.Forms.View.List;
             // 
             // metroLabel2
             // 
@@ -188,15 +193,18 @@ namespace SIGSE.FormsUI.Views
             this.metroLabel2.TabIndex = 20;
             this.metroLabel2.Text = "Activo";
             // 
-            // metroComboBox1
+            // cbxActivo
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(264, 147);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(131, 29);
-            this.metroComboBox1.TabIndex = 19;
-            this.metroComboBox1.UseSelectable = true;
+            this.cbxActivo.FormattingEnabled = true;
+            this.cbxActivo.ItemHeight = 23;
+            this.cbxActivo.Items.AddRange(new object[] {
+            "Si",
+            "No"});
+            this.cbxActivo.Location = new System.Drawing.Point(264, 147);
+            this.cbxActivo.Name = "cbxActivo";
+            this.cbxActivo.Size = new System.Drawing.Size(131, 29);
+            this.cbxActivo.TabIndex = 19;
+            this.cbxActivo.UseSelectable = true;
             // 
             // metroLabel3
             // 
@@ -207,74 +215,74 @@ namespace SIGSE.FormsUI.Views
             this.metroLabel3.TabIndex = 18;
             this.metroLabel3.Text = "Persona:";
             // 
-            // tbxExerciseSet
+            // txtUsuario
             // 
             // 
             // 
             // 
-            this.tbxExerciseSet.CustomButton.Image = null;
-            this.tbxExerciseSet.CustomButton.Location = new System.Drawing.Point(223, 1);
-            this.tbxExerciseSet.CustomButton.Name = "";
-            this.tbxExerciseSet.CustomButton.Size = new System.Drawing.Size(27, 27);
-            this.tbxExerciseSet.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tbxExerciseSet.CustomButton.TabIndex = 1;
-            this.tbxExerciseSet.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tbxExerciseSet.CustomButton.UseSelectable = true;
-            this.tbxExerciseSet.CustomButton.Visible = false;
-            this.tbxExerciseSet.Lines = new string[0];
-            this.tbxExerciseSet.Location = new System.Drawing.Point(7, 147);
-            this.tbxExerciseSet.MaxLength = 32767;
-            this.tbxExerciseSet.Name = "tbxExerciseSet";
-            this.tbxExerciseSet.PasswordChar = '\0';
-            this.tbxExerciseSet.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbxExerciseSet.SelectedText = "";
-            this.tbxExerciseSet.SelectionLength = 0;
-            this.tbxExerciseSet.SelectionStart = 0;
-            this.tbxExerciseSet.ShortcutsEnabled = true;
-            this.tbxExerciseSet.Size = new System.Drawing.Size(251, 29);
-            this.tbxExerciseSet.TabIndex = 17;
-            this.tbxExerciseSet.UseSelectable = true;
-            this.tbxExerciseSet.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tbxExerciseSet.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtUsuario.CustomButton.Image = null;
+            this.txtUsuario.CustomButton.Location = new System.Drawing.Point(223, 1);
+            this.txtUsuario.CustomButton.Name = "";
+            this.txtUsuario.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtUsuario.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtUsuario.CustomButton.TabIndex = 1;
+            this.txtUsuario.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtUsuario.CustomButton.UseSelectable = true;
+            this.txtUsuario.CustomButton.Visible = false;
+            this.txtUsuario.Lines = new string[0];
+            this.txtUsuario.Location = new System.Drawing.Point(7, 147);
+            this.txtUsuario.MaxLength = 32767;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PasswordChar = '\0';
+            this.txtUsuario.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtUsuario.SelectedText = "";
+            this.txtUsuario.SelectionLength = 0;
+            this.txtUsuario.SelectionStart = 0;
+            this.txtUsuario.ShortcutsEnabled = true;
+            this.txtUsuario.Size = new System.Drawing.Size(251, 29);
+            this.txtUsuario.TabIndex = 17;
+            this.txtUsuario.UseSelectable = true;
+            this.txtUsuario.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtUsuario.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel5
+            // lblPassword
             // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(7, 179);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(78, 19);
-            this.metroLabel5.TabIndex = 16;
-            this.metroLabel5.Text = "Contraseña:";
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(7, 179);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(78, 19);
+            this.lblPassword.TabIndex = 16;
+            this.lblPassword.Text = "Contraseña:";
             // 
-            // tbxExerciseDay
-            // 
-            // 
+            // txtPassword
             // 
             // 
-            this.tbxExerciseDay.CustomButton.Image = null;
-            this.tbxExerciseDay.CustomButton.Location = new System.Drawing.Point(224, 1);
-            this.tbxExerciseDay.CustomButton.Name = "";
-            this.tbxExerciseDay.CustomButton.Size = new System.Drawing.Size(27, 27);
-            this.tbxExerciseDay.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tbxExerciseDay.CustomButton.TabIndex = 1;
-            this.tbxExerciseDay.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tbxExerciseDay.CustomButton.UseSelectable = true;
-            this.tbxExerciseDay.CustomButton.Visible = false;
-            this.tbxExerciseDay.Lines = new string[0];
-            this.tbxExerciseDay.Location = new System.Drawing.Point(6, 201);
-            this.tbxExerciseDay.MaxLength = 32767;
-            this.tbxExerciseDay.Name = "tbxExerciseDay";
-            this.tbxExerciseDay.PasswordChar = '\0';
-            this.tbxExerciseDay.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbxExerciseDay.SelectedText = "";
-            this.tbxExerciseDay.SelectionLength = 0;
-            this.tbxExerciseDay.SelectionStart = 0;
-            this.tbxExerciseDay.ShortcutsEnabled = true;
-            this.tbxExerciseDay.Size = new System.Drawing.Size(252, 29);
-            this.tbxExerciseDay.TabIndex = 15;
-            this.tbxExerciseDay.UseSelectable = true;
-            this.tbxExerciseDay.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tbxExerciseDay.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // 
+            this.txtPassword.CustomButton.Image = null;
+            this.txtPassword.CustomButton.Location = new System.Drawing.Point(224, 1);
+            this.txtPassword.CustomButton.Name = "";
+            this.txtPassword.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPassword.CustomButton.TabIndex = 1;
+            this.txtPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPassword.CustomButton.UseSelectable = true;
+            this.txtPassword.CustomButton.Visible = false;
+            this.txtPassword.Lines = new string[0];
+            this.txtPassword.Location = new System.Drawing.Point(6, 201);
+            this.txtPassword.MaxLength = 32767;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.SelectionLength = 0;
+            this.txtPassword.SelectionStart = 0;
+            this.txtPassword.ShortcutsEnabled = true;
+            this.txtPassword.Size = new System.Drawing.Size(252, 29);
+            this.txtPassword.TabIndex = 15;
+            this.txtPassword.UseSelectable = true;
+            this.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPassword.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // btnAgregarPersona
             // 
@@ -288,28 +296,30 @@ namespace SIGSE.FormsUI.Views
             this.btnAgregarPersona.UseSelectable = true;
             this.btnAgregarPersona.Click += new System.EventHandler(this.btnAgregarPersona_Click);
             // 
-            // btnSave
+            // btnGuardar
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(122, 462);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(156, 36);
-            this.btnSave.TabIndex = 13;
-            this.btnSave.Text = "Guardar";
-            this.btnSave.UseCustomBackColor = true;
-            this.btnSave.UseCustomForeColor = true;
-            this.btnSave.UseSelectable = true;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(122, 462);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(156, 36);
+            this.btnGuardar.TabIndex = 13;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseCustomBackColor = true;
+            this.btnGuardar.UseCustomForeColor = true;
+            this.btnGuardar.UseSelectable = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // cbxParts
+            // cbxPersonas
             // 
-            this.cbxParts.FormattingEnabled = true;
-            this.cbxParts.ItemHeight = 23;
-            this.cbxParts.Location = new System.Drawing.Point(7, 93);
-            this.cbxParts.Name = "cbxParts";
-            this.cbxParts.Size = new System.Drawing.Size(251, 29);
-            this.cbxParts.TabIndex = 12;
-            this.cbxParts.UseSelectable = true;
+            this.cbxPersonas.FormattingEnabled = true;
+            this.cbxPersonas.ItemHeight = 23;
+            this.cbxPersonas.Location = new System.Drawing.Point(7, 93);
+            this.cbxPersonas.Name = "cbxPersonas";
+            this.cbxPersonas.Size = new System.Drawing.Size(251, 29);
+            this.cbxPersonas.TabIndex = 12;
+            this.cbxPersonas.UseSelectable = true;
+            this.cbxPersonas.Click += new System.EventHandler(this.cbxPersonas_Click);
             // 
             // metroLabel6
             // 
@@ -329,37 +339,37 @@ namespace SIGSE.FormsUI.Views
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "ID Usuario:";
             // 
-            // tbxExerciseName
+            // txtIdUsuario
             // 
             // 
             // 
             // 
-            this.tbxExerciseName.CustomButton.Image = null;
-            this.tbxExerciseName.CustomButton.Location = new System.Drawing.Point(224, 1);
-            this.tbxExerciseName.CustomButton.Name = "";
-            this.tbxExerciseName.CustomButton.Size = new System.Drawing.Size(27, 27);
-            this.tbxExerciseName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tbxExerciseName.CustomButton.TabIndex = 1;
-            this.tbxExerciseName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tbxExerciseName.CustomButton.UseSelectable = true;
-            this.tbxExerciseName.CustomButton.Visible = false;
-            this.tbxExerciseName.Enabled = false;
-            this.tbxExerciseName.Lines = new string[0];
-            this.tbxExerciseName.Location = new System.Drawing.Point(6, 39);
-            this.tbxExerciseName.MaxLength = 32767;
-            this.tbxExerciseName.Name = "tbxExerciseName";
-            this.tbxExerciseName.PasswordChar = '\0';
-            this.tbxExerciseName.ReadOnly = true;
-            this.tbxExerciseName.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbxExerciseName.SelectedText = "";
-            this.tbxExerciseName.SelectionLength = 0;
-            this.tbxExerciseName.SelectionStart = 0;
-            this.tbxExerciseName.ShortcutsEnabled = true;
-            this.tbxExerciseName.Size = new System.Drawing.Size(252, 29);
-            this.tbxExerciseName.TabIndex = 0;
-            this.tbxExerciseName.UseSelectable = true;
-            this.tbxExerciseName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tbxExerciseName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtIdUsuario.CustomButton.Image = null;
+            this.txtIdUsuario.CustomButton.Location = new System.Drawing.Point(224, 1);
+            this.txtIdUsuario.CustomButton.Name = "";
+            this.txtIdUsuario.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtIdUsuario.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtIdUsuario.CustomButton.TabIndex = 1;
+            this.txtIdUsuario.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtIdUsuario.CustomButton.UseSelectable = true;
+            this.txtIdUsuario.CustomButton.Visible = false;
+            this.txtIdUsuario.Enabled = false;
+            this.txtIdUsuario.Lines = new string[0];
+            this.txtIdUsuario.Location = new System.Drawing.Point(6, 39);
+            this.txtIdUsuario.MaxLength = 32767;
+            this.txtIdUsuario.Name = "txtIdUsuario";
+            this.txtIdUsuario.PasswordChar = '\0';
+            this.txtIdUsuario.ReadOnly = true;
+            this.txtIdUsuario.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtIdUsuario.SelectedText = "";
+            this.txtIdUsuario.SelectionLength = 0;
+            this.txtIdUsuario.SelectionStart = 0;
+            this.txtIdUsuario.ShortcutsEnabled = true;
+            this.txtIdUsuario.Size = new System.Drawing.Size(252, 29);
+            this.txtIdUsuario.TabIndex = 0;
+            this.txtIdUsuario.UseSelectable = true;
+            this.txtIdUsuario.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtIdUsuario.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // mpFooter
             // 
@@ -423,22 +433,22 @@ namespace SIGSE.FormsUI.Views
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroTextBox tbxExerciseSet;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroTextBox tbxExerciseDay;
+        private MetroFramework.Controls.MetroTextBox txtUsuario;
+        private MetroFramework.Controls.MetroLabel lblPassword;
+        private MetroFramework.Controls.MetroTextBox txtPassword;
         private MetroFramework.Controls.MetroButton btnAgregarPersona;
-        private MetroFramework.Controls.MetroButton btnSave;
-        private MetroFramework.Controls.MetroComboBox cbxParts;
+        private MetroFramework.Controls.MetroButton btnGuardar;
+        private MetroFramework.Controls.MetroComboBox cbxPersonas;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroTextBox tbxExerciseName;
+        private MetroFramework.Controls.MetroTextBox txtIdUsuario;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private System.Windows.Forms.ListView listView2;
+        private MetroFramework.Controls.MetroComboBox cbxActivo;
+        private MetroFramework.Controls.MetroButton btnDesasignar;
+        private MetroFramework.Controls.MetroButton btnAsignar;
+        private System.Windows.Forms.ListView lvAsignado;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvSinAsignar;
         private MetroFramework.Controls.MetroButton btnSalir;
         private MetroFramework.Controls.MetroPanel mpFooter;
         private MetroFramework.Controls.MetroLabel lblFooter;

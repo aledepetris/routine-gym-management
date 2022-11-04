@@ -14,6 +14,16 @@ namespace SIGSE.Bussines
             return sigseContext.personas.ToList();
         }
 
+        public static Entities.Persona obtenerPesonaPorId(Context.SigseContext sigseContext, int id)
+        {
+            return sigseContext.personas.SingleOrDefault(p => p.idPersona == id);
+        }
+
+        public static Entities.Persona obtenerPesonaPorEmail(Context.SigseContext sigseContext, string email)
+        {
+            return sigseContext.personas.SingleOrDefault(p => p.mail == email);
+        }
+
         public static void agregarPersonas(Context.SigseContext sigseContext, Entities.Persona persona)
         {
             sigseContext.personas.Add(persona);

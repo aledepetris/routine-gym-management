@@ -29,143 +29,147 @@ namespace SIGSE.FormsUI.Views
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "1",
-            "Administrador"}, -1);
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Mi Perfil");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Cambiar Contraseña");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Perfil", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Agregar Persona");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Modificar Persona");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Eliminar Persona");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Modificar Password");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Perfil", new System.Windows.Forms.TreeNode[] {
+            treeNode1});
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Agregar Personas");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Modificar Personas");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Eliminar Personas");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Consultar Personas");
             System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Gestionar Personas", new System.Windows.Forms.TreeNode[] {
+            treeNode3,
             treeNode4,
             treeNode5,
             treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Agregar Usuario");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Modificar Usuario");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Eliminar Usuario");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Gestionar Usuarios", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Agregar Usuarios");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Modificar Usuarios");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Eliminar Usuarios");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Consultar Usuarios");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Gestionar Usuarios", new System.Windows.Forms.TreeNode[] {
             treeNode8,
             treeNode9,
-            treeNode10});
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Agregar Permiso");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Modificar Permiso");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Eliminar Permiso");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Gestionar Roles", new System.Windows.Forms.TreeNode[] {
-            treeNode12,
+            treeNode10,
+            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Agregar Roles");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Modificar Roles");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Eliminar Roles");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Consultar Roles");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Gestionar Roles", new System.Windows.Forms.TreeNode[] {
             treeNode13,
-            treeNode14});
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Seguridad", new System.Windows.Forms.TreeNode[] {
+            treeNode14,
+            treeNode15,
+            treeNode16});
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Seguridad", new System.Windows.Forms.TreeNode[] {
             treeNode7,
-            treeNode11,
-            treeNode15});
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Agregar Cupon");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Modificar Cupon");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Eliminar Cupon");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Consultar Cupones");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Gestionar Musculos", new System.Windows.Forms.TreeNode[] {
-            treeNode17,
-            treeNode18,
+            treeNode12,
+            treeNode17});
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Agregar Ejercicios");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Modificar Ejercicios");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Eliminar Ejercicios");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Consultar Ejercicios");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Gestionar Ejercicios", new System.Windows.Forms.TreeNode[] {
             treeNode19,
-            treeNode20});
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Agregar Deducción");
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Modificar Deducción");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Eliminar Deducción");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Consultar Deducciones");
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Gestionar Deducciones", new System.Windows.Forms.TreeNode[] {
-            treeNode22,
-            treeNode23,
-            treeNode24,
-            treeNode25});
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Agregar Feriado");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Modificar Feriado");
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Eliminar Feriado");
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Consultar Feriados");
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Gestionar Feriados", new System.Windows.Forms.TreeNode[] {
-            treeNode27,
-            treeNode28,
-            treeNode29,
-            treeNode30});
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Agregar Plan");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Modificar Plan");
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Eliminar Plan");
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Consultar Plan");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Gestionar Planes", new System.Windows.Forms.TreeNode[] {
-            treeNode32,
-            treeNode33,
-            treeNode34,
-            treeNode35});
-            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Agregar Terminal");
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Modificar Terminal");
-            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Eliminar Terminal");
-            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Consultar Terminales");
-            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("Gestionar Terminales", new System.Windows.Forms.TreeNode[] {
-            treeNode37,
-            treeNode38,
-            treeNode39,
-            treeNode40});
-            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Parametrización", new System.Windows.Forms.TreeNode[] {
+            treeNode20,
             treeNode21,
+            treeNode22});
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Agregar Musculos");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Modificar Musculos");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Eliminar Musculos");
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Consultar Musculos");
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Gestionar Musculos", new System.Windows.Forms.TreeNode[] {
+            treeNode24,
+            treeNode25,
             treeNode26,
+            treeNode27});
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Agregar Objetivos");
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Modificar Objetivos");
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Eliminar Objetivos");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Consultar Objetivos");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Gestionar Objetivos", new System.Windows.Forms.TreeNode[] {
+            treeNode29,
+            treeNode30,
             treeNode31,
+            treeNode32});
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Agregar Tipos de Ejercicio");
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Modificar Tipos de Ejercicio");
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Eliminar Tipos de Ejercicio");
+            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Consultar Tipos de Ejercicio");
+            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Gestionar Tipos de Ejercicio", new System.Windows.Forms.TreeNode[] {
+            treeNode34,
+            treeNode35,
             treeNode36,
-            treeNode41});
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("Agregar Banco");
-            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Modificar Banco");
-            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("Eliminar Banco");
-            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Consultar Bancos");
-            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Gestionar Bancos", new System.Windows.Forms.TreeNode[] {
-            treeNode43,
-            treeNode44,
+            treeNode37});
+            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Agregar Tipos de Entrenamiento");
+            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Modificar Tipos de Entrenamiento");
+            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("Eliminar Tipos de Entrenamiento");
+            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Consultar Tipos de Entrenamiento");
+            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("Gestionar Tipos de Entrenamiento", new System.Windows.Forms.TreeNode[] {
+            treeNode39,
+            treeNode40,
+            treeNode41,
+            treeNode42});
+            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Parametrizacion", new System.Windows.Forms.TreeNode[] {
+            treeNode23,
+            treeNode28,
+            treeNode33,
+            treeNode38,
+            treeNode43});
+            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("Agregar Alumnos");
+            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Modificar Alumnos");
+            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Eliminar Alumnos");
+            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("Consultar Alumnos");
+            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("Gestionar Alumnos", new System.Windows.Forms.TreeNode[] {
             treeNode45,
-            treeNode46});
-            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("Profesores", new System.Windows.Forms.TreeNode[] {
-            treeNode47});
-            this.lvAcessFlags = new System.Windows.Forms.ListView();
+            treeNode46,
+            treeNode47,
+            treeNode48});
+            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("Consultar Informes");
+            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("Informes", new System.Windows.Forms.TreeNode[] {
+            treeNode50});
+            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("Profesores", new System.Windows.Forms.TreeNode[] {
+            treeNode49,
+            treeNode51});
+            this.gridRoles = new System.Windows.Forms.ListView();
             this.IdRol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblFooter = new MetroFramework.Controls.MetroLabel();
             this.mpFooter = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.tbxMail = new MetroFramework.Controls.MetroTextBox();
-            this.tbxUsername = new MetroFramework.Controls.MetroTextBox();
-            this.btnSave = new MetroFramework.Controls.MetroButton();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.trv_acciones = new System.Windows.Forms.TreeView();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.lblNombre = new MetroFramework.Controls.MetroLabel();
+            this.txtNombre = new MetroFramework.Controls.MetroTextBox();
+            this.txtIDRol = new MetroFramework.Controls.MetroTextBox();
+            this.btnGuardar = new MetroFramework.Controls.MetroButton();
+            this.lblId = new MetroFramework.Controls.MetroLabel();
+            this.trvPermisos = new System.Windows.Forms.TreeView();
+            this.panelFrm = new MetroFramework.Controls.MetroPanel();
+            this.btnCancelar = new MetroFramework.Controls.MetroButton();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.btnDel = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btnAgregar = new MetroFramework.Controls.MetroButton();
+            this.btnEliminar = new MetroFramework.Controls.MetroButton();
+            this.btnModificar = new MetroFramework.Controls.MetroButton();
             this.mpFooter.SuspendLayout();
-            this.metroPanel2.SuspendLayout();
+            this.panelFrm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lvAcessFlags
+            // gridRoles
             // 
-            this.lvAcessFlags.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.gridRoles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvAcessFlags.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.gridRoles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.IdRol,
             this.Nombre});
-            this.lvAcessFlags.FullRowSelect = true;
-            this.lvAcessFlags.GridLines = true;
-            this.lvAcessFlags.HideSelection = false;
-            this.lvAcessFlags.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.lvAcessFlags.Location = new System.Drawing.Point(23, 100);
-            this.lvAcessFlags.MultiSelect = false;
-            this.lvAcessFlags.Name = "lvAcessFlags";
-            this.lvAcessFlags.Size = new System.Drawing.Size(276, 338);
-            this.lvAcessFlags.TabIndex = 41;
-            this.lvAcessFlags.UseCompatibleStateImageBehavior = false;
-            this.lvAcessFlags.View = System.Windows.Forms.View.Details;
+            this.gridRoles.FullRowSelect = true;
+            this.gridRoles.GridLines = true;
+            this.gridRoles.HideSelection = false;
+            this.gridRoles.Location = new System.Drawing.Point(23, 99);
+            this.gridRoles.MultiSelect = false;
+            this.gridRoles.Name = "gridRoles";
+            this.gridRoles.Size = new System.Drawing.Size(282, 338);
+            this.gridRoles.TabIndex = 41;
+            this.gridRoles.UseCompatibleStateImageBehavior = false;
+            this.gridRoles.View = System.Windows.Forms.View.Details;
             // 
             // IdRol
             // 
@@ -175,7 +179,7 @@ namespace SIGSE.FormsUI.Views
             // Nombre
             // 
             this.Nombre.Text = "Nombre";
-            this.Nombre.Width = 320;
+            this.Nombre.Width = 247;
             // 
             // lblFooter
             // 
@@ -213,227 +217,253 @@ namespace SIGSE.FormsUI.Views
             this.mpFooter.VerticalScrollbarHighlightOnWheel = false;
             this.mpFooter.VerticalScrollbarSize = 10;
             // 
-            // metroLabel2
+            // lblNombre
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(6, 54);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(62, 19);
-            this.metroLabel2.TabIndex = 37;
-            this.metroLabel2.Text = "Nombre:";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(6, 54);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(62, 19);
+            this.lblNombre.TabIndex = 37;
+            this.lblNombre.Text = "Nombre:";
             // 
-            // tbxMail
-            // 
-            // 
-            // 
-            // 
-            this.tbxMail.CustomButton.Image = null;
-            this.tbxMail.CustomButton.Location = new System.Drawing.Point(186, 1);
-            this.tbxMail.CustomButton.Name = "";
-            this.tbxMail.CustomButton.Size = new System.Drawing.Size(27, 27);
-            this.tbxMail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tbxMail.CustomButton.TabIndex = 1;
-            this.tbxMail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tbxMail.CustomButton.UseSelectable = true;
-            this.tbxMail.CustomButton.Visible = false;
-            this.tbxMail.Lines = new string[0];
-            this.tbxMail.Location = new System.Drawing.Point(6, 76);
-            this.tbxMail.MaxLength = 32767;
-            this.tbxMail.Name = "tbxMail";
-            this.tbxMail.PasswordChar = '\0';
-            this.tbxMail.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbxMail.SelectedText = "";
-            this.tbxMail.SelectionLength = 0;
-            this.tbxMail.SelectionStart = 0;
-            this.tbxMail.ShortcutsEnabled = true;
-            this.tbxMail.Size = new System.Drawing.Size(214, 29);
-            this.tbxMail.TabIndex = 35;
-            this.tbxMail.UseSelectable = true;
-            this.tbxMail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tbxMail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // tbxUsername
+            // txtNombre
             // 
             // 
             // 
             // 
-            this.tbxUsername.CustomButton.Image = null;
-            this.tbxUsername.CustomButton.Location = new System.Drawing.Point(186, 1);
-            this.tbxUsername.CustomButton.Name = "";
-            this.tbxUsername.CustomButton.Size = new System.Drawing.Size(27, 27);
-            this.tbxUsername.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tbxUsername.CustomButton.TabIndex = 1;
-            this.tbxUsername.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tbxUsername.CustomButton.UseSelectable = true;
-            this.tbxUsername.CustomButton.Visible = false;
-            this.tbxUsername.Lines = new string[0];
-            this.tbxUsername.Location = new System.Drawing.Point(6, 22);
-            this.tbxUsername.MaxLength = 32767;
-            this.tbxUsername.Name = "tbxUsername";
-            this.tbxUsername.PasswordChar = '\0';
-            this.tbxUsername.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbxUsername.SelectedText = "";
-            this.tbxUsername.SelectionLength = 0;
-            this.tbxUsername.SelectionStart = 0;
-            this.tbxUsername.ShortcutsEnabled = true;
-            this.tbxUsername.Size = new System.Drawing.Size(214, 29);
-            this.tbxUsername.TabIndex = 34;
-            this.tbxUsername.UseSelectable = true;
-            this.tbxUsername.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tbxUsername.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNombre.CustomButton.Image = null;
+            this.txtNombre.CustomButton.Location = new System.Drawing.Point(186, 1);
+            this.txtNombre.CustomButton.Name = "";
+            this.txtNombre.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtNombre.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtNombre.CustomButton.TabIndex = 1;
+            this.txtNombre.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtNombre.CustomButton.UseSelectable = true;
+            this.txtNombre.CustomButton.Visible = false;
+            this.txtNombre.Lines = new string[0];
+            this.txtNombre.Location = new System.Drawing.Point(6, 76);
+            this.txtNombre.MaxLength = 32767;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.PasswordChar = '\0';
+            this.txtNombre.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtNombre.SelectedText = "";
+            this.txtNombre.SelectionLength = 0;
+            this.txtNombre.SelectionStart = 0;
+            this.txtNombre.ShortcutsEnabled = true;
+            this.txtNombre.Size = new System.Drawing.Size(214, 29);
+            this.txtNombre.TabIndex = 35;
+            this.txtNombre.UseSelectable = true;
+            this.txtNombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtNombre.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // btnSave
+            // txtIDRol
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
-            this.btnSave.DisplayFocus = true;
-            this.btnSave.Location = new System.Drawing.Point(6, 332);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(214, 36);
-            this.btnSave.Style = MetroFramework.MetroColorStyle.White;
-            this.btnSave.TabIndex = 42;
-            this.btnSave.Text = "Guardar";
-            this.btnSave.UseCustomBackColor = true;
-            this.btnSave.UseSelectable = true;
-            this.btnSave.UseStyleColors = true;
             // 
-            // metroLabel1
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(6, 0);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(47, 19);
-            this.metroLabel1.TabIndex = 36;
-            this.metroLabel1.Text = "ID Rol:";
             // 
-            // trv_acciones
+            this.txtIDRol.CustomButton.Image = null;
+            this.txtIDRol.CustomButton.Location = new System.Drawing.Point(186, 1);
+            this.txtIDRol.CustomButton.Name = "";
+            this.txtIDRol.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtIDRol.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtIDRol.CustomButton.TabIndex = 1;
+            this.txtIDRol.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtIDRol.CustomButton.UseSelectable = true;
+            this.txtIDRol.CustomButton.Visible = false;
+            this.txtIDRol.Enabled = false;
+            this.txtIDRol.Lines = new string[0];
+            this.txtIDRol.Location = new System.Drawing.Point(6, 22);
+            this.txtIDRol.MaxLength = 32767;
+            this.txtIDRol.Name = "txtIDRol";
+            this.txtIDRol.PasswordChar = '\0';
+            this.txtIDRol.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtIDRol.SelectedText = "";
+            this.txtIDRol.SelectionLength = 0;
+            this.txtIDRol.SelectionStart = 0;
+            this.txtIDRol.ShortcutsEnabled = true;
+            this.txtIDRol.Size = new System.Drawing.Size(214, 29);
+            this.txtIDRol.TabIndex = 34;
+            this.txtIDRol.UseSelectable = true;
+            this.txtIDRol.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtIDRol.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            this.trv_acciones.BackColor = System.Drawing.SystemColors.Window;
-            this.trv_acciones.CheckBoxes = true;
-            this.trv_acciones.Location = new System.Drawing.Point(6, 130);
-            this.trv_acciones.Name = "trv_acciones";
-            treeNode1.Name = "Mi Perfil";
-            treeNode1.Text = "Mi Perfil";
-            treeNode2.Name = "Cambiar Contraseña";
-            treeNode2.Text = "Cambiar Contraseña";
-            treeNode3.Name = "Perfil";
-            treeNode3.Text = "Perfil";
-            treeNode4.Name = "Agregar Persona";
-            treeNode4.Text = "Agregar Persona";
-            treeNode5.Name = "Modificar Persona";
-            treeNode5.Text = "Modificar Persona";
-            treeNode6.Name = "Eliminar Persona";
-            treeNode6.Text = "Eliminar Persona";
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
+            this.btnGuardar.DisplayFocus = true;
+            this.btnGuardar.Location = new System.Drawing.Point(6, 316);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(214, 23);
+            this.btnGuardar.Style = MetroFramework.MetroColorStyle.White;
+            this.btnGuardar.TabIndex = 42;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseCustomBackColor = true;
+            this.btnGuardar.UseSelectable = true;
+            this.btnGuardar.UseStyleColors = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Enabled = false;
+            this.lblId.Location = new System.Drawing.Point(6, 0);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(47, 19);
+            this.lblId.TabIndex = 36;
+            this.lblId.Text = "ID Rol:";
+            // 
+            // trvPermisos
+            // 
+            this.trvPermisos.BackColor = System.Drawing.SystemColors.Window;
+            this.trvPermisos.CheckBoxes = true;
+            this.trvPermisos.Location = new System.Drawing.Point(6, 130);
+            this.trvPermisos.Name = "trvPermisos";
+            treeNode1.Name = "Modificar Password";
+            treeNode1.Text = "Modificar Password";
+            treeNode2.Name = "Perfil";
+            treeNode2.Text = "Perfil";
+            treeNode3.Name = "Agregar Personas";
+            treeNode3.Text = "Agregar Personas";
+            treeNode4.Name = "Modificar Personas";
+            treeNode4.Text = "Modificar Personas";
+            treeNode5.Name = "Eliminar Personas";
+            treeNode5.Text = "Eliminar Personas";
+            treeNode6.Name = "Consultar Personas";
+            treeNode6.Text = "Consultar Personas";
             treeNode7.Name = "Gestionar Personas";
             treeNode7.Text = "Gestionar Personas";
-            treeNode8.Name = "Agregar Usuario";
-            treeNode8.Text = "Agregar Usuario";
-            treeNode9.Name = "Modificar Usuario";
-            treeNode9.Text = "Modificar Usuario";
-            treeNode10.Name = "Eliminar Usuario";
-            treeNode10.Text = "Eliminar Usuario";
-            treeNode11.Name = "Gestionar Usuarios";
-            treeNode11.Text = "Gestionar Usuarios";
-            treeNode12.Name = "Agregar Permiso";
-            treeNode12.Text = "Agregar Permiso";
-            treeNode13.Name = "Modificar Permiso";
-            treeNode13.Text = "Modificar Permiso";
-            treeNode14.Name = "Eliminar Permiso";
-            treeNode14.Text = "Eliminar Permiso";
-            treeNode15.Name = "Gestionar Roles";
-            treeNode15.Text = "Gestionar Roles";
-            treeNode16.Name = "Seguridad";
-            treeNode16.Text = "Seguridad";
-            treeNode17.Name = "Agregar Cupon";
-            treeNode17.Text = "Agregar Cupon";
-            treeNode18.Name = "Modificar Cupon";
-            treeNode18.Text = "Modificar Cupon";
-            treeNode19.Name = "Eliminar Cupon";
-            treeNode19.Text = "Eliminar Cupon";
-            treeNode20.Name = "Consultar Cupones";
-            treeNode20.Text = "Consultar Cupones";
-            treeNode21.Name = "Gestionar Musculos";
-            treeNode21.Text = "Gestionar Musculos";
-            treeNode22.Name = "Agregar Deducción";
-            treeNode22.Text = "Agregar Deducción";
-            treeNode23.Name = "Modificar Deducción";
-            treeNode23.Text = "Modificar Deducción";
-            treeNode24.Name = "Eliminar Deducción";
-            treeNode24.Text = "Eliminar Deducción";
-            treeNode25.Name = "Consultar Deducciones";
-            treeNode25.Text = "Consultar Deducciones";
-            treeNode26.Name = "Gestionar Deducciones";
-            treeNode26.Text = "Gestionar Deducciones";
-            treeNode27.Name = "Agregar Feriado";
-            treeNode27.Text = "Agregar Feriado";
-            treeNode28.Name = "Modificar Feriado";
-            treeNode28.Text = "Modificar Feriado";
-            treeNode29.Name = "Eliminar Feriado";
-            treeNode29.Text = "Eliminar Feriado";
-            treeNode30.Name = "Consultar Feriados";
-            treeNode30.Text = "Consultar Feriados";
-            treeNode31.Name = "Gestionar Feriados";
-            treeNode31.Text = "Gestionar Feriados";
-            treeNode32.Name = "Agregar Plan";
-            treeNode32.Text = "Agregar Plan";
-            treeNode33.Name = "Modificar Plan";
-            treeNode33.Text = "Modificar Plan";
-            treeNode34.Name = "Eliminar Plan";
-            treeNode34.Text = "Eliminar Plan";
-            treeNode35.Name = "Consultar Plan";
-            treeNode35.Text = "Consultar Plan";
-            treeNode36.Name = "Gestionar Planes";
-            treeNode36.Text = "Gestionar Planes";
-            treeNode37.Name = "Agregar Terminal";
-            treeNode37.Text = "Agregar Terminal";
-            treeNode38.Name = "Modificar Terminal";
-            treeNode38.Text = "Modificar Terminal";
-            treeNode39.Name = "Eliminar Terminal";
-            treeNode39.Text = "Eliminar Terminal";
-            treeNode40.Name = "Consultar Terminales";
-            treeNode40.Text = "Consultar Terminales";
-            treeNode41.Name = "Gestionar Terminales";
-            treeNode41.Text = "Gestionar Terminales";
-            treeNode42.Name = "Parametrizacion";
-            treeNode42.Text = "Parametrización";
-            treeNode43.Name = "Agregar Banco";
-            treeNode43.Text = "Agregar Banco";
-            treeNode44.Name = "Modificar Banco";
-            treeNode44.Text = "Modificar Banco";
-            treeNode45.Name = "Eliminar Banco";
-            treeNode45.Text = "Eliminar Banco";
-            treeNode46.Name = "Consultar Bancos";
-            treeNode46.Text = "Consultar Bancos";
-            treeNode47.Name = "Gestionar Bancos";
-            treeNode47.Text = "Gestionar Bancos";
-            treeNode48.Name = "Profesores";
-            treeNode48.Text = "Profesores";
-            this.trv_acciones.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode16,
-            treeNode42,
-            treeNode48});
-            this.trv_acciones.Size = new System.Drawing.Size(214, 196);
-            this.trv_acciones.TabIndex = 57;
+            treeNode8.Name = "Agregar Usuarios";
+            treeNode8.Text = "Agregar Usuarios";
+            treeNode9.Name = "Modificar Usuarios";
+            treeNode9.Text = "Modificar Usuarios";
+            treeNode10.Name = "Eliminar Usuarios";
+            treeNode10.Text = "Eliminar Usuarios";
+            treeNode11.Name = "Consultar Usuarios";
+            treeNode11.Text = "Consultar Usuarios";
+            treeNode12.Name = "Gestionar Usuarios";
+            treeNode12.Text = "Gestionar Usuarios";
+            treeNode13.Name = "Agregar Roles";
+            treeNode13.Text = "Agregar Roles";
+            treeNode14.Name = "Modificar Roles";
+            treeNode14.Text = "Modificar Roles";
+            treeNode15.Name = "Eliminar Roles";
+            treeNode15.Text = "Eliminar Roles";
+            treeNode16.Name = "Consultar Roles";
+            treeNode16.Text = "Consultar Roles";
+            treeNode17.Name = "Gestionar Roles";
+            treeNode17.Text = "Gestionar Roles";
+            treeNode18.Name = "Seguridad";
+            treeNode18.Text = "Seguridad";
+            treeNode19.Name = "Agregar Ejercicios";
+            treeNode19.Text = "Agregar Ejercicios";
+            treeNode20.Name = "Modificar Ejercicios";
+            treeNode20.Text = "Modificar Ejercicios";
+            treeNode21.Name = "Eliminar Ejercicios";
+            treeNode21.Text = "Eliminar Ejercicios";
+            treeNode22.Name = "Consultar Ejercicios";
+            treeNode22.Text = "Consultar Ejercicios";
+            treeNode23.Name = "Gestionar Ejercicios";
+            treeNode23.Text = "Gestionar Ejercicios";
+            treeNode24.Name = "Agregar Musculos";
+            treeNode24.Text = "Agregar Musculos";
+            treeNode25.Name = "Modificar Musculos";
+            treeNode25.Text = "Modificar Musculos";
+            treeNode26.Name = "Eliminar Musculos";
+            treeNode26.Text = "Eliminar Musculos";
+            treeNode27.Name = "Consultar Musculos";
+            treeNode27.Text = "Consultar Musculos";
+            treeNode28.Name = "Gestionar Musculos";
+            treeNode28.Text = "Gestionar Musculos";
+            treeNode29.Name = "Agregar Objetivos";
+            treeNode29.Text = "Agregar Objetivos";
+            treeNode30.Name = "Modificar Objetivos";
+            treeNode30.Text = "Modificar Objetivos";
+            treeNode31.Name = "Eliminar Objetivos";
+            treeNode31.Text = "Eliminar Objetivos";
+            treeNode32.Name = "Consultar Objetivos";
+            treeNode32.Text = "Consultar Objetivos";
+            treeNode33.Name = "Gestionar Objetivos";
+            treeNode33.Text = "Gestionar Objetivos";
+            treeNode34.Name = "Agregar Tipos de Ejercicio";
+            treeNode34.Text = "Agregar Tipos de Ejercicio";
+            treeNode35.Name = "Modificar Tipos de Ejercicio";
+            treeNode35.Text = "Modificar Tipos de Ejercicio";
+            treeNode36.Name = "Eliminar Tipos de Ejercicio";
+            treeNode36.Text = "Eliminar Tipos de Ejercicio";
+            treeNode37.Name = "Consultar Tipos de Ejercicio";
+            treeNode37.Text = "Consultar Tipos de Ejercicio";
+            treeNode38.Name = "Gestionar Tipos de Ejercicio";
+            treeNode38.Text = "Gestionar Tipos de Ejercicio";
+            treeNode39.Name = "Agregar Tipos de Entrenamiento";
+            treeNode39.Text = "Agregar Tipos de Entrenamiento";
+            treeNode40.Name = "Modificar Tipos de Entrenamiento";
+            treeNode40.Text = "Modificar Tipos de Entrenamiento";
+            treeNode41.Name = "Eliminar Tipos de Entrenamiento";
+            treeNode41.Text = "Eliminar Tipos de Entrenamiento";
+            treeNode42.Name = "Consultar Tipos de Entrenamiento";
+            treeNode42.Text = "Consultar Tipos de Entrenamiento";
+            treeNode43.Name = "Gestionar Tipos de Entrenamiento";
+            treeNode43.Text = "Gestionar Tipos de Entrenamiento";
+            treeNode44.Name = "Parametrizacion";
+            treeNode44.Text = "Parametrizacion";
+            treeNode45.Name = "Agregar Alumnos";
+            treeNode45.Text = "Agregar Alumnos";
+            treeNode46.Name = "Modificar Alumnos";
+            treeNode46.Text = "Modificar Alumnos";
+            treeNode47.Name = "Eliminar Alumnos";
+            treeNode47.Text = "Eliminar Alumnos";
+            treeNode48.Name = "Consultar Alumnos";
+            treeNode48.Text = "Consultar Alumnos";
+            treeNode49.Name = "Gestionar Alumnos";
+            treeNode49.Text = "Gestionar Alumnos";
+            treeNode50.Name = "Consultar Informes";
+            treeNode50.Text = "Consultar Informes";
+            treeNode51.Name = "Informes";
+            treeNode51.Text = "Informes";
+            treeNode52.Name = "Profesores";
+            treeNode52.Text = "Profesores";
+            this.trvPermisos.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode2,
+            treeNode18,
+            treeNode44,
+            treeNode52});
+            this.trvPermisos.Size = new System.Drawing.Size(214, 179);
+            this.trvPermisos.TabIndex = 57;
+            this.trvPermisos.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.trvPermisos_AfterCheck);
             // 
-            // metroPanel2
+            // panelFrm
             // 
-            this.metroPanel2.Controls.Add(this.metroLabel4);
-            this.metroPanel2.Controls.Add(this.trv_acciones);
-            this.metroPanel2.Controls.Add(this.metroLabel1);
-            this.metroPanel2.Controls.Add(this.btnSave);
-            this.metroPanel2.Controls.Add(this.tbxUsername);
-            this.metroPanel2.Controls.Add(this.tbxMail);
-            this.metroPanel2.Controls.Add(this.metroLabel2);
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(305, 99);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(225, 368);
-            this.metroPanel2.TabIndex = 44;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
+            this.panelFrm.CausesValidation = false;
+            this.panelFrm.Controls.Add(this.btnCancelar);
+            this.panelFrm.Controls.Add(this.metroLabel4);
+            this.panelFrm.Controls.Add(this.trvPermisos);
+            this.panelFrm.Controls.Add(this.lblId);
+            this.panelFrm.Controls.Add(this.btnGuardar);
+            this.panelFrm.Controls.Add(this.txtIDRol);
+            this.panelFrm.Controls.Add(this.txtNombre);
+            this.panelFrm.Controls.Add(this.lblNombre);
+            this.panelFrm.HorizontalScrollbarBarColor = true;
+            this.panelFrm.HorizontalScrollbarHighlightOnWheel = false;
+            this.panelFrm.HorizontalScrollbarSize = 10;
+            this.panelFrm.Location = new System.Drawing.Point(305, 99);
+            this.panelFrm.Name = "panelFrm";
+            this.panelFrm.Size = new System.Drawing.Size(225, 368);
+            this.panelFrm.TabIndex = 44;
+            this.panelFrm.VerticalScrollbarBarColor = true;
+            this.panelFrm.VerticalScrollbarHighlightOnWheel = false;
+            this.panelFrm.VerticalScrollbarSize = 10;
+            this.panelFrm.Visible = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.Location = new System.Drawing.Point(6, 345);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(214, 20);
+            this.btnCancelar.TabIndex = 54;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseSelectable = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // metroLabel4
             // 
@@ -462,57 +492,61 @@ namespace SIGSE.FormsUI.Views
             this.metroLabel3.TabIndex = 50;
             this.metroLabel3.Text = "Lista de Roles";
             // 
-            // btnDel
+            // btnAgregar
             // 
-            this.btnDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDel.Location = new System.Drawing.Point(23, 444);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(88, 23);
-            this.btnDel.TabIndex = 51;
-            this.btnDel.Text = "Agregar";
-            this.btnDel.UseSelectable = true;
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.Location = new System.Drawing.Point(23, 444);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(88, 23);
+            this.btnAgregar.TabIndex = 51;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseSelectable = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // metroButton2
+            // btnEliminar
             // 
-            this.metroButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroButton2.Location = new System.Drawing.Point(211, 444);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(88, 23);
-            this.metroButton2.TabIndex = 52;
-            this.metroButton2.Text = "Eliminar";
-            this.metroButton2.UseSelectable = true;
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.Location = new System.Drawing.Point(211, 444);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(88, 23);
+            this.btnEliminar.TabIndex = 52;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseSelectable = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // metroButton1
+            // btnModificar
             // 
-            this.metroButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroButton1.Location = new System.Drawing.Point(117, 444);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(88, 23);
-            this.metroButton1.TabIndex = 53;
-            this.metroButton1.Text = "Modificar";
-            this.metroButton1.UseSelectable = true;
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificar.Location = new System.Drawing.Point(117, 444);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(88, 23);
+            this.btnModificar.TabIndex = 53;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseSelectable = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // FrmRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(553, 516);
-            this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.mpFooter);
-            this.Controls.Add(this.metroPanel2);
-            this.Controls.Add(this.lvAcessFlags);
+            this.Controls.Add(this.panelFrm);
+            this.Controls.Add(this.gridRoles);
             this.MaximizeBox = false;
             this.Name = "FrmRoles";
             this.Resizable = false;
             this.Text = "Gestionar Roles";
+            this.Activated += new System.EventHandler(this.FrmRoles_Activated);
             this.mpFooter.ResumeLayout(false);
             this.mpFooter.PerformLayout();
-            this.metroPanel2.ResumeLayout(false);
-            this.metroPanel2.PerformLayout();
+            this.panelFrm.ResumeLayout(false);
+            this.panelFrm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -521,23 +555,24 @@ namespace SIGSE.FormsUI.Views
 
         #endregion
 
-        private System.Windows.Forms.ListView lvAcessFlags;
+        private System.Windows.Forms.ListView gridRoles;
         private System.Windows.Forms.ColumnHeader IdRol;
         private System.Windows.Forms.ColumnHeader Nombre;
         private MetroFramework.Controls.MetroLabel lblFooter;
         private MetroFramework.Controls.MetroPanel mpFooter;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroTextBox tbxMail;
-        private MetroFramework.Controls.MetroTextBox tbxUsername;
-        private MetroFramework.Controls.MetroButton btnSave;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private System.Windows.Forms.TreeView trv_acciones;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
+        private MetroFramework.Controls.MetroLabel lblNombre;
+        private MetroFramework.Controls.MetroTextBox txtNombre;
+        private MetroFramework.Controls.MetroTextBox txtIDRol;
+        private MetroFramework.Controls.MetroButton btnGuardar;
+        private MetroFramework.Controls.MetroLabel lblId;
+        private System.Windows.Forms.TreeView trvPermisos;
+        private MetroFramework.Controls.MetroPanel panelFrm;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroButton btnDel;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btnAgregar;
+        private MetroFramework.Controls.MetroButton btnEliminar;
+        private MetroFramework.Controls.MetroButton btnModificar;
+        private MetroFramework.Controls.MetroButton btnCancelar;
     }
 }

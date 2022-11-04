@@ -36,7 +36,7 @@ namespace SIGSE.FormsUI.Views
                         System.Windows.Forms.MessageBoxButtons.OK,
                         System.Windows.Forms.MessageBoxIcon.Information,
                         100);
-                Utilities.Navegar.Open(this, new FrmHome());
+                this.Close();
             }
             else
             { 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 
 namespace SIGSE.Entities
@@ -12,7 +13,15 @@ namespace SIGSE.Entities
         public string apellido { get; set; }
         public string mail { get; set; }
         public string telefono { get; set; }
-        public DateTime fechaNacimiento { get; set; }
+
+        [NotMapped]
+        public string nombrecompleto
+        {
+            get { return nombre + " " + apellido; }
+        }
+
+        [Column(TypeName = "datetime2")]
+        public DateTime? fechaNacimiento { get; set; }
 
     }
 

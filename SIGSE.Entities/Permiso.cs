@@ -11,22 +11,32 @@ namespace SIGSE.Entities
         public int idPermiso { get; set; }
         public string nombre { get; set; }
 
-
-        public abstract void crearListaPermisos();
+        public abstract void crearListaPermiso();
         public abstract void agregarNodo(Permiso perm);
         public abstract IList<Permiso> obtenerNodos();
+
     }
 
     public class PermisoSimple : Permiso
     {
-        public List<Permiso> permisos { get; set; }
-
-        public override void crearListaPermisos()
+        public PermisoSimple()
         {
+
+        }
+
+        public PermisoSimple(string nombre)
+        {
+            this.nombre = nombre;
         }
 
         public override void agregarNodo(Permiso perm)
         {
+            
+        }
+
+        public override void crearListaPermiso()
+        {
+            
         }
 
         public override IList<Permiso> obtenerNodos()
@@ -39,7 +49,24 @@ namespace SIGSE.Entities
     {
         public List<Permiso> permisos { get; set; }
 
-        public override void crearListaPermisos()
+        public PermisoCompuesto()
+        {
+
+        }
+
+        public PermisoCompuesto(string nombre)
+        {
+            this.nombre = nombre;
+            crearListaPermiso();
+        }
+
+        public PermisoCompuesto(string nombre, List<Permiso> permisos)
+        {
+            this.nombre = nombre;
+            this.permisos = permisos;
+        }
+
+        public override void crearListaPermiso()
         {
             permisos = new List<Permiso>();
         }
@@ -47,6 +74,7 @@ namespace SIGSE.Entities
         public override void agregarNodo(Permiso perm)
         {
             permisos.Add(perm);
+
         }
 
         public override IList<Permiso> obtenerNodos()

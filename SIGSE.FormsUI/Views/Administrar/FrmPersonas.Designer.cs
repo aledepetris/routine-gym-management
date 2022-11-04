@@ -29,12 +29,13 @@ namespace SIGSE.FormsUI.Views
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.btnEliminar = new MetroFramework.Controls.MetroButton();
             this.btnModificar = new MetroFramework.Controls.MetroButton();
             this.btnAgregar = new MetroFramework.Controls.MetroButton();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.lvlAuthorities = new System.Windows.Forms.ListView();
+            this.gridPersonas = new System.Windows.Forms.ListView();
             this.IdPersonas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DNI = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -45,6 +46,7 @@ namespace SIGSE.FormsUI.Views
             this.lblFooter = new MetroFramework.Controls.MetroLabel();
             this.mpFooter = new MetroFramework.Controls.MetroPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.metroPanel1.SuspendLayout();
             this.mpFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,7 +61,7 @@ namespace SIGSE.FormsUI.Views
             this.metroPanel1.Controls.Add(this.btnModificar);
             this.metroPanel1.Controls.Add(this.btnAgregar);
             this.metroPanel1.Controls.Add(this.metroLabel5);
-            this.metroPanel1.Controls.Add(this.lvlAuthorities);
+            this.metroPanel1.Controls.Add(this.gridPersonas);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
@@ -74,7 +76,7 @@ namespace SIGSE.FormsUI.Views
             // btnEliminar
             // 
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEliminar.BackColor = System.Drawing.Color.Silver;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
             this.btnEliminar.DisplayFocus = true;
             this.btnEliminar.Location = new System.Drawing.Point(626, 7);
             this.btnEliminar.MaximumSize = new System.Drawing.Size(300, 35);
@@ -91,7 +93,7 @@ namespace SIGSE.FormsUI.Views
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.BackColor = System.Drawing.Color.Silver;
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
             this.btnModificar.DisplayFocus = true;
             this.btnModificar.Location = new System.Drawing.Point(490, 7);
             this.btnModificar.MaximumSize = new System.Drawing.Size(300, 35);
@@ -108,7 +110,7 @@ namespace SIGSE.FormsUI.Views
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.BackColor = System.Drawing.Color.Silver;
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
             this.btnAgregar.DisplayFocus = true;
             this.btnAgregar.Location = new System.Drawing.Point(354, 7);
             this.btnAgregar.MaximumSize = new System.Drawing.Size(300, 35);
@@ -132,12 +134,12 @@ namespace SIGSE.FormsUI.Views
             this.metroLabel5.TabIndex = 35;
             this.metroLabel5.Text = "Listado de Persona";
             // 
-            // lvlAuthorities
+            // gridPersonas
             // 
-            this.lvlAuthorities.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gridPersonas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvlAuthorities.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.gridPersonas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.IdPersonas,
             this.Tipo,
             this.DNI,
@@ -145,16 +147,16 @@ namespace SIGSE.FormsUI.Views
             this.Apellido,
             this.Telefono,
             this.Email});
-            this.lvlAuthorities.FullRowSelect = true;
-            this.lvlAuthorities.GridLines = true;
-            this.lvlAuthorities.HideSelection = false;
-            this.lvlAuthorities.Location = new System.Drawing.Point(13, 34);
-            this.lvlAuthorities.MultiSelect = false;
-            this.lvlAuthorities.Name = "lvlAuthorities";
-            this.lvlAuthorities.Size = new System.Drawing.Size(742, 367);
-            this.lvlAuthorities.TabIndex = 36;
-            this.lvlAuthorities.UseCompatibleStateImageBehavior = false;
-            this.lvlAuthorities.View = System.Windows.Forms.View.Details;
+            this.gridPersonas.FullRowSelect = true;
+            this.gridPersonas.GridLines = true;
+            this.gridPersonas.HideSelection = false;
+            this.gridPersonas.Location = new System.Drawing.Point(13, 34);
+            this.gridPersonas.MultiSelect = false;
+            this.gridPersonas.Name = "gridPersonas";
+            this.gridPersonas.Size = new System.Drawing.Size(742, 359);
+            this.gridPersonas.TabIndex = 36;
+            this.gridPersonas.UseCompatibleStateImageBehavior = false;
+            this.gridPersonas.View = System.Windows.Forms.View.Details;
             // 
             // IdPersonas
             // 
@@ -254,6 +256,7 @@ namespace SIGSE.FormsUI.Views
             this.Name = "FrmPersonas";
             this.Resizable = false;
             this.Text = "Gestionar Personas";
+            this.Activated += new System.EventHandler(this.FrmPersonas_Activated);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             this.mpFooter.ResumeLayout(false);
@@ -267,7 +270,7 @@ namespace SIGSE.FormsUI.Views
 
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private System.Windows.Forms.ListView lvlAuthorities;
+        private System.Windows.Forms.ListView gridPersonas;
         private System.Windows.Forms.ColumnHeader IdPersonas;
         private System.Windows.Forms.ColumnHeader Nombre;
         private System.Windows.Forms.ColumnHeader Apellido;
@@ -281,5 +284,6 @@ namespace SIGSE.FormsUI.Views
         private MetroFramework.Controls.MetroLabel lblFooter;
         private MetroFramework.Controls.MetroPanel mpFooter;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Components.MetroStyleExtender metroStyleExtender1;
     }
 }

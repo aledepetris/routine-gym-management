@@ -34,8 +34,12 @@ namespace SIGSE.FormsUI.Views
             cHome = HomeController.obtenerInstancia();
             currentUser = cHome.obtenerSesionUsuario();
             InitializeComponent();
+            tsmPerfil.Visible = false;
+            tsmAdministrar.Visible = false;
+            tsmParametrizacion.Visible = false;
+            tsmProfesores.Visible = false;
             lblNombreApellido.Text = currentUser.persona.nombre.ToUpper() + " " + currentUser.persona.apellido.ToUpper();
-
+            verificarPermisos();
         }
 
         private void pbLogOut_Click(object sender, EventArgs e)
@@ -46,7 +50,7 @@ namespace SIGSE.FormsUI.Views
 
         private void tspCambiarPassword_Click(object sender, EventArgs e)
         {
-            Utilities.Navegar.Open(this, new FrmCambiarPassword());
+            Utilities.Navegar.OpenNewTab(new FrmCambiarPassword());
         }
 
         #region SubMenuAdministrar
@@ -63,11 +67,6 @@ namespace SIGSE.FormsUI.Views
         private void tspGestionarUsuarios_Click(object sender, EventArgs e)
         {
             Utilities.Navegar.OpenNewTab(new FrmUsuarios());
-        }
-
-        private void tspGestionarAlumnos_Click(object sender, EventArgs e)
-        {
-            Utilities.Navegar.OpenNewTab(new FrmAlumnos());
         }
         #endregion
 
@@ -100,9 +99,100 @@ namespace SIGSE.FormsUI.Views
         #endregion
 
         #region SubMenuProfesores
+        private void tspInformes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tspGestionarAlumnos_Click(object sender, EventArgs e)
+        {
+            Utilities.Navegar.OpenNewTab(new FrmAlumnos());
+        }
+        #endregion
+
+        #region Permisos
+
+        public void verificarPermisos()
+        {
+            List<Rol> roles = currentUser.roles.ToList();
+
+            foreach (Rol rol in roles)
+            {
+                foreach (Permiso permiso in rol.permisos)
+                {
+                    if (permiso.nombre == "Modificar Password" && tspCambiarPassword.Visible == false)
+                    {
+                        tsmPerfil.Visible = true;
+                        tspCambiarPassword.Visible = true;
+                    }
+
+                    if (permiso.nombre == "Consultar Usuarios" && tspGestionarUsuarios.Visible == false)
+                    {
+                        tsmAdministrar.Visible = true;
+                        tspGestionarUsuarios.Visible = true;
+                    }
+
+                    if (permiso.nombre == "Consultar Personas" && tspGestionarPersonas.Visible == false)
+                    {
+                        tsmAdministrar.Visible = true;
+                        tspGestionarPersonas.Visible = true;
+                    }
+
+                    if (permiso.nombre == "Consultar Roles" && tspGestionarRoles.Visible == false)
+                    {
+                        tsmAdministrar.Visible = true;
+                        tspGestionarRoles.Visible = true;
+                    }
 
 
+                    if (permiso.nombre == "Consultar Ejercicios" && tspGestionarEjercicios.Visible == false)
+                    {
+                        tsmParametrizacion.Visible = true;
+                        tspGestionarEjercicios.Visible = true;
+                    }
 
+                    if (permiso.nombre == "Consultar Musculos" && tspGestionarMusculos.Visible == false)
+                    {
+                        tsmParametrizacion.Visible = true;
+                        tspGestionarMusculos.Visible = true;
+                    }
+
+                    if (permiso.nombre == "Consultar Objetivos" && tspGestionarObjetivos.Visible == false)
+                    {
+                        tsmParametrizacion.Visible = true;
+                        tspGestionarObjetivos.Visible = true;
+                    }
+
+                    if (permiso.nombre == "Consultar Tipos de Ejercicio" && tspGestionarTipoEjercicios.Visible == false)
+                    {
+                        tsmParametrizacion.Visible = true;
+                        tspGestionarTipoEjercicios.Visible = true;
+                    }
+
+
+                    if (permiso.nombre == "Consultar Tipos de Entrenamiento" && tspGestionarTipoEntrenamientos.Visible == false)
+                    {
+                        tsmParametrizacion.Visible = true;
+                        tspGestionarTipoEntrenamientos.Visible = true;
+                    }
+
+
+                    if (permiso.nombre == "Consultar Alumnos" && tspGestionarAlumnos.Visible == false)
+                    {
+                        tsmProfesores.Visible = true;
+                        tspGestionarAlumnos.Visible = true;
+                    }
+
+                    if (permiso.nombre == "Consultar Informes" && tspInformes.Visible == false)
+                    {
+                        tsmProfesores.Visible = true;
+                        tspInformes.Visible = true;
+                    }
+
+                }
+            }
+
+        }
         #endregion
 
     }

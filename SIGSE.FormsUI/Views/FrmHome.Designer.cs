@@ -52,10 +52,6 @@ namespace SIGSE.FormsUI.Views
             this.tspGestionarTipoEntrenamientos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmProfesores = new System.Windows.Forms.ToolStripMenuItem();
             this.tspGestionarAlumnos = new System.Windows.Forms.ToolStripMenuItem();
-            this.tspGestionarPlantilla = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsp2PlantillaCiclo = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsp2PlantillaSemana = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsp2PlantillaDias = new System.Windows.Forms.ToolStripMenuItem();
             this.tspInformes = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.mpFooter.SuspendLayout();
@@ -166,12 +162,14 @@ namespace SIGSE.FormsUI.Views
             this.tsmPerfil.Name = "tsmPerfil";
             this.tsmPerfil.Size = new System.Drawing.Size(46, 20);
             this.tsmPerfil.Text = "Perfil";
+            this.tsmPerfil.Visible = false;
             // 
             // tspCambiarPassword
             // 
             this.tspCambiarPassword.Name = "tspCambiarPassword";
             this.tspCambiarPassword.Size = new System.Drawing.Size(182, 22);
             this.tspCambiarPassword.Text = "Cambiar Contraseña";
+            this.tspCambiarPassword.Visible = false;
             this.tspCambiarPassword.Click += new System.EventHandler(this.tspCambiarPassword_Click);
             // 
             // tsmAdministrar
@@ -183,12 +181,14 @@ namespace SIGSE.FormsUI.Views
             this.tsmAdministrar.Name = "tsmAdministrar";
             this.tsmAdministrar.Size = new System.Drawing.Size(81, 20);
             this.tsmAdministrar.Text = "Administrar";
+            this.tsmAdministrar.Visible = false;
             // 
             // tspGestionarPersonas
             // 
             this.tspGestionarPersonas.Name = "tspGestionarPersonas";
             this.tspGestionarPersonas.Size = new System.Drawing.Size(180, 22);
             this.tspGestionarPersonas.Text = "Gestionar Personas";
+            this.tspGestionarPersonas.Visible = false;
             this.tspGestionarPersonas.Click += new System.EventHandler(this.tspGestionarPersonas_Click);
             // 
             // tspGestionarUsuarios
@@ -196,6 +196,7 @@ namespace SIGSE.FormsUI.Views
             this.tspGestionarUsuarios.Name = "tspGestionarUsuarios";
             this.tspGestionarUsuarios.Size = new System.Drawing.Size(180, 22);
             this.tspGestionarUsuarios.Text = "Gestionar Usuarios";
+            this.tspGestionarUsuarios.Visible = false;
             this.tspGestionarUsuarios.Click += new System.EventHandler(this.tspGestionarUsuarios_Click);
             // 
             // tspGestionarRoles
@@ -203,6 +204,7 @@ namespace SIGSE.FormsUI.Views
             this.tspGestionarRoles.Name = "tspGestionarRoles";
             this.tspGestionarRoles.Size = new System.Drawing.Size(180, 22);
             this.tspGestionarRoles.Text = "Gestionar Roles";
+            this.tspGestionarRoles.Visible = false;
             this.tspGestionarRoles.Click += new System.EventHandler(this.tspGestionarRoles_Click);
             // 
             // tsmParametrizacion
@@ -216,12 +218,14 @@ namespace SIGSE.FormsUI.Views
             this.tsmParametrizacion.Name = "tsmParametrizacion";
             this.tsmParametrizacion.Size = new System.Drawing.Size(104, 20);
             this.tsmParametrizacion.Text = "Parametrización";
+            this.tsmParametrizacion.Visible = false;
             // 
             // tspGestionarEjercicios
             // 
             this.tspGestionarEjercicios.Name = "tspGestionarEjercicios";
             this.tspGestionarEjercicios.Size = new System.Drawing.Size(257, 22);
             this.tspGestionarEjercicios.Text = "Gestionar Ejercicios";
+            this.tspGestionarEjercicios.Visible = false;
             this.tspGestionarEjercicios.Click += new System.EventHandler(this.tspGestionarEjercicios_Click);
             // 
             // tspGestionarMusculos
@@ -229,6 +233,7 @@ namespace SIGSE.FormsUI.Views
             this.tspGestionarMusculos.Name = "tspGestionarMusculos";
             this.tspGestionarMusculos.Size = new System.Drawing.Size(257, 22);
             this.tspGestionarMusculos.Text = "Gestionar Musculos";
+            this.tspGestionarMusculos.Visible = false;
             this.tspGestionarMusculos.Click += new System.EventHandler(this.tspGestionarMusculos_Click);
             // 
             // tspGestionarObjetivos
@@ -236,6 +241,7 @@ namespace SIGSE.FormsUI.Views
             this.tspGestionarObjetivos.Name = "tspGestionarObjetivos";
             this.tspGestionarObjetivos.Size = new System.Drawing.Size(257, 22);
             this.tspGestionarObjetivos.Text = "Gestionar Objetivos";
+            this.tspGestionarObjetivos.Visible = false;
             this.tspGestionarObjetivos.Click += new System.EventHandler(this.tspGestionarObjetivos_Click);
             // 
             // tspGestionarTipoEjercicios
@@ -243,6 +249,7 @@ namespace SIGSE.FormsUI.Views
             this.tspGestionarTipoEjercicios.Name = "tspGestionarTipoEjercicios";
             this.tspGestionarTipoEjercicios.Size = new System.Drawing.Size(257, 22);
             this.tspGestionarTipoEjercicios.Text = "Gestionar Tipos de Ejercicio";
+            this.tspGestionarTipoEjercicios.Visible = false;
             this.tspGestionarTipoEjercicios.Click += new System.EventHandler(this.tspGestionarTipoEjercicios_Click);
             // 
             // tspGestionarTipoEntrenamientos
@@ -250,58 +257,34 @@ namespace SIGSE.FormsUI.Views
             this.tspGestionarTipoEntrenamientos.Name = "tspGestionarTipoEntrenamientos";
             this.tspGestionarTipoEntrenamientos.Size = new System.Drawing.Size(257, 22);
             this.tspGestionarTipoEntrenamientos.Text = "Gestionar Tipos de Entrenamientos";
+            this.tspGestionarTipoEntrenamientos.Visible = false;
             this.tspGestionarTipoEntrenamientos.Click += new System.EventHandler(this.tspGestionarTipoEntrenamientos_Click);
             // 
             // tsmProfesores
             // 
             this.tsmProfesores.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tspGestionarAlumnos,
-            this.tspGestionarPlantilla,
             this.tspInformes});
             this.tsmProfesores.Name = "tsmProfesores";
             this.tsmProfesores.Size = new System.Drawing.Size(74, 20);
             this.tsmProfesores.Text = "Profesores";
+            this.tsmProfesores.Visible = false;
             // 
             // tspGestionarAlumnos
             // 
             this.tspGestionarAlumnos.Name = "tspGestionarAlumnos";
             this.tspGestionarAlumnos.Size = new System.Drawing.Size(180, 22);
             this.tspGestionarAlumnos.Text = "Gestionar Alumnos";
+            this.tspGestionarAlumnos.Visible = false;
             this.tspGestionarAlumnos.Click += new System.EventHandler(this.tspGestionarAlumnos_Click);
-            // 
-            // tspGestionarPlantilla
-            // 
-            this.tspGestionarPlantilla.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsp2PlantillaCiclo,
-            this.tsp2PlantillaSemana,
-            this.tsp2PlantillaDias});
-            this.tspGestionarPlantilla.Name = "tspGestionarPlantilla";
-            this.tspGestionarPlantilla.Size = new System.Drawing.Size(180, 22);
-            this.tspGestionarPlantilla.Text = "Gestionar Plantillas";
-            // 
-            // tsp2PlantillaCiclo
-            // 
-            this.tsp2PlantillaCiclo.Name = "tsp2PlantillaCiclo";
-            this.tsp2PlantillaCiclo.Size = new System.Drawing.Size(177, 22);
-            this.tsp2PlantillaCiclo.Text = "Plantilla de Ciclo";
-            // 
-            // tsp2PlantillaSemana
-            // 
-            this.tsp2PlantillaSemana.Name = "tsp2PlantillaSemana";
-            this.tsp2PlantillaSemana.Size = new System.Drawing.Size(177, 22);
-            this.tsp2PlantillaSemana.Text = "Plantilla de Semana";
-            // 
-            // tsp2PlantillaDias
-            // 
-            this.tsp2PlantillaDias.Name = "tsp2PlantillaDias";
-            this.tsp2PlantillaDias.Size = new System.Drawing.Size(177, 22);
-            this.tsp2PlantillaDias.Text = "Plantilla de Días";
             // 
             // tspInformes
             // 
             this.tspInformes.Name = "tspInformes";
             this.tspInformes.Size = new System.Drawing.Size(180, 22);
             this.tspInformes.Text = "Informes";
+            this.tspInformes.Visible = false;
+            this.tspInformes.Click += new System.EventHandler(this.tspInformes_Click);
             // 
             // msMenu
             // 
@@ -367,10 +350,6 @@ namespace SIGSE.FormsUI.Views
         private System.Windows.Forms.ToolStripMenuItem tspGestionarTipoEntrenamientos;
         private System.Windows.Forms.ToolStripMenuItem tsmProfesores;
         private System.Windows.Forms.ToolStripMenuItem tspGestionarAlumnos;
-        private System.Windows.Forms.ToolStripMenuItem tspGestionarPlantilla;
-        private System.Windows.Forms.ToolStripMenuItem tsp2PlantillaCiclo;
-        private System.Windows.Forms.ToolStripMenuItem tsp2PlantillaSemana;
-        private System.Windows.Forms.ToolStripMenuItem tsp2PlantillaDias;
         private System.Windows.Forms.ToolStripMenuItem tspInformes;
         private System.Windows.Forms.MenuStrip msMenu;
     }

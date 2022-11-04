@@ -52,6 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Encrypter.cs" />
+    <Compile Include="MusculosManager.cs" />
+    <Compile Include="RolesManager.cs" />
+    <Compile Include="PermisoManager.cs" />
     <Compile Include="PersonaManager.cs" />
     <Compile Include="UsuarioManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

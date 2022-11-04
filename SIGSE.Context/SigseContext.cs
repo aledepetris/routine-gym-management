@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Data.SqlTypes;
+using System.Linq;
 using SIGSE.Entities;
 using SIGSE.Entities.Auditoria;
 
@@ -16,7 +18,38 @@ namespace SIGSE.Context
                 instancia = new SigseContext();
             return instancia;
         }
-        public SigseContext() : base("name=SigseContext")
+
+        public override int SaveChanges()
+        {
+            UpdateDates();
+            return base.SaveChanges();
+        }
+
+        private void UpdateDates()
+        {
+            foreach (var change in ChangeTracker.Entries().Where(x => (x.State == EntityState.Added || x.State == EntityState.Modified)))
+            {
+                var values = change.CurrentValues;
+                foreach (var name in values.PropertyNames)
+                {
+                    var value = values[name];
+                    if (value is DateTime)
+                    {
+                        var date = (DateTime)value;
+                        if (date < SqlDateTime.MinValue.Value)
+                        {
+                            values[name] = SqlDateTime.MinValue.Value;
+                        }
+                        else if (date > SqlDateTime.MaxValue.Value)
+                        {
+                            values[name] = SqlDateTime.MaxValue.Value;
+                        }
+                    }
+                }
+            }
+        }
+    
+    public SigseContext() : base("name=SigseContext")
         {
         }
         public virtual DbSet<Persona> personas { get; set; }
@@ -40,12 +73,18 @@ namespace SIGSE.Context
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Persona>()
-                .HasKey(p => p.idPersona);
+                .HasKey(p => p.idPersona)
+                .Property(f => f.fechaNacimiento)
+                .HasColumnType("datetime2")
+                .HasPrecision(0);
 
             modelBuilder.Entity<Usuario>()
                 .HasKey(u => u.idUsuario)
                 .HasMany(u => u.roles)
                 .WithMany();
+
+            modelBuilder.Entity<Usuario>()
+                .HasRequired(u => u.persona);
 
             modelBuilder.Entity<Rol>()
                 .HasKey(r => r.idRol)
