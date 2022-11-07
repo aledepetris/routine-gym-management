@@ -10,11 +10,11 @@ namespace SIGSE.Entities
     {
         #region Propiedades
         public int idEjercicio { get; set; }
-        public bool tiempo { get; set; } // Si la cantidad de Repeticiones son por cantidad o segundos.
         public string nombre { get; set; }
-        public List<Musculo> musculos { get; set; }
-        public bool total { get; set; } // Si el ejercicio se hace en total o para cada extremidad
+        public bool total { get; set; } // Si el ejercicio se hace en total o para cada lado/extremidad
+        public bool tiempo { get; set; } // Si la cantidad de Repeticiones son por cantidad o segundos.
         public List<TipoEjercicio> tipos_ejercicios { get; set; }
+        public List<Musculo> musculos { get; set; }
         #endregion
 
 

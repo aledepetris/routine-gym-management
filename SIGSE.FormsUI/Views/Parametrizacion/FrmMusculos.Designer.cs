@@ -29,38 +29,39 @@ namespace SIGSE.FormsUI.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.lblListaMusculos = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mpFooter = new MetroFramework.Controls.MetroPanel();
             this.lblFooter = new MetroFramework.Controls.MetroLabel();
             this.gbFrmMusculos = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.btnCancelar = new MetroFramework.Controls.MetroButton();
+            this.lblIdMusculo = new MetroFramework.Controls.MetroLabel();
             this.btnGuardar = new MetroFramework.Controls.MetroButton();
-            this.txtMusculos = new MetroFramework.Controls.MetroTextBox();
+            this.txtIdMusculos = new MetroFramework.Controls.MetroTextBox();
             this.txtNombre = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.lvMusculos = new System.Windows.Forms.ListView();
-            this.IdRol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblNombre = new MetroFramework.Controls.MetroLabel();
             this.btnModificar = new MetroFramework.Controls.MetroButton();
             this.btnEliminar = new MetroFramework.Controls.MetroButton();
             this.btnAgregar = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.gridMusculos = new System.Windows.Forms.ListView();
+            this.IdRol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mpFooter.SuspendLayout();
             this.gbFrmMusculos.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // metroLabel3
+            // lblListaMusculos
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(23, 78);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(110, 19);
-            this.metroLabel3.TabIndex = 58;
-            this.metroLabel3.Text = "Lista de Músculos";
+            this.lblListaMusculos.AutoSize = true;
+            this.lblListaMusculos.Location = new System.Drawing.Point(23, 78);
+            this.lblListaMusculos.Name = "lblListaMusculos";
+            this.lblListaMusculos.Size = new System.Drawing.Size(110, 19);
+            this.lblListaMusculos.TabIndex = 58;
+            this.lblListaMusculos.Text = "Lista de Músculos";
             // 
             // pictureBox1
             // 
@@ -109,38 +110,51 @@ namespace SIGSE.FormsUI.Views
             // 
             // gbFrmMusculos
             // 
-            this.gbFrmMusculos.Controls.Add(this.metroLabel1);
+            this.gbFrmMusculos.Controls.Add(this.btnCancelar);
+            this.gbFrmMusculos.Controls.Add(this.lblIdMusculo);
             this.gbFrmMusculos.Controls.Add(this.btnGuardar);
-            this.gbFrmMusculos.Controls.Add(this.txtMusculos);
+            this.gbFrmMusculos.Controls.Add(this.txtIdMusculos);
             this.gbFrmMusculos.Controls.Add(this.txtNombre);
-            this.gbFrmMusculos.Controls.Add(this.metroLabel2);
+            this.gbFrmMusculos.Controls.Add(this.lblNombre);
             this.gbFrmMusculos.HorizontalScrollbarBarColor = true;
             this.gbFrmMusculos.HorizontalScrollbarHighlightOnWheel = false;
             this.gbFrmMusculos.HorizontalScrollbarSize = 10;
             this.gbFrmMusculos.Location = new System.Drawing.Point(305, 99);
             this.gbFrmMusculos.Name = "gbFrmMusculos";
-            this.gbFrmMusculos.Size = new System.Drawing.Size(225, 171);
+            this.gbFrmMusculos.Size = new System.Drawing.Size(225, 204);
             this.gbFrmMusculos.TabIndex = 55;
             this.gbFrmMusculos.VerticalScrollbarBarColor = true;
             this.gbFrmMusculos.VerticalScrollbarHighlightOnWheel = false;
             this.gbFrmMusculos.VerticalScrollbarSize = 10;
+            this.gbFrmMusculos.Visible = false;
             // 
-            // metroLabel1
+            // btnCancelar
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(6, 0);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(76, 19);
-            this.metroLabel1.TabIndex = 36;
-            this.metroLabel1.Text = "ID Músculo:";
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.Location = new System.Drawing.Point(8, 135);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(214, 23);
+            this.btnCancelar.TabIndex = 69;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseSelectable = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // lblIdMusculo
+            // 
+            this.lblIdMusculo.AutoSize = true;
+            this.lblIdMusculo.Location = new System.Drawing.Point(6, -5);
+            this.lblIdMusculo.Name = "lblIdMusculo";
+            this.lblIdMusculo.Size = new System.Drawing.Size(76, 19);
+            this.lblIdMusculo.TabIndex = 36;
+            this.lblIdMusculo.Text = "ID Músculo:";
             // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
             this.btnGuardar.DisplayFocus = true;
-            this.btnGuardar.Location = new System.Drawing.Point(6, 122);
+            this.btnGuardar.Location = new System.Drawing.Point(6, 106);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(214, 36);
+            this.btnGuardar.Size = new System.Drawing.Size(214, 23);
             this.btnGuardar.Style = MetroFramework.MetroColorStyle.White;
             this.btnGuardar.TabIndex = 42;
             this.btnGuardar.Text = "Guardar";
@@ -149,35 +163,36 @@ namespace SIGSE.FormsUI.Views
             this.btnGuardar.UseStyleColors = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtMusculos
+            // txtIdMusculos
             // 
             // 
             // 
             // 
-            this.txtMusculos.CustomButton.Image = null;
-            this.txtMusculos.CustomButton.Location = new System.Drawing.Point(186, 1);
-            this.txtMusculos.CustomButton.Name = "";
-            this.txtMusculos.CustomButton.Size = new System.Drawing.Size(27, 27);
-            this.txtMusculos.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtMusculos.CustomButton.TabIndex = 1;
-            this.txtMusculos.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtMusculos.CustomButton.UseSelectable = true;
-            this.txtMusculos.CustomButton.Visible = false;
-            this.txtMusculos.Lines = new string[0];
-            this.txtMusculos.Location = new System.Drawing.Point(6, 22);
-            this.txtMusculos.MaxLength = 32767;
-            this.txtMusculos.Name = "txtMusculos";
-            this.txtMusculos.PasswordChar = '\0';
-            this.txtMusculos.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtMusculos.SelectedText = "";
-            this.txtMusculos.SelectionLength = 0;
-            this.txtMusculos.SelectionStart = 0;
-            this.txtMusculos.ShortcutsEnabled = true;
-            this.txtMusculos.Size = new System.Drawing.Size(214, 29);
-            this.txtMusculos.TabIndex = 34;
-            this.txtMusculos.UseSelectable = true;
-            this.txtMusculos.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtMusculos.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtIdMusculos.CustomButton.Image = null;
+            this.txtIdMusculos.CustomButton.Location = new System.Drawing.Point(186, 1);
+            this.txtIdMusculos.CustomButton.Name = "";
+            this.txtIdMusculos.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtIdMusculos.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtIdMusculos.CustomButton.TabIndex = 1;
+            this.txtIdMusculos.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtIdMusculos.CustomButton.UseSelectable = true;
+            this.txtIdMusculos.CustomButton.Visible = false;
+            this.txtIdMusculos.Enabled = false;
+            this.txtIdMusculos.Lines = new string[0];
+            this.txtIdMusculos.Location = new System.Drawing.Point(6, 17);
+            this.txtIdMusculos.MaxLength = 32767;
+            this.txtIdMusculos.Name = "txtIdMusculos";
+            this.txtIdMusculos.PasswordChar = '\0';
+            this.txtIdMusculos.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtIdMusculos.SelectedText = "";
+            this.txtIdMusculos.SelectionLength = 0;
+            this.txtIdMusculos.SelectionStart = 0;
+            this.txtIdMusculos.ShortcutsEnabled = true;
+            this.txtIdMusculos.Size = new System.Drawing.Size(214, 29);
+            this.txtIdMusculos.TabIndex = 34;
+            this.txtIdMusculos.UseSelectable = true;
+            this.txtIdMusculos.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtIdMusculos.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txtNombre
             // 
@@ -194,7 +209,7 @@ namespace SIGSE.FormsUI.Views
             this.txtNombre.CustomButton.UseSelectable = true;
             this.txtNombre.CustomButton.Visible = false;
             this.txtNombre.Lines = new string[0];
-            this.txtNombre.Location = new System.Drawing.Point(6, 76);
+            this.txtNombre.Location = new System.Drawing.Point(6, 71);
             this.txtNombre.MaxLength = 32767;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
@@ -209,42 +224,14 @@ namespace SIGSE.FormsUI.Views
             this.txtNombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNombre.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroLabel2
+            // lblNombre
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(6, 54);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(62, 19);
-            this.metroLabel2.TabIndex = 37;
-            this.metroLabel2.Text = "Nombre:";
-            // 
-            // lvMusculos
-            // 
-            this.lvMusculos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvMusculos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.IdRol,
-            this.Nombre});
-            this.lvMusculos.FullRowSelect = true;
-            this.lvMusculos.GridLines = true;
-            this.lvMusculos.HideSelection = false;
-            this.lvMusculos.Location = new System.Drawing.Point(23, 99);
-            this.lvMusculos.MultiSelect = false;
-            this.lvMusculos.Name = "lvMusculos";
-            this.lvMusculos.Size = new System.Drawing.Size(276, 158);
-            this.lvMusculos.TabIndex = 54;
-            this.lvMusculos.UseCompatibleStateImageBehavior = false;
-            this.lvMusculos.View = System.Windows.Forms.View.Details;
-            // 
-            // IdRol
-            // 
-            this.IdRol.Text = "#";
-            this.IdRol.Width = 31;
-            // 
-            // Nombre
-            // 
-            this.Nombre.Text = "Nombre";
-            this.Nombre.Width = 239;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(6, 49);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(62, 19);
+            this.lblNombre.TabIndex = 37;
+            this.lblNombre.Text = "Nombre:";
             // 
             // btnModificar
             // 
@@ -315,24 +302,53 @@ namespace SIGSE.FormsUI.Views
             this.metroLabel4.UseCustomBackColor = true;
             this.metroLabel4.UseCustomForeColor = true;
             // 
+            // gridMusculos
+            // 
+            this.gridMusculos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridMusculos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.IdRol,
+            this.Nombre});
+            this.gridMusculos.FullRowSelect = true;
+            this.gridMusculos.GridLines = true;
+            this.gridMusculos.HideSelection = false;
+            this.gridMusculos.Location = new System.Drawing.Point(23, 99);
+            this.gridMusculos.MultiSelect = false;
+            this.gridMusculos.Name = "gridMusculos";
+            this.gridMusculos.Size = new System.Drawing.Size(276, 158);
+            this.gridMusculos.TabIndex = 69;
+            this.gridMusculos.UseCompatibleStateImageBehavior = false;
+            this.gridMusculos.View = System.Windows.Forms.View.Details;
+            // 
+            // IdRol
+            // 
+            this.IdRol.Text = "#";
+            this.IdRol.Width = 35;
+            // 
+            // Nombre
+            // 
+            this.Nombre.Text = "Nombre";
+            this.Nombre.Width = 232;
+            // 
             // FrmMusculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(539, 335);
+            this.Controls.Add(this.gridMusculos);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.lblListaMusculos);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.mpFooter);
             this.Controls.Add(this.gbFrmMusculos);
-            this.Controls.Add(this.lvMusculos);
             this.MaximizeBox = false;
             this.Name = "FrmMusculos";
             this.Resizable = false;
             this.Text = "Gestionar Músculos";
+            this.Activated += new System.EventHandler(this.FrmMusculos_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mpFooter.ResumeLayout(false);
             this.mpFooter.PerformLayout();
@@ -347,23 +363,24 @@ namespace SIGSE.FormsUI.Views
 
         #endregion
 
-        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel lblListaMusculos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroPanel mpFooter;
         private MetroFramework.Controls.MetroLabel lblFooter;
         private MetroFramework.Controls.MetroPanel gbFrmMusculos;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lblIdMusculo;
         private MetroFramework.Controls.MetroButton btnGuardar;
-        private MetroFramework.Controls.MetroTextBox txtMusculos;
+        private MetroFramework.Controls.MetroTextBox txtIdMusculos;
         private MetroFramework.Controls.MetroTextBox txtNombre;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private System.Windows.Forms.ListView lvMusculos;
-        private System.Windows.Forms.ColumnHeader IdRol;
-        private System.Windows.Forms.ColumnHeader Nombre;
+        private MetroFramework.Controls.MetroLabel lblNombre;
         private MetroFramework.Controls.MetroButton btnModificar;
         private MetroFramework.Controls.MetroButton btnEliminar;
         private MetroFramework.Controls.MetroButton btnAgregar;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroButton btnCancelar;
+        private System.Windows.Forms.ListView gridMusculos;
+        private System.Windows.Forms.ColumnHeader IdRol;
+        private System.Windows.Forms.ColumnHeader Nombre;
     }
 }

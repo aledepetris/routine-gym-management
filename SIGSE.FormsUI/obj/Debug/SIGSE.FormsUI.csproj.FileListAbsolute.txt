@@ -99,3 +99,4 @@ C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.Fo
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmRoles.resources
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmUsuario.resources
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmUsuarios.resources
+C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmEjercicio.resources

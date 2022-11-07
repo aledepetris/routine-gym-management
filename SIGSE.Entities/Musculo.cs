@@ -12,6 +12,8 @@ namespace SIGSE.Entities
         public string nombre { get; set; }
 
 
+        public Musculo() { }
+
         public Musculo(string nombre)
         {
             this.nombre = nombre;

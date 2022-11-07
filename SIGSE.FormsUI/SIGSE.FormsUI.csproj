@@ -134,6 +134,12 @@
     <Compile Include="Views\Administrar\FrmPersona.Designer.cs">
       <DependentUpon>FrmPersona.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Parametrizacion\FrmEjercicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Parametrizacion\FrmEjercicio.Designer.cs">
+      <DependentUpon>FrmEjercicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Perfil\FrmCambiarPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Administrar\FrmPersona.resx">
       <DependentUpon>FrmPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Parametrizacion\FrmEjercicio.resx">
+      <DependentUpon>FrmEjercicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Perfil\FrmCambiarPassword.resx">
       <DependentUpon>FrmCambiarPassword.cs</DependentUpon>

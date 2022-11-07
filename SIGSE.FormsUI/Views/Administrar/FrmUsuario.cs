@@ -78,8 +78,12 @@ namespace SIGSE.FormsUI.Views
                 { 
                     rolesSinAsignar.RemoveAll(r => r.nombre == rolesAsignados[0].nombre);
 
-                    foreach (Rol rol in rolesAsignados)
+                    foreach (Rol rol in rolesAsignados) 
+                    {
+                        rolesSinAsignar.Remove(rol);
                         lvAsignado.Items.Add(rol.nombre);
+                    }
+                    
                 }
 
             }

@@ -51,6 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EjercicioControllers .cs" />
+    <Compile Include="TiposEntrenamientoControllers.cs" />
+    <Compile Include="TiposEjercicioControllers.cs" />
+    <Compile Include="ObjetivosControllers.cs" />
     <Compile Include="MusculosControllers.cs" />
     <Compile Include="RolesController.cs" />
     <Compile Include="UsuariosController.cs" />

@@ -11,21 +11,21 @@ using SIGSE.SessionManager;
 
 namespace SIGSE.Controller
 {
-    public class MuculosController
+    public class MusculosController
     {
 
-        private static MuculosController instancia;
-        public static MuculosController obtenerInstancia()
+        private static MusculosController instancia;
+        public static MusculosController obtenerInstancia()
         {
             if (instancia == null)
-                instancia = new MuculosController();
+                instancia = new MusculosController();
             return instancia;
         }
 
         SigseContext context;
         Sesion sesion;
 
-        private MuculosController()
+        private MusculosController()
         {
             context = SigseContext.obtenerInstancia();
             sesion = Sesion.obtenerSesion();
@@ -36,7 +36,7 @@ namespace SIGSE.Controller
             return sesion.currentUser;
         }
 
-        public List<Musculo> obtene()
+        public List<Musculo> obtenerListaMusculos()
         {
             return MusculoManager.obtenerMusculos(context);
         }
