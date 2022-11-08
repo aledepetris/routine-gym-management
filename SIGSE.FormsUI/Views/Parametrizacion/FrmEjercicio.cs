@@ -15,64 +15,155 @@ namespace SIGSE.FormsUI.Views
 {
     public partial class FrmEjercicio : MetroFramework.Forms.MetroForm
     {
-        private Usuario globalUser;
         private Usuario currentUser;
-        private UsuariosController cUsuarios;
-        String ACCION;
+        private EjerciciosController cEjercicio;
+        string ACCION;
 
         public FrmEjercicio()
         {
-            InitializeComponent();
+            inicializarForm();
+            ACCION = "A";
+            txtIdEjercicio.Text = "#";
+            cargarListViews();
+
         }
 
         public FrmEjercicio(Ejercicio ejercicio)
         {
-            cargarDatosFormulario();
-            cargarComboPersonas();
+            inicializarForm();
             ACCION = "M";
 
-            InitializeComponent();
+            txtIdEjercicio.Text = ejercicio.idEjercicio.ToString();
+            txtNombre.Text = ejercicio.nombre;
+
+            if (ejercicio.total)
+                cbxModo.SelectedIndex = 0;
+            else
+                cbxModo.SelectedIndex = 1;
+
+            if (ejercicio.total)
+                cbxForma.SelectedIndex = 0;
+            else
+                cbxForma.SelectedIndex = 1;
+
+            cargarListViewsAsignaciones(ejercicio);
+
         }
 
-        public void cargarLisViewsAsignacionesDeUsuario(Usuario user)
+        private void inicializarForm()
         {
-            List<Rol> rolesSinAsignar = cUsuarios.obtenerListaRoles();
+            cEjercicio = EjerciciosController.obtenerInstancia();
+            currentUser = cEjercicio.obtenerSesionUsuario();
+            InitializeComponent();
+            
+        }
 
-            List<Rol> rolesAsignados = (List<Rol>) user.roles;
+        private void btnAsignarMusculo_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection lista = lvMusculoSinAsignar.SelectedItems;
+            foreach (ListViewItem item in lista)
+            {
+                lvMusculoSinAsignar.Items.Remove(item);
+                lvMusculoAsignado.Items.Add(item);
+            }
+        }
 
-            if (rolesAsignados != null)
-            { 
-                if (rolesAsignados.Count > 0)
-                { 
-                    rolesSinAsignar.RemoveAll(r => r.nombre == rolesAsignados[0].nombre);
+        private void btnDesasignarMusculo_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection lista = lvMusculoAsignado.SelectedItems;
+            foreach (ListViewItem item in lista)
+            {
+                lvMusculoAsignado.Items.Remove(item);
+                lvMusculoSinAsignar.Items.Add(item);
+            }
+        }
 
-                    foreach (Rol rol in rolesAsignados)
-                        lvAsignado.Items.Add(rol.nombre);
-                }
+        private void btnAsignarTipoEnt_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection lista = lvTipoEjercicioSinAsignar.SelectedItems;
+            foreach (ListViewItem item in lista)
+            {
+                lvTipoEjercicioSinAsignar.Items.Remove(item);
+                lvTipoEjercicioAsignado.Items.Add(item);
+            }
+        }
 
+        private void btnDesasignarTipoEnt_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection lista = lvTipoEjercicioAsignado.SelectedItems;
+            foreach (ListViewItem item in lista)
+            {
+                lvTipoEjercicioAsignado.Items.Remove(item);
+                lvTipoEjercicioSinAsignar.Items.Add(item);
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Ejercicio ejercicio;
+
+            #region Validaciones
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                MetroMessageBox.Show(this, "Complete el campo Nombre", "ERROR!",
+                    System.Windows.Forms.MessageBoxButtons.OK,
+                    System.Windows.Forms.MessageBoxIcon.Error,
+                    100);
+                return;
+            }
+            #endregion
+
+            if (ACCION == "A")
+            {
+                ejercicio = new Ejercicio();
+            }
+            else
+            {
+                ejercicio = cEjercicio.obtenerEjercicioPorId(int.Parse(txtIdEjercicio.Text));
             }
 
-            foreach (Rol rol in rolesSinAsignar)
-                lvSinAsignar.Items.Add(rol.nombre);
+            ejercicio.nombre = txtNombre.Text;
 
-        }
+            if (cbxForma.SelectedIndex == 0)
+                ejercicio.total = true;
+            else
+                ejercicio.total = false;
 
-        public void cargarDatosFormulario()
-        {
-            InitializeComponent();
-            cUsuarios = UsuariosController.obtenerInstancia();
-            currentUser = cUsuarios.obtenerSesionUsuario();
-            cargarComboPersonas();
-        }
+            if (cbxModo.SelectedIndex == 0)
+                ejercicio.tiempo = true;
+            else
+                ejercicio.tiempo = false;
 
-        public void cargarComboPersonas()
-        {
+            List<Musculo> musculosAsignados = new List<Musculo>();
+            List<TipoEjercicio> tipoEjercAsignados = new List<TipoEjercicio>();
 
-        }
+            foreach (Musculo musculo in musculosAsignados)
+                lvMusculoSinAsignar.Items.Add(musculo.nombre);
 
-        private void btnAgregarPersona_Click(object sender, EventArgs e)
-        {
-            Utilities.Navegar.OpenNewTab(new FrmPersona());
+            foreach (TipoEjercicio tipoEjer in tipoEjercAsignados)
+                lvTipoEjercicioSinAsignar.Items.Add(tipoEjer.nombre);
+
+            foreach (ListViewItem item in lvMusculoAsignado.Items)
+            {
+                musculosAsignados.Add(cEjercicio.obtenerMusculoPorNombre(item.Text));
+            }
+
+            foreach (ListViewItem item in lvTipoEjercicioAsignado.Items)
+            {
+                tipoEjercAsignados.Add(cEjercicio.obtenerTipoEjercicioPorNombre(item.Text));
+            }
+
+            ejercicio.musculos = musculosAsignados;
+            ejercicio.tipos_ejercicios = tipoEjercAsignados;
+
+            cEjercicio.guardarEjercicio(ejercicio);
+
+            MetroMessageBox.Show(this, "Ejercicio creado correctamente", "EXITO!",
+                System.Windows.Forms.MessageBoxButtons.OK,
+                System.Windows.Forms.MessageBoxIcon.Information,
+                100);
+
+            this.Close();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -80,38 +171,67 @@ namespace SIGSE.FormsUI.Views
             this.Close();
         }
 
-        private void btnAsignar_Click(object sender, EventArgs e)
+        public void cargarListViews()
         {
-            ListView.SelectedListViewItemCollection lista = lvSinAsignar.SelectedItems;
-            
-            foreach (ListViewItem item in lista)
-            {
-                lvSinAsignar.Items.Remove(item);
-                lvAsignado.Items.Add(item);                
-            }        
+            lvMusculoSinAsignar.Items.Clear();
+            lvMusculoAsignado.Items.Clear();
+            lvTipoEjercicioSinAsignar.Items.Clear();
+            lvTipoEjercicioAsignado.Items.Clear();
+
+            List<Musculo> musculoSinAsignar = cEjercicio.obtenerListaMusculos();
+            List<TipoEjercicio> tipoEjercSinAsignar = cEjercicio.obtenerListaTipoEjercicios();
+
+            foreach (Musculo musculo in musculoSinAsignar)
+                lvMusculoSinAsignar.Items.Add(musculo.nombre);
+
+            foreach (TipoEjercicio tipoEjer in tipoEjercSinAsignar)
+                lvTipoEjercicioSinAsignar.Items.Add(tipoEjer.nombre);
+
         }
 
-        private void btnDesasignar_Click(object sender, EventArgs e)
+        public void cargarListViewsAsignaciones(Ejercicio ejercicio)
         {
-            ListView.SelectedListViewItemCollection lista = lvAsignado.SelectedItems;
+            lvMusculoSinAsignar.Items.Clear();
+            lvMusculoAsignado.Items.Clear();
+            lvTipoEjercicioSinAsignar.Items.Clear();
+            lvTipoEjercicioAsignado.Items.Clear();
 
-            foreach (ListViewItem item in lista)
+            // Musculos
+            List<Musculo> musculoSinAsignar = cEjercicio.obtenerListaMusculos();
+            List<Musculo> musculosAsignados = ejercicio.musculos;
+            if (musculosAsignados != null)
             {
-                lvAsignado.Items.Remove(item);
-                lvSinAsignar.Items.Add(item);
+                if (musculosAsignados.Count > 0)
+                {
+                    foreach (Musculo musculo in musculosAsignados)
+                    {
+                        musculoSinAsignar.Remove(musculo);
+                        lvMusculoAsignado.Items.Add(musculo.nombre);
+                    }
+                }
             }
+            foreach (Musculo musculo in musculoSinAsignar)
+                lvMusculoSinAsignar.Items.Add(musculo.nombre);
+
+            // Tipo Ejercicios
+            List<TipoEjercicio> tiposEjSinAsignar = cEjercicio.obtenerListaTipoEjercicios();
+            List<TipoEjercicio> tiposEjAsignados = ejercicio.tipos_ejercicios;
+            if (tiposEjAsignados != null)
+            {
+                if (tiposEjAsignados.Count > 0)
+                {
+                    foreach (TipoEjercicio tipoEjercicio in tiposEjAsignados)
+                    {
+                        tiposEjSinAsignar.Remove(tipoEjercicio);
+                        lvTipoEjercicioAsignado.Items.Add(tipoEjercicio.nombre);
+                    }
+                }
+
+            }
+
+            foreach (TipoEjercicio tipoEjercicio in tiposEjSinAsignar)
+                lvTipoEjercicioSinAsignar.Items.Add(tipoEjercicio.nombre);
+
         }
-
-        private void cbxPersonas_Click(object sender, EventArgs e)
-        {
-            cargarComboPersonas();
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
     }
 }

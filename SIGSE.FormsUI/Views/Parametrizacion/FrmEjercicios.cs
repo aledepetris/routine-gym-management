@@ -23,10 +23,6 @@ namespace SIGSE.FormsUI.Views
             cEjercicios = EjerciciosController.obtenerInstancia();
             currentUser = cEjercicios.obtenerSesionUsuario();
             InitializeComponent();
-        }
-
-        private void FrmUsuarios_Activated(object sender, EventArgs e)
-        {
             cargarLista();
         }
 
@@ -86,6 +82,11 @@ namespace SIGSE.FormsUI.Views
         {
             int id = int.Parse(gridEjercicios.SelectedItems[0].Text);
             return cEjercicios.obtenerEjercicioPorId(id);
+        }
+
+        private void FrmEjercicios_Activated(object sender, EventArgs e)
+        {
+            cargarLista();
         }
     }
 }

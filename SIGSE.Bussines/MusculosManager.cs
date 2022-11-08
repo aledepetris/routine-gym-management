@@ -19,6 +19,12 @@ namespace SIGSE.Bussines
             return sigseContext.musculos.SingleOrDefault(p => p.idMusculo == id);
         }
 
+        public static Entities.Musculo obtenerMusculoPorNombre(Context.SigseContext sigseContext, string nombre)
+        {
+            return sigseContext.musculos.SingleOrDefault(p => p.nombre == nombre);
+        }
+        
+
         public static void agregarMusculos(Context.SigseContext sigseContext, Entities.Musculo musculo)
         {
             sigseContext.musculos.Add(musculo);

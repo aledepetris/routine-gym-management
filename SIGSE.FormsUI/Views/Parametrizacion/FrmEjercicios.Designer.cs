@@ -48,7 +48,7 @@ namespace SIGSE.FormsUI.Views
             this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
             this.btnEliminar.DisplayFocus = true;
-            this.btnEliminar.Location = new System.Drawing.Point(472, 78);
+            this.btnEliminar.Location = new System.Drawing.Point(465, 78);
             this.btnEliminar.MaximumSize = new System.Drawing.Size(300, 35);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(130, 24);
@@ -65,7 +65,7 @@ namespace SIGSE.FormsUI.Views
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
             this.btnModificar.DisplayFocus = true;
-            this.btnModificar.Location = new System.Drawing.Point(336, 78);
+            this.btnModificar.Location = new System.Drawing.Point(329, 78);
             this.btnModificar.MaximumSize = new System.Drawing.Size(300, 35);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(130, 24);
@@ -75,14 +75,14 @@ namespace SIGSE.FormsUI.Views
             this.btnModificar.UseCustomBackColor = true;
             this.btnModificar.UseSelectable = true;
             this.btnModificar.UseStyleColors = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
             this.btnAgregar.DisplayFocus = true;
-            this.btnAgregar.Location = new System.Drawing.Point(200, 78);
+            this.btnAgregar.Location = new System.Drawing.Point(193, 78);
             this.btnAgregar.MaximumSize = new System.Drawing.Size(300, 35);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(130, 24);
@@ -109,7 +109,7 @@ namespace SIGSE.FormsUI.Views
             this.tbxHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tbxHome.FontSize = MetroFramework.MetroLinkSize.Tall;
             this.tbxHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
-            this.tbxHome.Location = new System.Drawing.Point(29, 76);
+            this.tbxHome.Location = new System.Drawing.Point(22, 78);
             this.tbxHome.Name = "tbxHome";
             this.tbxHome.Size = new System.Drawing.Size(264, 24);
             this.tbxHome.TabIndex = 65;
@@ -129,7 +129,7 @@ namespace SIGSE.FormsUI.Views
             this.gridEjercicios.FullRowSelect = true;
             this.gridEjercicios.GridLines = true;
             this.gridEjercicios.HideSelection = false;
-            this.gridEjercicios.Location = new System.Drawing.Point(29, 108);
+            this.gridEjercicios.Location = new System.Drawing.Point(22, 108);
             this.gridEjercicios.MultiSelect = false;
             this.gridEjercicios.Name = "gridEjercicios";
             this.gridEjercicios.Size = new System.Drawing.Size(573, 341);
@@ -199,6 +199,7 @@ namespace SIGSE.FormsUI.Views
             this.Name = "FrmEjercicios";
             this.Resizable = false;
             this.Text = "Gestionar Ejercicios";
+            this.Activated += new System.EventHandler(this.FrmEjercicios_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mpFooter.ResumeLayout(false);
             this.mpFooter.PerformLayout();

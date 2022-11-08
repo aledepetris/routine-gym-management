@@ -35,4 +35,4 @@ C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Co
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.csproj.CopyComplete
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.dll
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.pdb
-C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.Migrations.inicial0001.resources
+C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.Migrations.inicial.resources

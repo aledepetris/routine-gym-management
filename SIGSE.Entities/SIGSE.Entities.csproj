@@ -54,6 +54,7 @@
     <Compile Include="Auditoria\AuditoriaLogin.cs" />
     <Compile Include="Ciclo.cs" />
     <Compile Include="Medida.cs" />
+    <Compile Include="PlantillaDia.cs" />
     <Compile Include="TipoEntrenamiento.cs" />
     <Compile Include="TipoEjercicio.cs" />
     <Compile Include="Semana.cs" />

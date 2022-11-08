@@ -31,30 +31,30 @@ namespace SIGSE.FormsUI.Views
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.btnDesasignarTipoEnt = new MetroFramework.Controls.MetroButton();
+            this.btnAsignarTipoEnt = new MetroFramework.Controls.MetroButton();
+            this.lvTipoEjercicioAsignado = new System.Windows.Forms.ListView();
+            this.lvTipoEjercicioSinAsignar = new System.Windows.Forms.ListView();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.cbxModo = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.btnSalir = new MetroFramework.Controls.MetroButton();
-            this.btnDesasignar = new MetroFramework.Controls.MetroButton();
-            this.btnAsignar = new MetroFramework.Controls.MetroButton();
-            this.lvAsignado = new System.Windows.Forms.ListView();
+            this.btnDesasignarMusculo = new MetroFramework.Controls.MetroButton();
+            this.btnAsignarMusculo = new MetroFramework.Controls.MetroButton();
+            this.lvMusculoAsignado = new System.Windows.Forms.ListView();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.lvSinAsignar = new System.Windows.Forms.ListView();
+            this.lvMusculoSinAsignar = new System.Windows.Forms.ListView();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.cbxActivo = new MetroFramework.Controls.MetroComboBox();
+            this.cbxForma = new MetroFramework.Controls.MetroComboBox();
             this.txtNombre = new MetroFramework.Controls.MetroTextBox();
             this.btnGuardar = new MetroFramework.Controls.MetroButton();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtIdEjercicio = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.mpFooter = new MetroFramework.Controls.MetroPanel();
             this.lblFooter = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,22 +76,22 @@ namespace SIGSE.FormsUI.Views
             this.groupBox1.Controls.Add(this.metroLabel10);
             this.groupBox1.Controls.Add(this.metroLabel5);
             this.groupBox1.Controls.Add(this.metroLabel9);
-            this.groupBox1.Controls.Add(this.metroButton1);
-            this.groupBox1.Controls.Add(this.metroButton2);
-            this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Controls.Add(this.listView2);
+            this.groupBox1.Controls.Add(this.btnDesasignarTipoEnt);
+            this.groupBox1.Controls.Add(this.btnAsignarTipoEnt);
+            this.groupBox1.Controls.Add(this.lvTipoEjercicioAsignado);
+            this.groupBox1.Controls.Add(this.lvTipoEjercicioSinAsignar);
             this.groupBox1.Controls.Add(this.metroLabel3);
-            this.groupBox1.Controls.Add(this.metroComboBox1);
+            this.groupBox1.Controls.Add(this.cbxModo);
             this.groupBox1.Controls.Add(this.metroLabel8);
             this.groupBox1.Controls.Add(this.metroLabel7);
             this.groupBox1.Controls.Add(this.btnSalir);
-            this.groupBox1.Controls.Add(this.btnDesasignar);
-            this.groupBox1.Controls.Add(this.btnAsignar);
-            this.groupBox1.Controls.Add(this.lvAsignado);
+            this.groupBox1.Controls.Add(this.btnDesasignarMusculo);
+            this.groupBox1.Controls.Add(this.btnAsignarMusculo);
+            this.groupBox1.Controls.Add(this.lvMusculoAsignado);
             this.groupBox1.Controls.Add(this.metroLabel4);
-            this.groupBox1.Controls.Add(this.lvSinAsignar);
+            this.groupBox1.Controls.Add(this.lvMusculoSinAsignar);
             this.groupBox1.Controls.Add(this.metroLabel2);
-            this.groupBox1.Controls.Add(this.cbxActivo);
+            this.groupBox1.Controls.Add(this.cbxForma);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.metroLabel6);
@@ -102,6 +102,100 @@ namespace SIGSE.FormsUI.Views
             this.groupBox1.Size = new System.Drawing.Size(682, 454);
             this.groupBox1.TabIndex = 61;
             this.groupBox1.TabStop = false;
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel10.Location = new System.Drawing.Point(353, 145);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(93, 19);
+            this.metroLabel10.TabIndex = 37;
+            this.metroLabel10.Text = "Tipos Ejercicio";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(547, 164);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(69, 19);
+            this.metroLabel5.TabIndex = 36;
+            this.metroLabel5.Text = "Asignados";
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(353, 164);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(74, 19);
+            this.metroLabel9.TabIndex = 35;
+            this.metroLabel9.Text = "Sin Asignar";
+            // 
+            // btnDesasignarTipoEnt
+            // 
+            this.btnDesasignarTipoEnt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
+            this.btnDesasignarTipoEnt.ForeColor = System.Drawing.Color.White;
+            this.btnDesasignarTipoEnt.Location = new System.Drawing.Point(487, 268);
+            this.btnDesasignarTipoEnt.Name = "btnDesasignarTipoEnt";
+            this.btnDesasignarTipoEnt.Size = new System.Drawing.Size(54, 29);
+            this.btnDesasignarTipoEnt.TabIndex = 34;
+            this.btnDesasignarTipoEnt.Text = "<";
+            this.btnDesasignarTipoEnt.UseSelectable = true;
+            this.btnDesasignarTipoEnt.Click += new System.EventHandler(this.btnDesasignarTipoEnt_Click);
+            // 
+            // btnAsignarTipoEnt
+            // 
+            this.btnAsignarTipoEnt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
+            this.btnAsignarTipoEnt.ForeColor = System.Drawing.Color.White;
+            this.btnAsignarTipoEnt.Location = new System.Drawing.Point(487, 223);
+            this.btnAsignarTipoEnt.Name = "btnAsignarTipoEnt";
+            this.btnAsignarTipoEnt.Size = new System.Drawing.Size(54, 29);
+            this.btnAsignarTipoEnt.TabIndex = 33;
+            this.btnAsignarTipoEnt.Text = ">";
+            this.btnAsignarTipoEnt.UseSelectable = true;
+            this.btnAsignarTipoEnt.Click += new System.EventHandler(this.btnAsignarTipoEnt_Click);
+            // 
+            // lvTipoEjercicioAsignado
+            // 
+            this.lvTipoEjercicioAsignado.HideSelection = false;
+            this.lvTipoEjercicioAsignado.Location = new System.Drawing.Point(547, 186);
+            this.lvTipoEjercicioAsignado.Name = "lvTipoEjercicioAsignado";
+            this.lvTipoEjercicioAsignado.Size = new System.Drawing.Size(128, 178);
+            this.lvTipoEjercicioAsignado.TabIndex = 32;
+            this.lvTipoEjercicioAsignado.UseCompatibleStateImageBehavior = false;
+            this.lvTipoEjercicioAsignado.View = System.Windows.Forms.View.List;
+            // 
+            // lvTipoEjercicioSinAsignar
+            // 
+            this.lvTipoEjercicioSinAsignar.HideSelection = false;
+            this.lvTipoEjercicioSinAsignar.Location = new System.Drawing.Point(353, 186);
+            this.lvTipoEjercicioSinAsignar.Name = "lvTipoEjercicioSinAsignar";
+            this.lvTipoEjercicioSinAsignar.Size = new System.Drawing.Size(128, 178);
+            this.lvTipoEjercicioSinAsignar.TabIndex = 31;
+            this.lvTipoEjercicioSinAsignar.UseCompatibleStateImageBehavior = false;
+            this.lvTipoEjercicioSinAsignar.View = System.Windows.Forms.View.List;
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(513, 77);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(48, 19);
+            this.metroLabel3.TabIndex = 30;
+            this.metroLabel3.Text = "Modo:";
+            // 
+            // cbxModo
+            // 
+            this.cbxModo.FormattingEnabled = true;
+            this.cbxModo.ItemHeight = 23;
+            this.cbxModo.Items.AddRange(new object[] {
+            "Por Tiempo",
+            "Por Cantidad"});
+            this.cbxModo.Location = new System.Drawing.Point(513, 99);
+            this.cbxModo.Name = "cbxModo";
+            this.cbxModo.Size = new System.Drawing.Size(162, 29);
+            this.cbxModo.TabIndex = 29;
+            this.cbxModo.UseSelectable = true;
             // 
             // metroLabel8
             // 
@@ -126,10 +220,10 @@ namespace SIGSE.FormsUI.Views
             this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSalir.BackColor = System.Drawing.Color.Silver;
             this.btnSalir.DisplayFocus = true;
-            this.btnSalir.Location = new System.Drawing.Point(271, 415);
+            this.btnSalir.Location = new System.Drawing.Point(203, 415);
             this.btnSalir.MaximumSize = new System.Drawing.Size(300, 35);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(155, 26);
+            this.btnSalir.Size = new System.Drawing.Size(278, 26);
             this.btnSalir.Style = MetroFramework.MetroColorStyle.White;
             this.btnSalir.TabIndex = 26;
             this.btnSalir.Text = "Salir";
@@ -138,39 +232,39 @@ namespace SIGSE.FormsUI.Views
             this.btnSalir.UseStyleColors = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnDesasignar
+            // btnDesasignarMusculo
             // 
-            this.btnDesasignar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
-            this.btnDesasignar.ForeColor = System.Drawing.Color.White;
-            this.btnDesasignar.Location = new System.Drawing.Point(143, 268);
-            this.btnDesasignar.Name = "btnDesasignar";
-            this.btnDesasignar.Size = new System.Drawing.Size(54, 29);
-            this.btnDesasignar.TabIndex = 25;
-            this.btnDesasignar.Text = "<";
-            this.btnDesasignar.UseSelectable = true;
-            this.btnDesasignar.Click += new System.EventHandler(this.btnDesasignar_Click);
+            this.btnDesasignarMusculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
+            this.btnDesasignarMusculo.ForeColor = System.Drawing.Color.White;
+            this.btnDesasignarMusculo.Location = new System.Drawing.Point(143, 268);
+            this.btnDesasignarMusculo.Name = "btnDesasignarMusculo";
+            this.btnDesasignarMusculo.Size = new System.Drawing.Size(54, 29);
+            this.btnDesasignarMusculo.TabIndex = 25;
+            this.btnDesasignarMusculo.Text = "<";
+            this.btnDesasignarMusculo.UseSelectable = true;
+            this.btnDesasignarMusculo.Click += new System.EventHandler(this.btnDesasignarMusculo_Click);
             // 
-            // btnAsignar
+            // btnAsignarMusculo
             // 
-            this.btnAsignar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
-            this.btnAsignar.ForeColor = System.Drawing.Color.White;
-            this.btnAsignar.Location = new System.Drawing.Point(143, 223);
-            this.btnAsignar.Name = "btnAsignar";
-            this.btnAsignar.Size = new System.Drawing.Size(54, 29);
-            this.btnAsignar.TabIndex = 24;
-            this.btnAsignar.Text = ">";
-            this.btnAsignar.UseSelectable = true;
-            this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
+            this.btnAsignarMusculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
+            this.btnAsignarMusculo.ForeColor = System.Drawing.Color.White;
+            this.btnAsignarMusculo.Location = new System.Drawing.Point(143, 223);
+            this.btnAsignarMusculo.Name = "btnAsignarMusculo";
+            this.btnAsignarMusculo.Size = new System.Drawing.Size(54, 29);
+            this.btnAsignarMusculo.TabIndex = 24;
+            this.btnAsignarMusculo.Text = ">";
+            this.btnAsignarMusculo.UseSelectable = true;
+            this.btnAsignarMusculo.Click += new System.EventHandler(this.btnAsignarMusculo_Click);
             // 
-            // lvAsignado
+            // lvMusculoAsignado
             // 
-            this.lvAsignado.HideSelection = false;
-            this.lvAsignado.Location = new System.Drawing.Point(203, 186);
-            this.lvAsignado.Name = "lvAsignado";
-            this.lvAsignado.Size = new System.Drawing.Size(128, 178);
-            this.lvAsignado.TabIndex = 23;
-            this.lvAsignado.UseCompatibleStateImageBehavior = false;
-            this.lvAsignado.View = System.Windows.Forms.View.List;
+            this.lvMusculoAsignado.HideSelection = false;
+            this.lvMusculoAsignado.Location = new System.Drawing.Point(203, 186);
+            this.lvMusculoAsignado.Name = "lvMusculoAsignado";
+            this.lvMusculoAsignado.Size = new System.Drawing.Size(128, 178);
+            this.lvMusculoAsignado.TabIndex = 23;
+            this.lvMusculoAsignado.UseCompatibleStateImageBehavior = false;
+            this.lvMusculoAsignado.View = System.Windows.Forms.View.List;
             // 
             // metroLabel4
             // 
@@ -182,15 +276,15 @@ namespace SIGSE.FormsUI.Views
             this.metroLabel4.TabIndex = 22;
             this.metroLabel4.Text = "Musculos";
             // 
-            // lvSinAsignar
+            // lvMusculoSinAsignar
             // 
-            this.lvSinAsignar.HideSelection = false;
-            this.lvSinAsignar.Location = new System.Drawing.Point(9, 186);
-            this.lvSinAsignar.Name = "lvSinAsignar";
-            this.lvSinAsignar.Size = new System.Drawing.Size(128, 178);
-            this.lvSinAsignar.TabIndex = 21;
-            this.lvSinAsignar.UseCompatibleStateImageBehavior = false;
-            this.lvSinAsignar.View = System.Windows.Forms.View.List;
+            this.lvMusculoSinAsignar.HideSelection = false;
+            this.lvMusculoSinAsignar.Location = new System.Drawing.Point(9, 186);
+            this.lvMusculoSinAsignar.Name = "lvMusculoSinAsignar";
+            this.lvMusculoSinAsignar.Size = new System.Drawing.Size(128, 178);
+            this.lvMusculoSinAsignar.TabIndex = 21;
+            this.lvMusculoSinAsignar.UseCompatibleStateImageBehavior = false;
+            this.lvMusculoSinAsignar.View = System.Windows.Forms.View.List;
             // 
             // metroLabel2
             // 
@@ -201,18 +295,18 @@ namespace SIGSE.FormsUI.Views
             this.metroLabel2.TabIndex = 20;
             this.metroLabel2.Text = "Forma:";
             // 
-            // cbxActivo
+            // cbxForma
             // 
-            this.cbxActivo.FormattingEnabled = true;
-            this.cbxActivo.ItemHeight = 23;
-            this.cbxActivo.Items.AddRange(new object[] {
+            this.cbxForma.FormattingEnabled = true;
+            this.cbxForma.ItemHeight = 23;
+            this.cbxForma.Items.AddRange(new object[] {
             "Total",
             "Lado/Extremidad"});
-            this.cbxActivo.Location = new System.Drawing.Point(337, 99);
-            this.cbxActivo.Name = "cbxActivo";
-            this.cbxActivo.Size = new System.Drawing.Size(170, 29);
-            this.cbxActivo.TabIndex = 19;
-            this.cbxActivo.UseSelectable = true;
+            this.cbxForma.Location = new System.Drawing.Point(337, 99);
+            this.cbxForma.Name = "cbxForma";
+            this.cbxForma.Size = new System.Drawing.Size(170, 29);
+            this.cbxForma.TabIndex = 19;
+            this.cbxForma.UseSelectable = true;
             // 
             // txtNombre
             // 
@@ -220,7 +314,7 @@ namespace SIGSE.FormsUI.Views
             // 
             // 
             this.txtNombre.CustomButton.Image = null;
-            this.txtNombre.CustomButton.Location = new System.Drawing.Point(223, 1);
+            this.txtNombre.CustomButton.Location = new System.Drawing.Point(297, 1);
             this.txtNombre.CustomButton.Name = "";
             this.txtNombre.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.txtNombre.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -248,9 +342,9 @@ namespace SIGSE.FormsUI.Views
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(271, 378);
+            this.btnGuardar.Location = new System.Drawing.Point(203, 383);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(156, 31);
+            this.btnGuardar.Size = new System.Drawing.Size(278, 26);
             this.btnGuardar.TabIndex = 13;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseCustomBackColor = true;
@@ -282,7 +376,7 @@ namespace SIGSE.FormsUI.Views
             // 
             // 
             this.txtIdEjercicio.CustomButton.Image = null;
-            this.txtIdEjercicio.CustomButton.Location = new System.Drawing.Point(224, 1);
+            this.txtIdEjercicio.CustomButton.Location = new System.Drawing.Point(297, 1);
             this.txtIdEjercicio.CustomButton.Name = "";
             this.txtIdEjercicio.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.txtIdEjercicio.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -307,98 +401,6 @@ namespace SIGSE.FormsUI.Views
             this.txtIdEjercicio.UseSelectable = true;
             this.txtIdEjercicio.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtIdEjercicio.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(513, 77);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(48, 19);
-            this.metroLabel3.TabIndex = 30;
-            this.metroLabel3.Text = "Modo:";
-            // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Items.AddRange(new object[] {
-            "Por Tiempo",
-            "Por Cantidad"});
-            this.metroComboBox1.Location = new System.Drawing.Point(513, 99);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(162, 29);
-            this.metroComboBox1.TabIndex = 29;
-            this.metroComboBox1.UseSelectable = true;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(547, 164);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(69, 19);
-            this.metroLabel5.TabIndex = 36;
-            this.metroLabel5.Text = "Asignados";
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(353, 164);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(74, 19);
-            this.metroLabel9.TabIndex = 35;
-            this.metroLabel9.Text = "Sin Asignar";
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
-            this.metroButton1.ForeColor = System.Drawing.Color.White;
-            this.metroButton1.Location = new System.Drawing.Point(487, 268);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(54, 29);
-            this.metroButton1.TabIndex = 34;
-            this.metroButton1.Text = "<";
-            this.metroButton1.UseSelectable = true;
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(66)))));
-            this.metroButton2.ForeColor = System.Drawing.Color.White;
-            this.metroButton2.Location = new System.Drawing.Point(487, 223);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(54, 29);
-            this.metroButton2.TabIndex = 33;
-            this.metroButton2.Text = ">";
-            this.metroButton2.UseSelectable = true;
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(547, 186);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(128, 178);
-            this.listView1.TabIndex = 32;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.List;
-            // 
-            // listView2
-            // 
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(353, 186);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(128, 178);
-            this.listView2.TabIndex = 31;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.List;
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel10.Location = new System.Drawing.Point(353, 145);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(141, 19);
-            this.metroLabel10.TabIndex = 37;
-            this.metroLabel10.Text = "Tipos Entrenamientos";
             // 
             // mpFooter
             // 
@@ -467,24 +469,24 @@ namespace SIGSE.FormsUI.Views
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox txtIdEjercicio;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroComboBox cbxActivo;
-        private MetroFramework.Controls.MetroButton btnDesasignar;
-        private MetroFramework.Controls.MetroButton btnAsignar;
-        private System.Windows.Forms.ListView lvAsignado;
+        private MetroFramework.Controls.MetroComboBox cbxForma;
+        private MetroFramework.Controls.MetroButton btnDesasignarMusculo;
+        private MetroFramework.Controls.MetroButton btnAsignarMusculo;
+        private System.Windows.Forms.ListView lvMusculoAsignado;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private System.Windows.Forms.ListView lvSinAsignar;
+        private System.Windows.Forms.ListView lvMusculoSinAsignar;
         private MetroFramework.Controls.MetroButton btnSalir;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox cbxModo;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel9;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ListView listView2;
+        private MetroFramework.Controls.MetroButton btnDesasignarTipoEnt;
+        private MetroFramework.Controls.MetroButton btnAsignarTipoEnt;
+        private System.Windows.Forms.ListView lvTipoEjercicioAsignado;
+        private System.Windows.Forms.ListView lvTipoEjercicioSinAsignar;
         private MetroFramework.Controls.MetroPanel mpFooter;
         private MetroFramework.Controls.MetroLabel lblFooter;
     }

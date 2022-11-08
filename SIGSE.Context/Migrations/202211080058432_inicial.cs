@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class inicial0001 : DbMigration
+    public partial class inicial : DbMigration
     {
         public override void Up()
         {
@@ -96,9 +96,9 @@
                 c => new
                     {
                         idEjercicio = c.Int(nullable: false, identity: true),
-                        tiempo = c.Boolean(nullable: false),
                         nombre = c.String(),
                         total = c.Boolean(nullable: false),
+                        tiempo = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.idEjercicio);
             

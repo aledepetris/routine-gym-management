@@ -7,13 +7,13 @@ namespace SIGSE.Context.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class inicial0001 : IMigrationMetadata
+    public sealed partial class inicial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(inicial0001));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(inicial));
         
         string IMigrationMetadata.Id
         {
-            get { return "202210022233197_inicial0001"; }
+            get { return "202211080058432_inicial"; }
         }
         
         string IMigrationMetadata.Source

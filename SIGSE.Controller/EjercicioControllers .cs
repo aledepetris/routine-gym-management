@@ -59,5 +59,24 @@ namespace SIGSE.Controller
             EjercicioManager.eliminarEjercicio(context, ejercicio);
         }
 
+        public List<Musculo> obtenerListaMusculos()
+        {
+            return MusculoManager.obtenerMusculos(context);
+        }
+
+        public List<TipoEjercicio> obtenerListaTipoEjercicios()
+        {
+            return TipoEjercicioManager.obtenerTipoEjercicios(context);
+        }
+
+        public Musculo obtenerMusculoPorNombre(string nombre)
+        {
+            return MusculoManager.obtenerMusculoPorNombre(context, nombre);
+        }
+
+        public TipoEjercicio obtenerTipoEjercicioPorNombre(string nombre)
+        {
+            return TipoEjercicioManager.obtenerTipoEjercicioPorNombre(context, nombre);
+        }
     }
 }

@@ -196,7 +196,6 @@ namespace SIGSE.FormsUI.Views
             lvAsignado.Items.Clear();
 
             List<TipoEjercicio> tiposEjSinAsignar = cTiposEntrenamientos.obtenerListaTiposEjercicio();
-
             List<TipoEjercicio> tiposEjAsignados = tipoEntrenamiento.tipos_ejercicios;
 
             if (tiposEjAsignados != null)

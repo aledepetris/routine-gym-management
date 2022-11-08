@@ -21,6 +21,12 @@ namespace SIGSE.Bussines
                 .FirstOrDefault();
         }
 
+        public static Entities.TipoEjercicio obtenerTipoEjercicioPorNombre(Context.SigseContext sigseContext, string nombre)
+        {
+            return sigseContext.tipos_ejercicios.Where(p => p.nombre == nombre)
+                .FirstOrDefault();
+        }
+        
         public static void agregarTipoEjercicios(Context.SigseContext sigseContext, Entities.TipoEjercicio ejercicio)
         {
             sigseContext.tipos_ejercicios.Add(ejercicio);
