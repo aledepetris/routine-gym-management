@@ -56,5 +56,6 @@ namespace SIGSE.Bussines
             sigseContext.permisos.Remove(permiso);
             sigseContext.SaveChanges();
         }
+
     }
 }

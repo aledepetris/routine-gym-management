@@ -29,7 +29,6 @@ namespace SIGSE.FormsUI.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.numPeso = new System.Windows.Forms.NumericUpDown();
             this.numAltura = new System.Windows.Forms.NumericUpDown();
             this.btnSalir = new MetroFramework.Controls.MetroButton();
             this.btnGuardar = new MetroFramework.Controls.MetroButton();
@@ -54,7 +53,7 @@ namespace SIGSE.FormsUI.Views
             this.mpFooter = new MetroFramework.Controls.MetroPanel();
             this.lblFooter = new MetroFramework.Controls.MetroLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numPeso)).BeginInit();
+            this.numPeso = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numAltura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPierna)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCadera)).BeginInit();
@@ -64,19 +63,8 @@ namespace SIGSE.FormsUI.Views
             ((System.ComponentModel.ISupportInitialize)(this.numCintura)).BeginInit();
             this.mpFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPeso)).BeginInit();
             this.SuspendLayout();
-            // 
-            // numPeso
-            // 
-            this.numPeso.Location = new System.Drawing.Point(122, 195);
-            this.numPeso.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numPeso.Name = "numPeso";
-            this.numPeso.Size = new System.Drawing.Size(92, 20);
-            this.numPeso.TabIndex = 54;
             // 
             // numAltura
             // 
@@ -100,6 +88,7 @@ namespace SIGSE.FormsUI.Views
             this.btnSalir.TabIndex = 52;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseSelectable = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnGuardar
             // 
@@ -113,6 +102,7 @@ namespace SIGSE.FormsUI.Views
             this.btnGuardar.UseCustomBackColor = true;
             this.btnGuardar.UseCustomForeColor = true;
             this.btnGuardar.UseSelectable = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // metroLabel9
             // 
@@ -362,6 +352,18 @@ namespace SIGSE.FormsUI.Views
             this.pictureBox2.TabIndex = 59;
             this.pictureBox2.TabStop = false;
             // 
+            // numPeso
+            // 
+            this.numPeso.Location = new System.Drawing.Point(122, 195);
+            this.numPeso.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numPeso.Name = "numPeso";
+            this.numPeso.Size = new System.Drawing.Size(92, 20);
+            this.numPeso.TabIndex = 54;
+            // 
             // FrmAlumnoMedida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,7 +398,6 @@ namespace SIGSE.FormsUI.Views
             this.Name = "FrmAlumnoMedida";
             this.Resizable = false;
             this.Text = "Agregar Medida";
-            ((System.ComponentModel.ISupportInitialize)(this.numPeso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAltura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPierna)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCadera)).EndInit();
@@ -407,14 +408,13 @@ namespace SIGSE.FormsUI.Views
             this.mpFooter.ResumeLayout(false);
             this.mpFooter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPeso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.NumericUpDown numPeso;
         private System.Windows.Forms.NumericUpDown numAltura;
         private MetroFramework.Controls.MetroButton btnSalir;
         private MetroFramework.Controls.MetroButton btnGuardar;
@@ -439,5 +439,6 @@ namespace SIGSE.FormsUI.Views
         private MetroFramework.Controls.MetroPanel mpFooter;
         private MetroFramework.Controls.MetroLabel lblFooter;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.NumericUpDown numPeso;
     }
 }

@@ -103,7 +103,7 @@ namespace SIGSE.FormsUI.Views
             this.lblNombreApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreApellido.Location = new System.Drawing.Point(310, 39);
             this.lblNombreApellido.Name = "lblNombreApellido";
-            this.lblNombreApellido.Size = new System.Drawing.Size(148, 16);
+            this.lblNombreApellido.Size = new System.Drawing.Size(149, 16);
             this.lblNombreApellido.TabIndex = 19;
             this.lblNombreApellido.Text = "NOMBRE APELLIDO";
             this.lblNombreApellido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -273,7 +273,7 @@ namespace SIGSE.FormsUI.Views
             // tspGestionarAlumnos
             // 
             this.tspGestionarAlumnos.Name = "tspGestionarAlumnos";
-            this.tspGestionarAlumnos.Size = new System.Drawing.Size(180, 22);
+            this.tspGestionarAlumnos.Size = new System.Drawing.Size(175, 22);
             this.tspGestionarAlumnos.Text = "Gestionar Alumnos";
             this.tspGestionarAlumnos.Visible = false;
             this.tspGestionarAlumnos.Click += new System.EventHandler(this.tspGestionarAlumnos_Click);
@@ -281,7 +281,7 @@ namespace SIGSE.FormsUI.Views
             // tspInformes
             // 
             this.tspInformes.Name = "tspInformes";
-            this.tspInformes.Size = new System.Drawing.Size(180, 22);
+            this.tspInformes.Size = new System.Drawing.Size(175, 22);
             this.tspInformes.Text = "Informes";
             this.tspInformes.Visible = false;
             this.tspInformes.Click += new System.EventHandler(this.tspInformes_Click);

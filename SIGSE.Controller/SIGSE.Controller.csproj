@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EjercicioControllers .cs" />
+    <Compile Include="AlumnosController.cs" />
     <Compile Include="TiposEntrenamientoControllers.cs" />
     <Compile Include="TiposEjercicioControllers.cs" />
     <Compile Include="ObjetivosControllers.cs" />

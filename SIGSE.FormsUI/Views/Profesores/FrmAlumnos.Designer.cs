@@ -31,15 +31,14 @@ namespace SIGSE.FormsUI.Views
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnPlanEntrenamiento = new System.Windows.Forms.PictureBox();
+            this.btnVerDetalle = new System.Windows.Forms.PictureBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAgregarAlumno = new System.Windows.Forms.PictureBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.lvlAuthorities = new System.Windows.Forms.ListView();
+            this.gridAlumnos = new System.Windows.Forms.ListView();
             this.IdPersonas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DNI = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Apellido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -48,10 +47,11 @@ namespace SIGSE.FormsUI.Views
             this.lblFooter = new MetroFramework.Controls.MetroLabel();
             this.mpFooter = new MetroFramework.Controls.MetroPanel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.activo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlanEntrenamiento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVerDetalle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarAlumno)).BeginInit();
             this.mpFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -62,13 +62,13 @@ namespace SIGSE.FormsUI.Views
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.metroPanel1.Controls.Add(this.metroLabel3);
-            this.metroPanel1.Controls.Add(this.pictureBox3);
-            this.metroPanel1.Controls.Add(this.pictureBox2);
+            this.metroPanel1.Controls.Add(this.btnPlanEntrenamiento);
+            this.metroPanel1.Controls.Add(this.btnVerDetalle);
             this.metroPanel1.Controls.Add(this.metroLabel2);
-            this.metroPanel1.Controls.Add(this.pictureBox1);
+            this.metroPanel1.Controls.Add(this.btnAgregarAlumno);
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.Controls.Add(this.metroLabel5);
-            this.metroPanel1.Controls.Add(this.lvlAuthorities);
+            this.metroPanel1.Controls.Add(this.gridAlumnos);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
@@ -91,27 +91,29 @@ namespace SIGSE.FormsUI.Views
             this.metroLabel3.Text = "Plan\r\nEntrenamiento";
             this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox3
+            // btnPlanEntrenamiento
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::SIGSE.FormsUI.Properties.Resources.checklist1;
-            this.pictureBox3.Location = new System.Drawing.Point(663, 294);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(86, 68);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 50;
-            this.pictureBox3.TabStop = false;
+            this.btnPlanEntrenamiento.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlanEntrenamiento.Image = global::SIGSE.FormsUI.Properties.Resources.checklist1;
+            this.btnPlanEntrenamiento.Location = new System.Drawing.Point(663, 294);
+            this.btnPlanEntrenamiento.Name = "btnPlanEntrenamiento";
+            this.btnPlanEntrenamiento.Size = new System.Drawing.Size(86, 68);
+            this.btnPlanEntrenamiento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnPlanEntrenamiento.TabIndex = 50;
+            this.btnPlanEntrenamiento.TabStop = false;
+            this.btnPlanEntrenamiento.Click += new System.EventHandler(this.btnPlanEntrenamiento_Click);
             // 
-            // pictureBox2
+            // btnVerDetalle
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::SIGSE.FormsUI.Properties.Resources.search_file;
-            this.pictureBox2.Location = new System.Drawing.Point(663, 161);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(86, 68);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 48;
-            this.pictureBox2.TabStop = false;
+            this.btnVerDetalle.BackColor = System.Drawing.Color.Transparent;
+            this.btnVerDetalle.Image = global::SIGSE.FormsUI.Properties.Resources.search_file;
+            this.btnVerDetalle.Location = new System.Drawing.Point(663, 161);
+            this.btnVerDetalle.Name = "btnVerDetalle";
+            this.btnVerDetalle.Size = new System.Drawing.Size(86, 68);
+            this.btnVerDetalle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnVerDetalle.TabIndex = 48;
+            this.btnVerDetalle.TabStop = false;
+            this.btnVerDetalle.Click += new System.EventHandler(this.btnVerDetalle_Click);
             // 
             // metroLabel2
             // 
@@ -124,16 +126,17 @@ namespace SIGSE.FormsUI.Views
             this.metroLabel2.Text = "Ver Detalle \r\ndel Alumno";
             this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // btnAgregarAlumno
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::SIGSE.FormsUI.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(663, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(86, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 46;
-            this.pictureBox1.TabStop = false;
+            this.btnAgregarAlumno.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarAlumno.Image = global::SIGSE.FormsUI.Properties.Resources.user;
+            this.btnAgregarAlumno.Location = new System.Drawing.Point(663, 37);
+            this.btnAgregarAlumno.Name = "btnAgregarAlumno";
+            this.btnAgregarAlumno.Size = new System.Drawing.Size(86, 68);
+            this.btnAgregarAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAgregarAlumno.TabIndex = 46;
+            this.btnAgregarAlumno.TabStop = false;
+            this.btnAgregarAlumno.Click += new System.EventHandler(this.btnAgregarAlumno_Click);
             // 
             // metroLabel1
             // 
@@ -156,46 +159,40 @@ namespace SIGSE.FormsUI.Views
             this.metroLabel5.TabIndex = 35;
             this.metroLabel5.Text = "Listado:";
             // 
-            // lvlAuthorities
+            // gridAlumnos
             // 
-            this.lvlAuthorities.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gridAlumnos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvlAuthorities.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.gridAlumnos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.IdPersonas,
-            this.Tipo,
             this.DNI,
             this.Nombre,
             this.Apellido,
             this.Telefono,
-            this.Email});
-            this.lvlAuthorities.FullRowSelect = true;
-            this.lvlAuthorities.GridLines = true;
-            this.lvlAuthorities.HideSelection = false;
-            this.lvlAuthorities.Location = new System.Drawing.Point(13, 37);
-            this.lvlAuthorities.MultiSelect = false;
-            this.lvlAuthorities.Name = "lvlAuthorities";
-            this.lvlAuthorities.Size = new System.Drawing.Size(640, 366);
-            this.lvlAuthorities.TabIndex = 36;
-            this.lvlAuthorities.UseCompatibleStateImageBehavior = false;
-            this.lvlAuthorities.View = System.Windows.Forms.View.Details;
+            this.Email,
+            this.activo});
+            this.gridAlumnos.FullRowSelect = true;
+            this.gridAlumnos.GridLines = true;
+            this.gridAlumnos.HideSelection = false;
+            this.gridAlumnos.Location = new System.Drawing.Point(13, 37);
+            this.gridAlumnos.MultiSelect = false;
+            this.gridAlumnos.Name = "gridAlumnos";
+            this.gridAlumnos.Size = new System.Drawing.Size(640, 366);
+            this.gridAlumnos.TabIndex = 36;
+            this.gridAlumnos.UseCompatibleStateImageBehavior = false;
+            this.gridAlumnos.View = System.Windows.Forms.View.Details;
             // 
             // IdPersonas
             // 
             this.IdPersonas.Text = "#";
             this.IdPersonas.Width = 26;
             // 
-            // Tipo
-            // 
-            this.Tipo.Text = "Tipo";
-            this.Tipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Tipo.Width = 124;
-            // 
             // DNI
             // 
             this.DNI.Text = "DNI";
             this.DNI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.DNI.Width = 116;
+            this.DNI.Width = 87;
             // 
             // Nombre
             // 
@@ -207,7 +204,7 @@ namespace SIGSE.FormsUI.Views
             // 
             this.Apellido.Text = "Apellido";
             this.Apellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Apellido.Width = 126;
+            this.Apellido.Width = 107;
             // 
             // Telefono
             // 
@@ -266,6 +263,11 @@ namespace SIGSE.FormsUI.Views
             this.pictureBox4.TabIndex = 59;
             this.pictureBox4.TabStop = false;
             // 
+            // activo
+            // 
+            this.activo.Text = "Activo";
+            this.activo.Width = 46;
+            // 
             // FrmAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,11 +280,12 @@ namespace SIGSE.FormsUI.Views
             this.Name = "FrmAlumnos";
             this.Resizable = false;
             this.Text = "Tus Alumnos";
+            this.Activated += new System.EventHandler(this.FrmAlumnos_Activated);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlanEntrenamiento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVerDetalle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAgregarAlumno)).EndInit();
             this.mpFooter.ResumeLayout(false);
             this.mpFooter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -294,22 +297,22 @@ namespace SIGSE.FormsUI.Views
 
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private System.Windows.Forms.ListView lvlAuthorities;
+        private System.Windows.Forms.ListView gridAlumnos;
         private System.Windows.Forms.ColumnHeader IdPersonas;
         private System.Windows.Forms.ColumnHeader Nombre;
         private System.Windows.Forms.ColumnHeader Apellido;
-        private System.Windows.Forms.ColumnHeader Tipo;
         private System.Windows.Forms.ColumnHeader Telefono;
         private System.Windows.Forms.ColumnHeader Email;
         private System.Windows.Forms.ColumnHeader DNI;
         private MetroFramework.Controls.MetroLabel lblFooter;
         private MetroFramework.Controls.MetroPanel mpFooter;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox btnAgregarAlumno;
+        private System.Windows.Forms.PictureBox btnVerDetalle;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox btnPlanEntrenamiento;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.ColumnHeader activo;
     }
 }
