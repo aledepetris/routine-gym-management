@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CiclosManager.cs" />
     <Compile Include="TiposEntrenamientoManager.cs" />
     <Compile Include="TiposEjercicioManager.cs" />
     <Compile Include="ObjetivosManager.cs" />

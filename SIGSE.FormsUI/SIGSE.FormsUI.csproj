@@ -188,6 +188,18 @@
     <Compile Include="Views\Administrar\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Profesores\PlanEntrenamiento\FrmCiclo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Profesores\PlanEntrenamiento\FrmCiclo.Designer.cs">
+      <DependentUpon>FrmCiclo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Profesores\PlanEntrenamiento\FrmGestionarCiclo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Profesores\PlanEntrenamiento\FrmGestionarCiclo.Designer.cs">
+      <DependentUpon>FrmGestionarCiclo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Profesores\PlanEntrenamiento\FrmPlanEntrenamiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +267,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Administrar\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Profesores\PlanEntrenamiento\FrmCiclo.resx">
+      <DependentUpon>FrmCiclo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Profesores\PlanEntrenamiento\FrmGestionarCiclo.resx">
+      <DependentUpon>FrmGestionarCiclo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Profesores\PlanEntrenamiento\FrmPlanEntrenamiento.resx">
       <DependentUpon>FrmPlanEntrenamiento.cs</DependentUpon>

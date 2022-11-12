@@ -10,13 +10,15 @@ namespace SIGSE.FormsUI.Views
     public partial class FrmPlanEntrenamiento : MetroFramework.Forms.MetroForm
     {
         private Usuario currentUser;
-        private AlumnosController cAlumnos;
+        private CiclosController cCiclos;
+        private Alumno alumno;
 
-        public FrmPlanEntrenamiento(Alumno alumno)
+        public FrmPlanEntrenamiento(Alumno _alumno)
         {
-            this.Text = "Plan Entrenamiento:" + alumno.nombrecompleto;
-            cAlumnos = AlumnosController.obtenerInstancia();
-            currentUser = cAlumnos.obtenerSesionUsuario();
+            this.alumno = _alumno;
+            this.Text = "Plan Entrenamiento:" + _alumno.nombrecompleto;
+            cCiclos = CiclosController.obtenerInstancia();
+            currentUser = cCiclos.obtenerSesionUsuario();
             InitializeComponent();
             cargarLista();
         }
@@ -24,65 +26,82 @@ namespace SIGSE.FormsUI.Views
         private void cargarLista()
         {
             gridCiclos.Items.Clear();
-            List<Alumno> listaAlumnos = cAlumnos.obtenerListaAlumnosDelProfesor();
-
-            foreach (Alumno alumno in listaAlumnos)
+            List<Ciclo> listaCiclos = alumno.planEntrenamiento;
+            int i = 1;
+            foreach (Ciclo ciclo in listaCiclos)
             {
-                string active = "No";
-                if (alumno.activo)
-                    active = "Si";
-
                 string[] row =
                 {
-                    alumno.idPersona.ToString(),
-                    alumno.DNI.ToString(),
-                    alumno.nombre,
-                    alumno.apellido,
-                    alumno.telefono,
-                    alumno.mail,
-                    active
+                    ciclo.idCiclo.ToString(),
+                    i.ToString(),
+                    ciclo.fecha_inicio.ToShortDateString(),
+                    ciclo.calcularFechaFin().ToShortDateString(),
+                    ciclo.semanas.ToString(),
+                    ciclo.cant_dias.ToString(),
+                    ciclo.objetivo.nombre,
+                    ciclo.tipo_entrenamiento.nombre,
+                    ciclo.estado.ToString()                    
                 };
-
+                i++;
                 var listViewItem = new ListViewItem(row);
                 gridCiclos.Items.Add(listViewItem);
             }
         }
 
-
-        private void btnAgregarAlumno_Click(object sender, EventArgs e)
+        private void btnAgregarCiclo_Click(object sender, EventArgs e)
         {
-            Utilities.Navegar.OpenNewTab(new FrmAlumnoNuevo());
+            Utilities.Navegar.OpenNewTab(new FrmCiclo(alumno));
         }
 
-        private void btnVerDetalle_Click(object sender, EventArgs e)
+        private void btnModificarCiclo_Click(object sender, EventArgs e)
         {
             if (gridCiclos.SelectedItems.Count == 0)
             {
-                MetroMessageBox.Show(this, "Debe seleccionar un Alumno de la lista", "ATENCION!",
+                MetroMessageBox.Show(this, "Debe seleccionar un Ciclo de la lista", "ATENCION!",
                                     System.Windows.Forms.MessageBoxButtons.OK,
                                     System.Windows.Forms.MessageBoxIcon.Warning,
                                     100);
                 return;
             }
 
-            Utilities.Navegar.OpenNewTab(new FrmAlumnoDetalle(obtenerAlumnoSeleccionado()));
+            Utilities.Navegar.OpenNewTab(new FrmCiclo(obtenerCicloSeleccionado()));
             cargarLista();
         }
 
-        private void btnPlanEntrenamiento_Click(object sender, EventArgs e)
+        private void btnEliminarCiclo_Click(object sender, EventArgs e)
         {
+            if (gridCiclos.SelectedItems.Count == 0)
+            {
+                MetroMessageBox.Show(this, "Debe seleccionar un Ciclo de la lista", "ATENCION!",
+                                    System.Windows.Forms.MessageBoxButtons.OK,
+                                    System.Windows.Forms.MessageBoxIcon.Warning,
+                                    100);
+                return;
+            }
+
+            DialogResult dr = MetroMessageBox.Show(this, "Está seguro que desea eliminar el Ciclo?", "ATENCION!",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                100);
+            if (dr == DialogResult.Yes)
+            {
+                bool result = cCiclos.eliminarCiclo(alumno, obtenerCicloSeleccionado());
+
+                // Con el resultado si no puedo eliminar informo porque.
+            }
 
         }
 
-        private void FrmAlumnos_Activated(object sender, EventArgs e)
+        private void btnGestionarCiclo_Click(object sender, EventArgs e)
         {
-            cargarLista();
+            Utilities.Navegar.OpenNewTab(new FrmGestionarCiclo(alumno, obtenerCicloSeleccionado()));
         }
 
-        private Alumno obtenerAlumnoSeleccionado()
+
+        private Ciclo obtenerCicloSeleccionado()
         {
             int id = int.Parse(gridCiclos.SelectedItems[0].Text);
-            return cAlumnos.obtenerAlumno(id);
+            return cCiclos.obtenerCiclo(id);
         }
     }
 }

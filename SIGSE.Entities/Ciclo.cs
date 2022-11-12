@@ -10,7 +10,7 @@ namespace SIGSE.Entities
     {
         #region Propiedades
         public int idCiclo { get; set; }
-        private DateTime fecha_inicio { get; set; }
+        public DateTime fecha_inicio { get; set; }
         public List<Semana> semanas { get; set; }
         public Objetivo objetivo { get; set; }
         public EstadoCiclo estado { get; }
