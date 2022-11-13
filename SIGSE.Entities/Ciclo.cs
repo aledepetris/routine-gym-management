@@ -13,7 +13,7 @@ namespace SIGSE.Entities
         public DateTime fecha_inicio { get; set; }
         public List<Semana> semanas { get; set; }
         public Objetivo objetivo { get; set; }
-        public EstadoCiclo estado { get; }
+        public EstadoCiclo estado { get; set; }
         public TipoEntrenamiento tipo_entrenamiento { get; set; }
         public int cant_dias { get; set; }
         #endregion
@@ -58,17 +58,6 @@ namespace SIGSE.Entities
         {
             return semanas.Count();
         }
-
-        public void cambiarCicloAPendiente()
-        {
-            // <<--> LOGICA EN MAQUINA DE ESTADO
-        }
-
-        public void cancelarCiclo()
-        {
-            // <<--> LOGICA EN MAQUINA DE ESTADO
-        }
-
         #endregion
 
     }

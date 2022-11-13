@@ -78,6 +78,8 @@ namespace SIGSE.Bussines
             return sigseContext.personas.OfType<Entities.Alumno>()
                 .Where(x => x.idPersona == id)
                 .Include(x => x.medidas)
+                .Include(x => x.planEntrenamiento.Select(o => o.tipo_entrenamiento))
+                .Include(x => x.planEntrenamiento.Select(o => o.objetivo))
                 .Include(x => x.planEntrenamiento
                 .Select(p => p.semanas
                 .Select(s => s.dias

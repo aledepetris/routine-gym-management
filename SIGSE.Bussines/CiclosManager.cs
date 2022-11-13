@@ -17,9 +17,14 @@ namespace SIGSE.Bussines
 
         public static Entities.Ciclo obtenerCicloPorId(Context.SigseContext sigseContext, int id)
         {
-            return sigseContext.ciclos.Where(p => p.idCiclo == id)
+            return sigseContext.ciclos.Where(x => x.idCiclo == id)
+                .Include(x => x.semanas
+                .Select(b => b.dias
+                .Select(d => d.ejercicios
+                .Select(e => e.ejercicio))))
                 .FirstOrDefault();
         }
+    
 
         public static void agregarCiclos(Context.SigseContext sigseContext, Entities.Ciclo ciclo)
         {
@@ -27,18 +32,62 @@ namespace SIGSE.Bussines
             sigseContext.SaveChanges();
         }
 
-        public static void modificarCiclo(Context.SigseContext sigseContext, Entities.Ciclo ciclo)
+        public static bool eliminarCiclo(Context.SigseContext sigseContext, Entities.Ciclo ciclo)
         {
-            sigseContext.Entry(ciclo).State = System.Data.Entity.EntityState.Modified;
-            sigseContext.SaveChanges();
-        }
+            
+            foreach (var semana in ciclo.semanas)
+            {
+                List<Entities.Dia> dias = semana.dias.ToList();
+                foreach (var dia in dias)
+                {
+                    dia.ejercicios.ToList().ForEach(e => sigseContext.ejercicios_instesidad.Remove(e));
+                }
+                dias.ForEach(p => sigseContext.dias.Remove(p));
 
-        public static void eliminarCiclo(Context.SigseContext sigseContext, Entities.Ciclo ciclo)
-        {
+            }
+
+            sigseContext.semanas.RemoveRange(ciclo.semanas);
             sigseContext.ciclos.Remove(ciclo);
             sigseContext.SaveChanges();
+
+            return true;
+
         }
 
+
+        public static void modificarCiclo(Context.SigseContext sigseContext, Entities.Alumno alumno, Entities.Ciclo oCiclo, DateTime inicio, Entities.Objetivo oObjetivo, int cantSemanas, Entities.TipoEntrenamiento oTipoEntrenamiento, int cantDias)
+        {
+            oCiclo.tipo_entrenamiento = oTipoEntrenamiento;
+            oCiclo.objetivo = oObjetivo;
+
+            if (oCiclo.cant_dias != cantDias || oCiclo.semanas.Count != cantSemanas)
+            {
+                oCiclo.fecha_inicio = inicio;
+                oCiclo.cant_dias = cantDias;
+
+                foreach (var semana in oCiclo.semanas)
+                {
+                    List<Entities.Dia> ddias = semana.dias.ToList();
+                    foreach (var dia in ddias)
+                    {
+                        dia.ejercicios.ToList().ForEach(e => sigseContext.ejercicios_instesidad.Remove(e));
+                    }
+                    ddias.ForEach(p => sigseContext.dias.Remove(p));
+                }
+
+                oCiclo.semanas.ToList().ForEach(s => sigseContext.semanas.Remove(s));
+
+                for (int i = 0; i < cantSemanas; i++)
+                {
+                    var semana = new Entities.Semana(cantDias);
+                    oCiclo.semanas.Add(semana);
+                }
+            }
+
+            sigseContext.Entry(oCiclo).State = System.Data.Entity.EntityState.Modified;
+            sigseContext.SaveChanges();
+
+        }
     }
 
 }

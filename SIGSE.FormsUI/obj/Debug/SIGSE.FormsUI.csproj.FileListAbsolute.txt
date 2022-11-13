@@ -93,7 +93,6 @@ C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.Fo
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmAlumnoDetalle.resources
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmAlumnoMedida.resources
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmAlumnos.resources
-C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmCrearAlumno.resources
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmPersonas.resources
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmPersona.resources
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmRoles.resources
@@ -152,3 +151,6 @@ C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.FormsUI\ob
 C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.exe
 C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.pdb
 C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmPlanEntrenamiento.resources
+C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmCiclo.resources
+C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmGestionarCiclo.resources
+C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmPlanEntrenamiento.resources

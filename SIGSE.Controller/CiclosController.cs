@@ -41,10 +41,36 @@ namespace SIGSE.Controller
             return CicloManager.obtenerCicloPorId(context, id);
         }
 
-        public bool eliminarCiclo(Alumno alumno, Ciclo ciclo)
+        public bool eliminarCiclo(Ciclo ciclo)
         {
-            // TODO
+            CicloManager.eliminarCiclo(context, ciclo);
             return true;
+        }
+
+        public void modificarCiclo(Alumno alumno, Ciclo oCiclo, DateTime inicio, Objetivo objetivo, int cantSemanas, TipoEntrenamiento tipoEntrenamiento, int cantDias)
+        {
+            CicloManager.modificarCiclo(context, alumno, oCiclo, inicio, objetivo, cantSemanas, tipoEntrenamiento, cantDias);
+        }
+
+        public List<TipoEntrenamiento> obtenerListaTiposEntrenamientos(Objetivo objetivo, int cantDias)
+        {
+            return TipoEntrenamientoManager.obtenerTipoEntrenamientos(context, objetivo, cantDias);
+        }
+
+        public List<Objetivo> obtenerListaObjetivos()
+        {
+            return ObjetivoManager.obtenerObjetivos(context);
+        }
+
+        public void modificarAlumno(Alumno alumno)
+        {
+            PersonaManager.modificarPersona(context, alumno);
+        }
+
+        public void agregarNuevoCiclo(Alumno alumno, Ciclo ciclo)
+        {
+            alumno.planEntrenamiento.Add(ciclo);
+            PersonaManager.modificarPersona(context, alumno);
         }
 
     }

@@ -70,6 +70,14 @@ namespace SIGSE.FormsUI.Views
 
         private void btnPlanEntrenamiento_Click(object sender, EventArgs e)
         {
+            if (gridAlumnos.SelectedItems.Count == 0)
+            {
+                MetroMessageBox.Show(this, "Debe seleccionar un Alumno de la lista", "ATENCION!",
+                                    System.Windows.Forms.MessageBoxButtons.OK,
+                                    System.Windows.Forms.MessageBoxIcon.Warning,
+                                    100);
+                return;
+            }
             Utilities.Navegar.OpenNewTab(new FrmPlanEntrenamiento(obtenerAlumnoSeleccionado()));
         }
 

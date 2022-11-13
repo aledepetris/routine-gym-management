@@ -24,6 +24,7 @@
                 c => new
                     {
                         idCiclo = c.Int(nullable: false, identity: true),
+                        fecha_inicio = c.DateTime(nullable: false),
                         cant_dias = c.Int(nullable: false),
                         objetivo_idObjetivo = c.Int(),
                         tipo_entrenamiento_idTipoEntrenamiento = c.Int(),

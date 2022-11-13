@@ -36,7 +36,7 @@ namespace SIGSE.FormsUI.Views
                     i.ToString(),
                     ciclo.fecha_inicio.ToShortDateString(),
                     ciclo.calcularFechaFin().ToShortDateString(),
-                    ciclo.semanas.ToString(),
+                    ciclo.semanas.Count.ToString(),
                     ciclo.cant_dias.ToString(),
                     ciclo.objetivo.nombre,
                     ciclo.tipo_entrenamiento.nombre,
@@ -64,6 +64,17 @@ namespace SIGSE.FormsUI.Views
                 return;
             }
 
+            Ciclo oc = obtenerCicloSeleccionado();
+
+            if (oc.estado == EstadoCiclo.CANCELADO || oc.estado == EstadoCiclo.COMPLETO)
+            {
+                MetroMessageBox.Show(this, "NO es posible modificar Ciclos en estados Finalizados", "ATENCION!",
+                    System.Windows.Forms.MessageBoxButtons.OK,
+                    System.Windows.Forms.MessageBoxIcon.Error,
+                    100);
+                return;
+            }
+
             Utilities.Navegar.OpenNewTab(new FrmCiclo(obtenerCicloSeleccionado()));
             cargarLista();
         }
@@ -79,14 +90,26 @@ namespace SIGSE.FormsUI.Views
                 return;
             }
 
+            Ciclo oc = obtenerCicloSeleccionado();
+
+            if (oc.estado == EstadoCiclo.CANCELADO || oc.estado == EstadoCiclo.COMPLETO || oc.estado == EstadoCiclo.EN_CURSO)
+            {
+                MetroMessageBox.Show(this, "No es posible eliminar un ciclo en este estado", "ATENCION!",
+                    System.Windows.Forms.MessageBoxButtons.OK,
+                    System.Windows.Forms.MessageBoxIcon.Error,
+                    100);
+                return;
+            }
+
             DialogResult dr = MetroMessageBox.Show(this, "Está seguro que desea eliminar el Ciclo?", "ATENCION!",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question,
                 100);
+
             if (dr == DialogResult.Yes)
             {
-                bool result = cCiclos.eliminarCiclo(alumno, obtenerCicloSeleccionado());
-
+                bool result = cCiclos.eliminarCiclo(oc);
+                cargarLista();
                 // Con el resultado si no puedo eliminar informo porque.
             }
 
@@ -94,6 +117,14 @@ namespace SIGSE.FormsUI.Views
 
         private void btnGestionarCiclo_Click(object sender, EventArgs e)
         {
+            if (gridCiclos.SelectedItems.Count == 0)
+            {
+                MetroMessageBox.Show(this, "Debe seleccionar un Ciclo de la lista", "ATENCION!",
+                                    System.Windows.Forms.MessageBoxButtons.OK,
+                                    System.Windows.Forms.MessageBoxIcon.Warning,
+                                    100);
+                return;
+            }
             Utilities.Navegar.OpenNewTab(new FrmGestionarCiclo(alumno, obtenerCicloSeleccionado()));
         }
 
@@ -102,6 +133,11 @@ namespace SIGSE.FormsUI.Views
         {
             int id = int.Parse(gridCiclos.SelectedItems[0].Text);
             return cCiclos.obtenerCiclo(id);
+        }
+
+        private void FrmPlanEntrenamiento_Activated(object sender, EventArgs e)
+        {
+            cargarLista();
         }
     }
 }

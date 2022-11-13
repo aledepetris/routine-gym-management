@@ -44,10 +44,10 @@ namespace SIGSE.FormsUI.Views
             this.Apellido = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Telefono = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.activo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblFooter = new MetroFramework.Controls.MetroLabel();
             this.mpFooter = new MetroFramework.Controls.MetroPanel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.activo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnPlanEntrenamiento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVerDetalle)).BeginInit();
@@ -218,6 +218,11 @@ namespace SIGSE.FormsUI.Views
             this.Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Email.Width = 128;
             // 
+            // activo
+            // 
+            this.activo.Text = "Activo";
+            this.activo.Width = 46;
+            // 
             // lblFooter
             // 
             this.lblFooter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -262,11 +267,6 @@ namespace SIGSE.FormsUI.Views
             this.pictureBox4.Size = new System.Drawing.Size(811, 10);
             this.pictureBox4.TabIndex = 59;
             this.pictureBox4.TabStop = false;
-            // 
-            // activo
-            // 
-            this.activo.Text = "Activo";
-            this.activo.Width = 46;
             // 
             // FrmAlumnos
             // 

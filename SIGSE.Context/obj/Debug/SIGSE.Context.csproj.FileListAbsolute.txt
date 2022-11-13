@@ -35,7 +35,6 @@ C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Co
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.csproj.CopyComplete
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.dll
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.pdb
-C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.Migrations.inicial.resources
 C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.Context\bin\Debug\SIGSE.Context.dll.config
 C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.Context\bin\Debug\SIGSE.Context.dll
 C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.Context\bin\Debug\SIGSE.Context.pdb
@@ -54,3 +53,5 @@ C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.Context\ob
 C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.dll
 C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.pdb
 C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.Migrations.inicial.resources
+C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.Migrations.inicial.resources
+C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.Migrations.inicial2.resources

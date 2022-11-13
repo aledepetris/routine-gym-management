@@ -281,6 +281,7 @@ namespace SIGSE.FormsUI.Views
             this.Name = "FrmPlanEntrenamiento";
             this.Resizable = false;
             this.Text = "Plan Entrenamiento: ";
+            this.Activated += new System.EventHandler(this.FrmPlanEntrenamiento_Activated);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnGestionarCiclo)).EndInit();
