@@ -110,12 +110,47 @@ namespace SIGSE.FormsUI.Views
         {
             if (cbxObjetivo.SelectedItem == null || cbxEntrenamiento.SelectedItem == null)
             {
-                MetroMessageBox.Show(this, "Debe seleccionar un valores en los combos Objetivo/Entrenamiento", "ERROR!",
+                MetroMessageBox.Show(this, "Complete los campos obligatorios", "ERROR!",
                     System.Windows.Forms.MessageBoxButtons.OK,
                     System.Windows.Forms.MessageBoxIcon.Error,
                     100);
                 return;
             }
+
+            if (dtpFechaInicio.Value < DateTime.Today)
+            {
+                MetroMessageBox.Show(this, "Fecha en el pasado", "ERROR!",
+                    System.Windows.Forms.MessageBoxButtons.OK,
+                    System.Windows.Forms.MessageBoxIcon.Error,
+                    100);
+                return;
+            }
+            calcularFechaFin();
+            foreach (Ciclo ciclo in alumno.planEntrenamiento)
+            {
+                if (ciclo.estado != EstadoCiclo.CANCELADO)
+                { 
+                    if (dtpFechaInicio.Value >= ciclo.fecha_inicio && dtpFechaInicio.Value <= ciclo.calcularFechaFin())
+                    {
+                        MetroMessageBox.Show(this, "Coinciden Fechas", "ERROR!",
+                            System.Windows.Forms.MessageBoxButtons.OK,
+                            System.Windows.Forms.MessageBoxIcon.Error,
+                            100);
+                        return;
+                    }
+
+                    if (dtpFechaFin.Value >= ciclo.fecha_inicio && dtpFechaFin.Value <= ciclo.calcularFechaFin())
+                    {
+                        MetroMessageBox.Show(this, "Coinciden Fechas", "ERROR!",
+                            System.Windows.Forms.MessageBoxButtons.OK,
+                            System.Windows.Forms.MessageBoxIcon.Error,
+                            100);
+                        return;
+                    }
+                }
+            }
+            
+
 
             DateTime inicio = dtpFechaInicio.Value;
             objetivo = (Objetivo) cbxObjetivo.SelectedItem;
