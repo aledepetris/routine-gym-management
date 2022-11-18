@@ -292,9 +292,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\checklist.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\SIGSE.Bussines\SIGSE.Bussines.csproj">
       <Project>{d34188bc-11c2-414f-9b13-cb25907fb96e}</Project>
       <Name>SIGSE.Bussines</Name>
@@ -340,6 +337,10 @@
     <None Include="Resources\user.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\checklist.png" />
+    <None Include="Resources\trash.png" />
+    <None Include="Resources\plus-icon-blue.png" />
+    <None Include="Resources\pencil2.png" />
     <Content Include="Resources\userminus.png" />
   </ItemGroup>
   <ItemGroup />

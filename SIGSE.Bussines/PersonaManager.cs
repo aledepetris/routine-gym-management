@@ -10,6 +10,35 @@ namespace SIGSE.Bussines
 {
     public class PersonaManager
     {
+
+        public static void actualizarCiclosAlumnos()
+        {
+            SIGSE.Context.SigseContext context = SIGSE.Context.SigseContext.obtenerInstancia();
+
+            List<Entities.Alumno> listaAlumnos = context.personas.OfType<Entities.Alumno>()
+                .Include(x => x.medidas)
+                .Include(x => x.planEntrenamiento.Select(o => o.tipo_entrenamiento))
+                .Include(x => x.planEntrenamiento.Select(o => o.objetivo))
+                .Include(x => x.planEntrenamiento
+                .Select(p => p.semanas
+                .Select(s => s.dias
+                .Select(d => d.ejercicios)))).ToList();
+
+            foreach (Entities.Alumno al in listaAlumnos)
+            {
+                foreach (Entities.Ciclo ciclo in al.planEntrenamiento)
+                {
+                    if (ciclo.estado == Entities.EstadoCiclo.PENDIENTE && ciclo.fecha_inicio >= DateTime.Today)
+                    {
+                        ciclo.estado = Entities.EstadoCiclo.EN_CURSO;
+                        context.Entry(al).State = System.Data.Entity.EntityState.Modified;
+                        context.SaveChanges();
+                    }
+                }
+            }
+            
+        }
+
         public static List<Entities.Persona> obtenerPesonas(Context.SigseContext sigseContext)
         {
             return sigseContext.personas.ToList();

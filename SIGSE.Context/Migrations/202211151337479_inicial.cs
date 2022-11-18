@@ -3,16 +3,14 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class inicial2 : DbMigration
+    public partial class inicial : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Cicloes", "estado", c => c.Int(nullable: false));
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Cicloes", "estado");
         }
     }
 }

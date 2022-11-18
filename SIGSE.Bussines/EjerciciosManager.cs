@@ -41,6 +41,37 @@ namespace SIGSE.Bussines
             sigseContext.SaveChanges();
         }
 
+        public static List<Entities.Ejercicio> obtenerEjerciciosSegunTipoEntrenamiento(Context.SigseContext sigseContext, Entities.TipoEntrenamiento tipoEnt)
+        {
+            Entities.TipoEntrenamiento tipoEntrenamiento = sigseContext.tipos_entrenamientos
+                .Where(x => x.idTipoEntrenamiento == tipoEnt.idTipoEntrenamiento)
+                .Include(x => x.tipos_ejercicios)
+                .FirstOrDefault();
+
+            List<Entities.Ejercicio> totalEjercicios = sigseContext.ejercicios
+                .Include(x => x.tipos_ejercicios)
+                .ToList();
+
+            HashSet<Entities.Ejercicio> ejerciciosReturn = new HashSet<Entities.Ejercicio>();
+            
+            foreach (Entities.Ejercicio ej in totalEjercicios)
+            {
+                foreach (Entities.TipoEjercicio tEj in ej.tipos_ejercicios)
+                {
+                    foreach (Entities.TipoEjercicio tEj2 in tipoEntrenamiento.tipos_ejercicios)
+                    {
+                        if (tEj2.idTipoEjercicio == tEj.idTipoEjercicio)
+                        {
+                            ejerciciosReturn.Add(ej);
+                        }
+                    }
+                }
+            }
+
+            return ejerciciosReturn.ToList();
+
+        }
+
     }
 
 }

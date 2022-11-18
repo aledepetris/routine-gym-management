@@ -33,7 +33,7 @@ namespace SIGSE.FormsUI.Views
             ACCION = "A";
             cbxESTADO.Enabled = false;
             dtpFechaInicio.Value = DateTime.Today;
-            numSemanas.Text = "8";
+            numSemanas.Text = "2";
 
             calcularFechaFin();
             cbxESTADO.Items.Add(EstadoCiclo.BORRADOR);
@@ -41,8 +41,9 @@ namespace SIGSE.FormsUI.Views
             filtrarDiasObjetivos();
         }
 
-        public FrmCiclo(Ciclo _ciclo)
+        public FrmCiclo(Alumno _alumno, Ciclo _ciclo)
         {
+            this.alumno = _alumno;
             this.ciclo = _ciclo;
             InitializeComponent();
             cCiclos = CiclosController.obtenerInstancia();
@@ -125,12 +126,15 @@ namespace SIGSE.FormsUI.Views
                     100);
                 return;
             }
+
             calcularFechaFin();
-            foreach (Ciclo ciclo in alumno.planEntrenamiento)
+            List<Ciclo> ciclos_revisar = alumno.planEntrenamiento;
+            ciclos_revisar.Remove(ciclo);
+            foreach (Ciclo c in ciclos_revisar)
             {
-                if (ciclo.estado != EstadoCiclo.CANCELADO)
+                if (c.estado != EstadoCiclo.CANCELADO)
                 { 
-                    if (dtpFechaInicio.Value >= ciclo.fecha_inicio && dtpFechaInicio.Value <= ciclo.calcularFechaFin())
+                    if (dtpFechaInicio.Value >= c.fecha_inicio && dtpFechaInicio.Value <= c.calcularFechaFin())
                     {
                         MetroMessageBox.Show(this, "Coinciden Fechas", "ERROR!",
                             System.Windows.Forms.MessageBoxButtons.OK,
@@ -139,7 +143,7 @@ namespace SIGSE.FormsUI.Views
                         return;
                     }
 
-                    if (dtpFechaFin.Value >= ciclo.fecha_inicio && dtpFechaFin.Value <= ciclo.calcularFechaFin())
+                    if (dtpFechaFin.Value >= c.fecha_inicio && dtpFechaFin.Value <= c.calcularFechaFin())
                     {
                         MetroMessageBox.Show(this, "Coinciden Fechas", "ERROR!",
                             System.Windows.Forms.MessageBoxButtons.OK,
@@ -148,9 +152,7 @@ namespace SIGSE.FormsUI.Views
                         return;
                     }
                 }
-            }
-            
-
+            }          
 
             DateTime inicio = dtpFechaInicio.Value;
             objetivo = (Objetivo) cbxObjetivo.SelectedItem;
@@ -163,6 +165,11 @@ namespace SIGSE.FormsUI.Views
                 ciclo = new Ciclo(inicio, objetivo, semanas, tipoEntrenamiento, dias);
                 cCiclos.agregarNuevoCiclo(alumno, ciclo);
 
+                MetroMessageBox.Show(this, "Ciclo creado correctamente", "Exito!",
+                    System.Windows.Forms.MessageBoxButtons.OK,
+                    System.Windows.Forms.MessageBoxIcon.Information,
+                    100);
+
                 this.Close();
             }
             else
@@ -171,15 +178,14 @@ namespace SIGSE.FormsUI.Views
                 ciclo.estado = estadoCiclo;
 
                 cCiclos.modificarCiclo(alumno, ciclo, inicio, objetivo, semanas, tipoEntrenamiento, dias);
+
+                MetroMessageBox.Show(this, "Ciclo modificado correctamente", "Exito!",
+                    System.Windows.Forms.MessageBoxButtons.OK,
+                    System.Windows.Forms.MessageBoxIcon.Information,
+                    100);
+
                 this.Close();
             }
-
-            MetroMessageBox.Show(this, "Ciclo creado correctamente ", "EXITO!",
-                System.Windows.Forms.MessageBoxButtons.OK,
-                System.Windows.Forms.MessageBoxIcon.Information,
-                100);
-
-            this.Close();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

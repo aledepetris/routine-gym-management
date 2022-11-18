@@ -20,6 +20,8 @@ namespace SIGSE.FormsUI
             rol.nombre = "Administrador";
             rol.permisos = new List<Permiso>();
 
+            PersonaManager.actualizarCiclosAlumnos();
+
             Context.SigseContext sigse = Context.SigseContext.obtenerInstancia();
             if (RolesManager.obtenerRolPorNombre(sigse, "Administrador") == null)
             {

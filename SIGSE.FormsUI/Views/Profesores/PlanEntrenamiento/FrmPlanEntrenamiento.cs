@@ -75,7 +75,7 @@ namespace SIGSE.FormsUI.Views
                 return;
             }
 
-            Utilities.Navegar.OpenNewTab(new FrmCiclo(obtenerCicloSeleccionado()));
+            Utilities.Navegar.OpenNewTab(new FrmCiclo(alumno, obtenerCicloSeleccionado()));
             cargarLista();
         }
 

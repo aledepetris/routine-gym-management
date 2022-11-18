@@ -16,10 +16,7 @@ namespace SIGSE.Bussines
 
         public static string Encrypt(string strData)
         {
-
             return Convert.ToBase64String(Encrypt(Encoding.UTF8.GetBytes(strData)));
-            // reference https://msdn.microsoft.com/en-us/library/ds4kkd55(v=vs.110).aspx
-
         }
 
 
@@ -27,7 +24,6 @@ namespace SIGSE.Bussines
         public static string Decrypt(string strData)
         {
             return Encoding.UTF8.GetString(Decrypt(Convert.FromBase64String(strData)));
-            // reference https://msdn.microsoft.com/en-us/library/system.convert.frombase64string(v=vs.110).aspx
 
         }
 

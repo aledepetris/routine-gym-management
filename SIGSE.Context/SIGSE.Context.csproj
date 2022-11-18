@@ -59,22 +59,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202211130126187_inicial.cs" />
-    <Compile Include="Migrations\202211130126187_inicial.designer.cs">
-      <DependentUpon>202211130126187_inicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202211130236418_inicial2.cs" />
-    <Compile Include="Migrations\202211130236418_inicial2.designer.cs">
-      <DependentUpon>202211130236418_inicial2.cs</DependentUpon>
+    <Compile Include="Migrations\202211151337479_inicial.cs" />
+    <Compile Include="Migrations\202211151337479_inicial.designer.cs">
+      <DependentUpon>202211151337479_inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SigseContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Migrations\202211130126187_inicial.resx">
-      <DependentUpon>202211130126187_inicial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202211130236418_inicial2.resx">
-      <DependentUpon>202211130236418_inicial2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202211151337479_inicial.resx">
+      <DependentUpon>202211151337479_inicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

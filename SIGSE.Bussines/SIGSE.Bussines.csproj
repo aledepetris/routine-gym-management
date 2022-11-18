@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CiclosManager.cs" />
+    <Compile Include="EjercicioIntensidadManager.cs" />
     <Compile Include="TiposEntrenamientoManager.cs" />
     <Compile Include="TiposEjercicioManager.cs" />
     <Compile Include="ObjetivosManager.cs" />

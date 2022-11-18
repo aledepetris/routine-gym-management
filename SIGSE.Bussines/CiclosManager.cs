@@ -83,11 +83,119 @@ namespace SIGSE.Bussines
                     oCiclo.semanas.Add(semana);
                 }
             }
-
-            sigseContext.Entry(oCiclo).State = System.Data.Entity.EntityState.Modified;
+            alumno.planEntrenamiento.Add(oCiclo); 
+            sigseContext.Entry(alumno).State = System.Data.Entity.EntityState.Modified;
             sigseContext.SaveChanges();
 
         }
+
+        public static void agregarNuevoEjercicioAlCiclo(Context.SigseContext sigseContext, Entities.EjercicioIntensidad ej, Entities.Ciclo ciclo, int semana, int dia)
+        {
+            ciclo.semanas[semana].dias[dia].ejercicios.Add(ej);
+            sigseContext.Entry(ciclo).State = System.Data.Entity.EntityState.Modified;
+            sigseContext.SaveChanges();
+        }
+
+        public static void cambiarEstadoSemana(Context.SigseContext sigseContext, Entities.Ciclo ciclo, Entities.Semana semanaActual, Entities.EstadoSemana estado)
+        {
+
+            if(semanaActual.estado == estado)
+            {
+                throw new Exception("No es posible cambiar a al mismo estado");
+            }
+
+            if(semanaActual.estado == Entities.EstadoSemana.BORRADOR)
+            {
+                if(estado != Entities.EstadoSemana.PENDIENTE)
+                {
+                    throw new Exception("No es posible cambiar a ese estado");
+                }
+            }
+
+            if (semanaActual.estado == Entities.EstadoSemana.PENDIENTE)
+            {
+                if (estado != Entities.EstadoSemana.POSPUESTA)
+                {
+                    throw new Exception("No es posible cambiar a ese estado");
+                }
+                else
+                {
+                    int index = ciclo.semanas.IndexOf(semanaActual);
+
+                    Entities.Semana s = new Entities.Semana();
+                    s.estado = Entities.EstadoSemana.BORRADOR;
+
+                    foreach (Entities.Dia dd in semanaActual.dias)
+                    {
+                        List<Entities.EjercicioIntensidad> ejercicioIntensidads = new List<Entities.EjercicioIntensidad>();
+
+                        foreach (Entities.EjercicioIntensidad ej in dd.ejercicios)
+                        {
+                            Entities.EjercicioIntensidad nuevoEj = new Entities.EjercicioIntensidad();
+                            nuevoEj.ejercicio = ej.ejercicio;
+                            nuevoEj.descanso = ej.descanso;
+                            nuevoEj.notas = ej.notas;
+                            nuevoEj.peso = ej.peso;
+                            nuevoEj.repeticiones = ej.repeticiones;
+                            nuevoEj.series = ej.series;
+                            ejercicioIntensidads.Add(nuevoEj);
+                        }
+
+                        Entities.Dia nuevodia = new Entities.Dia();
+                        nuevodia.ejercicios.AddRange(ejercicioIntensidads);
+                        s.dias.Add(nuevodia);
+                    }
+
+                    ciclo.semanas.Insert(index+1, s);
+                }
+            }
+
+            if (semanaActual.estado == Entities.EstadoSemana.EN_CURSO)
+            {
+                if (estado != Entities.EstadoSemana.POSPUESTA)
+                {
+                    throw new Exception("No es posible cambiar a ese estado");
+                }
+                else
+                {
+                    int index = ciclo.semanas.IndexOf(semanaActual);
+
+                    Entities.Semana s = new Entities.Semana();
+                    s.estado = Entities.EstadoSemana.BORRADOR;
+
+                    foreach (Entities.Dia dd in semanaActual.dias)
+                    {
+                        List<Entities.EjercicioIntensidad> ejercicioIntensidads = new List<Entities.EjercicioIntensidad>();
+
+                        foreach (Entities.EjercicioIntensidad ej in dd.ejercicios)
+                        {
+                            Entities.EjercicioIntensidad nuevoEj = new Entities.EjercicioIntensidad();
+                            nuevoEj.ejercicio = ej.ejercicio;
+                            nuevoEj.descanso = ej.descanso;
+                            nuevoEj.notas = ej.notas;
+                            nuevoEj.peso = ej.peso;
+                            nuevoEj.repeticiones = ej.repeticiones;
+                            nuevoEj.series = ej.series;
+                            ejercicioIntensidads.Add(nuevoEj);
+                        }
+
+                        Entities.Dia nuevodia = new Entities.Dia();
+                        nuevodia.ejercicios.AddRange(ejercicioIntensidads);
+                        s.dias.Add(nuevodia);
+                    }
+
+                    ciclo.semanas.Insert(index + 1, s);
+                }
+            }
+
+            semanaActual.estado = estado;
+            sigseContext.Entry(ciclo).State = System.Data.Entity.EntityState.Modified;
+            sigseContext.SaveChanges();
+            return;
+        }
+
+
+
     }
 
 }

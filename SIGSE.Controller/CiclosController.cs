@@ -36,7 +36,7 @@ namespace SIGSE.Controller
             return sesion.currentUser;
         }
 
-        public Ciclo obtenerCiclo(int id)
+        public Ciclo obtenerCiclo(int id) 
         {
             return CicloManager.obtenerCicloPorId(context, id);
         }
@@ -50,6 +50,7 @@ namespace SIGSE.Controller
         public void modificarCiclo(Alumno alumno, Ciclo oCiclo, DateTime inicio, Objetivo objetivo, int cantSemanas, TipoEntrenamiento tipoEntrenamiento, int cantDias)
         {
             CicloManager.modificarCiclo(context, alumno, oCiclo, inicio, objetivo, cantSemanas, tipoEntrenamiento, cantDias);
+            PersonaManager.actualizarCiclosAlumnos();
         }
 
         public List<TipoEntrenamiento> obtenerListaTiposEntrenamientos(Objetivo objetivo, int cantDias)
@@ -71,6 +72,37 @@ namespace SIGSE.Controller
         {
             alumno.planEntrenamiento.Add(ciclo);
             PersonaManager.modificarPersona(context, alumno);
+            PersonaManager.actualizarCiclosAlumnos();
+        }
+
+        public List<Ejercicio> obtenerEjerciciosSegunTipoEntrenamiento(TipoEntrenamiento tipoEnt)
+        {
+            return EjercicioManager.obtenerEjerciciosSegunTipoEntrenamiento(context, tipoEnt);
+        }
+
+        public void agregarNuevoEjercicioAlCiclo(EjercicioIntensidad ej, Ciclo ciclo, int semana, int dia)
+        {
+            CicloManager.agregarNuevoEjercicioAlCiclo(context, ej, ciclo, semana, dia);
+        }
+
+        public EjercicioIntensidad obtenerEjercicioIntencidad(int id)
+        {
+            return EjercicioIntensidadManager.obtenerEjercicioIntensidadPorId(context, id);
+        }
+
+        public void modificarEjercicioIntensidad(EjercicioIntensidad ej)
+        {
+            EjercicioIntensidadManager.modificarEjercicioIntensidad(context, ej);
+        }
+
+        public void eliminarEjercicioIntensidad(EjercicioIntensidad ej)
+        {
+            EjercicioIntensidadManager.eliminarEjercicioIntensidad(context, ej);
+        }
+
+        public void cambiarEstadoSemana(Ciclo ciclo, Semana semanaActual, EstadoSemana estado) 
+        {
+            CicloManager.cambiarEstadoSemana(context, ciclo ,semanaActual, estado);
         }
 
     }
