@@ -28,11 +28,14 @@ namespace SIGSE.Bussines
             {
                 foreach (Entities.Ciclo ciclo in al.planEntrenamiento)
                 {
-                    if (ciclo.estado == Entities.EstadoCiclo.PENDIENTE && ciclo.fecha_inicio >= DateTime.Today)
+                    if (ciclo.estado == Entities.EstadoCiclo.PENDIENTE) 
                     {
-                        ciclo.estado = Entities.EstadoCiclo.EN_CURSO;
-                        context.Entry(al).State = System.Data.Entity.EntityState.Modified;
-                        context.SaveChanges();
+                        if (ciclo.fecha_inicio <= DateTime.Today)
+                        {
+                            ciclo.estado = Entities.EstadoCiclo.EN_CURSO;
+                            context.Entry(al).State = System.Data.Entity.EntityState.Modified;
+                            context.SaveChanges();
+                        }
                     }
                 }
             }

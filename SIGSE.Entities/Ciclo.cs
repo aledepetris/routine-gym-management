@@ -38,6 +38,8 @@ namespace SIGSE.Entities
             for (int i = 0; i < cantSemanas; i++)
             {
                 semana = new Semana(cantDias);
+                semana.orden = i + 1;
+                semana.fecha_inicio = this.fecha_inicio.AddDays(i * 7);
                 this.semanas.Add(semana);
             }
         }

@@ -26,6 +26,7 @@ namespace SIGSE.FormsUI.Views
         public FrmGestionarCiclo(Alumno _alumno, Ciclo _ciclo)
         {
             this.alumno = _alumno;
+            _ciclo.semanas = _ciclo.semanas.OrderBy(s => s.orden).ToList();
             this.ciclo = _ciclo;
             diaCount = 0;
             semanaCount = 0;
@@ -229,7 +230,6 @@ namespace SIGSE.FormsUI.Views
                     System.Windows.Forms.MessageBoxIcon.Information,
                     100);
                 return;
-
             } catch (Exception ex)
             {
                 MetroMessageBox.Show(this, ex.Message, "ERROR!",
@@ -242,12 +242,12 @@ namespace SIGSE.FormsUI.Views
             {
                 cargarComboEstadoSemana();
                 this.Text = alumno.nombrecompleto + "   |   " + ciclo.fecha_inicio.ToShortDateString() + " - " + ciclo.calcularFechaFin().ToShortDateString();
-
             }
         }
 
         private void cargarComboEstadoSemana()
         {
+            lbfecha_inicio.Text = ciclo.semanas[semanaCount].fecha_inicio.ToShortDateString();
             EstadoSemana estado = ciclo.semanas[semanaCount].estado;
 
             cbxEstadoSemana.Items.Clear();

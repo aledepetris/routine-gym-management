@@ -124,44 +124,8 @@ namespace SIGSE.Bussines
 
                     Entities.Semana s = new Entities.Semana();
                     s.estado = Entities.EstadoSemana.BORRADOR;
-
-                    foreach (Entities.Dia dd in semanaActual.dias)
-                    {
-                        List<Entities.EjercicioIntensidad> ejercicioIntensidads = new List<Entities.EjercicioIntensidad>();
-
-                        foreach (Entities.EjercicioIntensidad ej in dd.ejercicios)
-                        {
-                            Entities.EjercicioIntensidad nuevoEj = new Entities.EjercicioIntensidad();
-                            nuevoEj.ejercicio = ej.ejercicio;
-                            nuevoEj.descanso = ej.descanso;
-                            nuevoEj.notas = ej.notas;
-                            nuevoEj.peso = ej.peso;
-                            nuevoEj.repeticiones = ej.repeticiones;
-                            nuevoEj.series = ej.series;
-                            ejercicioIntensidads.Add(nuevoEj);
-                        }
-
-                        Entities.Dia nuevodia = new Entities.Dia();
-                        nuevodia.ejercicios.AddRange(ejercicioIntensidads);
-                        s.dias.Add(nuevodia);
-                    }
-
-                    ciclo.semanas.Insert(index+1, s);
-                }
-            }
-
-            if (semanaActual.estado == Entities.EstadoSemana.EN_CURSO)
-            {
-                if (estado != Entities.EstadoSemana.POSPUESTA)
-                {
-                    throw new Exception("No es posible cambiar a ese estado");
-                }
-                else
-                {
-                    int index = ciclo.semanas.IndexOf(semanaActual);
-
-                    Entities.Semana s = new Entities.Semana();
-                    s.estado = Entities.EstadoSemana.BORRADOR;
+                    s.fecha_inicio = semanaActual.fecha_inicio.AddDays(7);
+                    s.orden = semanaActual.orden + 1;
 
                     foreach (Entities.Dia dd in semanaActual.dias)
                     {
@@ -185,6 +149,59 @@ namespace SIGSE.Bussines
                     }
 
                     ciclo.semanas.Insert(index + 1, s);
+                    int ii = 0;
+                    foreach (Entities.Semana sss in ciclo.semanas)
+                    {
+                        sss.fecha_inicio = ciclo.fecha_inicio.AddDays(ii * 7);
+                        sss.orden = ii + 1;
+                        ii++;
+                    }
+                }
+            }
+
+            if (semanaActual.estado == Entities.EstadoSemana.EN_CURSO)
+            {
+                if (estado != Entities.EstadoSemana.POSPUESTA)
+                {
+                    throw new Exception("No es posible cambiar a ese estado");
+                }
+                else
+                {
+                    int index = ciclo.semanas.IndexOf(semanaActual);
+
+                    Entities.Semana s = new Entities.Semana();
+                    s.estado = Entities.EstadoSemana.BORRADOR;
+                    s.fecha_inicio = semanaActual.fecha_inicio.AddDays(7);
+                    s.orden = semanaActual.orden + 1;
+
+                    foreach (Entities.Dia dd in semanaActual.dias)
+                    {
+                        List<Entities.EjercicioIntensidad> ejercicioIntensidads = new List<Entities.EjercicioIntensidad>();
+
+                        foreach (Entities.EjercicioIntensidad ej in dd.ejercicios)
+                        {
+                            Entities.EjercicioIntensidad nuevoEj = new Entities.EjercicioIntensidad();
+                            nuevoEj.ejercicio = ej.ejercicio;
+                            nuevoEj.descanso = ej.descanso;
+                            nuevoEj.notas = ej.notas;
+                            nuevoEj.peso = ej.peso;
+                            nuevoEj.repeticiones = ej.repeticiones;
+                            nuevoEj.series = ej.series;
+                            ejercicioIntensidads.Add(nuevoEj);
+                        }
+
+                        Entities.Dia nuevodia = new Entities.Dia();
+                        nuevodia.ejercicios.AddRange(ejercicioIntensidads);
+                        s.dias.Add(nuevodia);
+                    }
+
+                    ciclo.semanas.Insert(index + 1, s);
+                    int ii = 0;
+                    foreach(Entities.Semana sss in ciclo.semanas)
+                    {
+                        sss.fecha_inicio = ciclo.fecha_inicio.AddDays(ii * 7);
+                        sss.orden = ii + 1;
+                    }
                 }
             }
 

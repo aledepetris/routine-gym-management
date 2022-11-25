@@ -55,3 +55,5 @@ C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.Context\ob
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.Migrations.inicial.resources
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.Migrations.inicial2.resources
 C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.Migrations.inicial.resources
+C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.Migrations.inicial3.resources
+C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.Context\obj\Debug\SIGSE.Context.Migrations.inicial1.resources

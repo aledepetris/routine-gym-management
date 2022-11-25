@@ -12,6 +12,8 @@ namespace SIGSE.Entities
         public int idSemana { get; set; }
         public List<Dia> dias { get; set; }
         public EstadoSemana estado { get; set; }
+        public int orden { get; set; }
+        public DateTime fecha_inicio { get; set; }
         #endregion
 
         #region Metodos
@@ -30,17 +32,13 @@ namespace SIGSE.Entities
                 dia = new Dia();
                 dias.Add(dia);
             }
-
         }
 
-        public void posponerSemana()
+        public DateTime calcularFechaFin()
         {
-            // LOGGICA MAQUINA DE ESTADOS
-        }
-
-        public void cambiarSemanaAPendiente()
-        {
-            // LOGGICA MAQUINA DE ESTADOS
+            DateTime fecha_fin;
+            fecha_fin = fecha_inicio.AddDays(7);
+            return fecha_fin;
         }
 
 

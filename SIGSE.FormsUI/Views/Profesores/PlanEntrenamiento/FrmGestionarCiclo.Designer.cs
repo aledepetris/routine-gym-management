@@ -63,17 +63,18 @@ namespace SIGSE.FormsUI.Views
             this.btnGuardar = new MetroFramework.Controls.MetroButton();
             this.panelForm = new System.Windows.Forms.Panel();
             this.btnNota = new System.Windows.Forms.PictureBox();
-            this.txtDescanso = new MetroFramework.Controls.MetroTextBox();
-            this.txtPeso = new MetroFramework.Controls.MetroTextBox();
             this.txtSeries = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.txtRepeticiones = new MetroFramework.Controls.MetroTextBox();
-            this.cbxEjercicios = new MetroFramework.Controls.MetroComboBox();
+            this.txtDescanso = new MetroFramework.Controls.MetroTextBox();
             this.lblEjercicio = new MetroFramework.Controls.MetroLabel();
+            this.txtPeso = new MetroFramework.Controls.MetroTextBox();
+            this.cbxEjercicios = new MetroFramework.Controls.MetroComboBox();
+            this.txtRepeticiones = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.lbfecha_inicio = new MetroFramework.Controls.MetroLabel();
             this.mpFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnModificar)).BeginInit();
@@ -237,7 +238,7 @@ namespace SIGSE.FormsUI.Views
             // descanso
             // 
             this.descanso.Text = "Descanso";
-            this.descanso.Width = 64;
+            this.descanso.Width = 65;
             // 
             // cbxPlantillas
             // 
@@ -497,6 +498,37 @@ namespace SIGSE.FormsUI.Views
             this.btnNota.TabIndex = 100;
             this.btnNota.TabStop = false;
             // 
+            // txtSeries
+            // 
+            // 
+            // 
+            // 
+            this.txtSeries.CustomButton.Image = null;
+            this.txtSeries.CustomButton.Location = new System.Drawing.Point(54, 1);
+            this.txtSeries.CustomButton.Name = "";
+            this.txtSeries.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtSeries.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtSeries.CustomButton.TabIndex = 1;
+            this.txtSeries.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtSeries.CustomButton.UseSelectable = true;
+            this.txtSeries.CustomButton.Visible = false;
+            this.txtSeries.Lines = new string[0];
+            this.txtSeries.Location = new System.Drawing.Point(299, 33);
+            this.txtSeries.MaxLength = 32767;
+            this.txtSeries.Name = "txtSeries";
+            this.txtSeries.PasswordChar = '\0';
+            this.txtSeries.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSeries.SelectedText = "";
+            this.txtSeries.SelectionLength = 0;
+            this.txtSeries.SelectionStart = 0;
+            this.txtSeries.ShortcutsEnabled = true;
+            this.txtSeries.Size = new System.Drawing.Size(82, 29);
+            this.txtSeries.TabIndex = 91;
+            this.txtSeries.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSeries.UseSelectable = true;
+            this.txtSeries.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtSeries.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // txtDescanso
             // 
             // 
@@ -527,6 +559,15 @@ namespace SIGSE.FormsUI.Views
             this.txtDescanso.UseSelectable = true;
             this.txtDescanso.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDescanso.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lblEjercicio
+            // 
+            this.lblEjercicio.AutoSize = true;
+            this.lblEjercicio.Location = new System.Drawing.Point(118, 11);
+            this.lblEjercicio.Name = "lblEjercicio";
+            this.lblEjercicio.Size = new System.Drawing.Size(57, 19);
+            this.lblEjercicio.TabIndex = 89;
+            this.lblEjercicio.Text = "Ejercicio";
             // 
             // txtPeso
             // 
@@ -559,81 +600,15 @@ namespace SIGSE.FormsUI.Views
             this.txtPeso.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPeso.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // txtSeries
+            // cbxEjercicios
             // 
-            // 
-            // 
-            // 
-            this.txtSeries.CustomButton.Image = null;
-            this.txtSeries.CustomButton.Location = new System.Drawing.Point(54, 1);
-            this.txtSeries.CustomButton.Name = "";
-            this.txtSeries.CustomButton.Size = new System.Drawing.Size(27, 27);
-            this.txtSeries.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtSeries.CustomButton.TabIndex = 1;
-            this.txtSeries.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtSeries.CustomButton.UseSelectable = true;
-            this.txtSeries.CustomButton.Visible = false;
-            this.txtSeries.Lines = new string[0];
-            this.txtSeries.Location = new System.Drawing.Point(299, 33);
-            this.txtSeries.MaxLength = 32767;
-            this.txtSeries.Name = "txtSeries";
-            this.txtSeries.PasswordChar = '\0';
-            this.txtSeries.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtSeries.SelectedText = "";
-            this.txtSeries.SelectionLength = 0;
-            this.txtSeries.SelectionStart = 0;
-            this.txtSeries.ShortcutsEnabled = true;
-            this.txtSeries.Size = new System.Drawing.Size(82, 29);
-            this.txtSeries.TabIndex = 91;
-            this.txtSeries.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSeries.UseSelectable = true;
-            this.txtSeries.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtSeries.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(647, 11);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(38, 19);
-            this.metroLabel5.TabIndex = 99;
-            this.metroLabel5.Text = "Nota";
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(573, 11);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(63, 19);
-            this.metroLabel4.TabIndex = 98;
-            this.metroLabel4.Text = "Descanso";
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(498, 11);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(36, 19);
-            this.metroLabel3.TabIndex = 97;
-            this.metroLabel3.Text = "Peso";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(387, 11);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(82, 19);
-            this.metroLabel2.TabIndex = 96;
-            this.metroLabel2.Text = "Repeticiones";
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(317, 11);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(43, 19);
-            this.metroLabel1.TabIndex = 95;
-            this.metroLabel1.Text = "Series";
+            this.cbxEjercicios.FormattingEnabled = true;
+            this.cbxEjercicios.ItemHeight = 23;
+            this.cbxEjercicios.Location = new System.Drawing.Point(1, 33);
+            this.cbxEjercicios.Name = "cbxEjercicios";
+            this.cbxEjercicios.Size = new System.Drawing.Size(292, 29);
+            this.cbxEjercicios.TabIndex = 90;
+            this.cbxEjercicios.UseSelectable = true;
             // 
             // txtRepeticiones
             // 
@@ -666,30 +641,66 @@ namespace SIGSE.FormsUI.Views
             this.txtRepeticiones.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtRepeticiones.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // cbxEjercicios
+            // metroLabel5
             // 
-            this.cbxEjercicios.FormattingEnabled = true;
-            this.cbxEjercicios.ItemHeight = 23;
-            this.cbxEjercicios.Location = new System.Drawing.Point(1, 33);
-            this.cbxEjercicios.Name = "cbxEjercicios";
-            this.cbxEjercicios.Size = new System.Drawing.Size(292, 29);
-            this.cbxEjercicios.TabIndex = 90;
-            this.cbxEjercicios.UseSelectable = true;
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(647, 11);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(38, 19);
+            this.metroLabel5.TabIndex = 99;
+            this.metroLabel5.Text = "Nota";
             // 
-            // lblEjercicio
+            // metroLabel1
             // 
-            this.lblEjercicio.AutoSize = true;
-            this.lblEjercicio.Location = new System.Drawing.Point(118, 11);
-            this.lblEjercicio.Name = "lblEjercicio";
-            this.lblEjercicio.Size = new System.Drawing.Size(57, 19);
-            this.lblEjercicio.TabIndex = 89;
-            this.lblEjercicio.Text = "Ejercicio";
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(317, 11);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(43, 19);
+            this.metroLabel1.TabIndex = 95;
+            this.metroLabel1.Text = "Series";
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(573, 11);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel4.TabIndex = 98;
+            this.metroLabel4.Text = "Descanso";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(387, 11);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(82, 19);
+            this.metroLabel2.TabIndex = 96;
+            this.metroLabel2.Text = "Repeticiones";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(498, 11);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(36, 19);
+            this.metroLabel3.TabIndex = 97;
+            this.metroLabel3.Text = "Peso";
+            // 
+            // lbfecha_inicio
+            // 
+            this.lbfecha_inicio.AutoSize = true;
+            this.lbfecha_inicio.Location = new System.Drawing.Point(73, 95);
+            this.lbfecha_inicio.Name = "lbfecha_inicio";
+            this.lbfecha_inicio.Size = new System.Drawing.Size(75, 19);
+            this.lbfecha_inicio.TabIndex = 89;
+            this.lbfecha_inicio.Text = "00/00/0000";
             // 
             // FrmGestionarCiclo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 528);
+            this.Controls.Add(this.lbfecha_inicio);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.lblAgregarEjercicio);
@@ -780,5 +791,6 @@ namespace SIGSE.FormsUI.Views
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel lbfecha_inicio;
     }
 }
