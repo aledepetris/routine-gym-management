@@ -118,6 +118,7 @@ namespace SIGSE.FormsUI.Views
                 return;
             }
 
+            // Comentar esto para pruebas de estados y poder crear.
             if (dtpFechaInicio.Value < DateTime.Today)
             {
                 MetroMessageBox.Show(this, "Fecha en el pasado", "ERROR!",
@@ -126,6 +127,7 @@ namespace SIGSE.FormsUI.Views
                     100);
                 return;
             }
+            
 
             calcularFechaFin();
             List<Ciclo> ciclos_revisar = alumno.planEntrenamiento;

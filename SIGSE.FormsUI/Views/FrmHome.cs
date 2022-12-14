@@ -96,19 +96,13 @@ namespace SIGSE.FormsUI.Views
         {
             Utilities.Navegar.OpenNewTab(new FrmTiposEntrenamientos());
         }
-        #endregion
-
-        #region SubMenuProfesores
-        private void tspInformes_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void tspGestionarAlumnos_Click(object sender, EventArgs e)
         {
             Utilities.Navegar.OpenNewTab(new FrmAlumnos());
         }
         #endregion
+
 
         #region Permisos
 
@@ -183,17 +177,57 @@ namespace SIGSE.FormsUI.Views
                         tspGestionarAlumnos.Visible = true;
                     }
 
-                    if (permiso.nombre == "Consultar Informes" && tspInformes.Visible == false)
+                    if (permiso.nombre == "Login-Logout" && tspLoginLogout.Visible == false)
                     {
-                        tsmProfesores.Visible = true;
-                        tspInformes.Visible = true;
+                        tsmAuditoria.Visible = true;
+                        tspLoginLogout.Visible = true;
+                    }
+
+                    if (permiso.nombre == "Ciclos" && tspCiclos.Visible == false)
+                    {
+                        tsmAuditoria.Visible = true;
+                        tspCiclos.Visible = true;
+                    }
+
+                    if (permiso.nombre == "Tablero" && tspTablero.Visible == false)
+                    {
+                        tsmReportes.Visible = false;
+                        tspTablero.Visible = false;
+                    }
+
+                    if (permiso.nombre == "Medidas Alumnos" && tspMedidasAlumnos.Visible == false)
+                    {
+                        tsmReportes.Visible = false;
+                        tspMedidasAlumnos.Visible = false;
                     }
 
                 }
             }
 
         }
+
+
         #endregion
 
+
+        private void tspLoginLogout_Click(object sender, EventArgs e)
+        {
+            Utilities.Navegar.OpenNewTab(new FrmLoginLogout());
+        }
+
+        private void tspCiclos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tspTablero_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tspMedidasAlumnos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

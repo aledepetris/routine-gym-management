@@ -54,6 +54,7 @@
     <Compile Include="CiclosController.cs" />
     <Compile Include="EjercicioControllers .cs" />
     <Compile Include="AlumnosController.cs" />
+    <Compile Include="AuditoriaControllers.cs" />
     <Compile Include="TiposEntrenamientoControllers.cs" />
     <Compile Include="TiposEjercicioControllers.cs" />
     <Compile Include="ObjetivosControllers.cs" />

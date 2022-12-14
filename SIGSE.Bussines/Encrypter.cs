@@ -20,14 +20,12 @@ namespace SIGSE.Bussines
         }
 
 
-        // decoding
         public static string Decrypt(string strData)
         {
             return Encoding.UTF8.GetString(Decrypt(Convert.FromBase64String(strData)));
 
         }
 
-        // encrypt
         public static byte[] Encrypt(byte[] strData)
         {
             PasswordDeriveBytes passbytes =

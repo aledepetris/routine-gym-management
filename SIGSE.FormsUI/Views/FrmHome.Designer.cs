@@ -52,8 +52,14 @@ namespace SIGSE.FormsUI.Views
             this.tspGestionarTipoEntrenamientos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmProfesores = new System.Windows.Forms.ToolStripMenuItem();
             this.tspGestionarAlumnos = new System.Windows.Forms.ToolStripMenuItem();
-            this.tspInformes = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenu = new System.Windows.Forms.MenuStrip();
+            this.tsmAuditoria = new System.Windows.Forms.ToolStripMenuItem();
+            this.tspLoginLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.tspCiclos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmReportes = new System.Windows.Forms.ToolStripMenuItem();
+            this.tspTablero = new System.Windows.Forms.ToolStripMenuItem();
+            this.tspMedidasAlumnos = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mpFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -73,7 +79,7 @@ namespace SIGSE.FormsUI.Views
             this.mpFooter.Location = new System.Drawing.Point(0, 385);
             this.mpFooter.Margin = new System.Windows.Forms.Padding(0);
             this.mpFooter.Name = "mpFooter";
-            this.mpFooter.Size = new System.Drawing.Size(488, 30);
+            this.mpFooter.Size = new System.Drawing.Size(544, 30);
             this.mpFooter.TabIndex = 17;
             this.mpFooter.UseCustomBackColor = true;
             this.mpFooter.VerticalScrollbarBarColor = true;
@@ -88,7 +94,7 @@ namespace SIGSE.FormsUI.Views
             this.lblFooter.FontSize = MetroFramework.MetroLabelSize.Small;
             this.lblFooter.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lblFooter.ForeColor = System.Drawing.Color.White;
-            this.lblFooter.Location = new System.Drawing.Point(100, 9);
+            this.lblFooter.Location = new System.Drawing.Point(123, 9);
             this.lblFooter.Name = "lblFooter";
             this.lblFooter.Size = new System.Drawing.Size(288, 15);
             this.lblFooter.TabIndex = 3;
@@ -101,7 +107,7 @@ namespace SIGSE.FormsUI.Views
             // 
             this.lblNombreApellido.AutoSize = true;
             this.lblNombreApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreApellido.Location = new System.Drawing.Point(310, 39);
+            this.lblNombreApellido.Location = new System.Drawing.Point(348, 39);
             this.lblNombreApellido.Name = "lblNombreApellido";
             this.lblNombreApellido.Size = new System.Drawing.Size(149, 16);
             this.lblNombreApellido.TabIndex = 19;
@@ -127,7 +133,7 @@ namespace SIGSE.FormsUI.Views
             // 
             this.pbLogOut.BackColor = System.Drawing.Color.Red;
             this.pbLogOut.Image = global::SIGSE.FormsUI.Properties.Resources.power;
-            this.pbLogOut.Location = new System.Drawing.Point(462, 37);
+            this.pbLogOut.Location = new System.Drawing.Point(500, 37);
             this.pbLogOut.Name = "pbLogOut";
             this.pbLogOut.Size = new System.Drawing.Size(20, 20);
             this.pbLogOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -141,7 +147,7 @@ namespace SIGSE.FormsUI.Views
             this.pbLogo.Image = global::SIGSE.FormsUI.Properties.Resources.logo_unnamed;
             this.pbLogo.Location = new System.Drawing.Point(20, 84);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(446, 298);
+            this.pbLogo.Size = new System.Drawing.Size(502, 298);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 16;
             this.pbLogo.TabStop = false;
@@ -186,7 +192,7 @@ namespace SIGSE.FormsUI.Views
             // tspGestionarPersonas
             // 
             this.tspGestionarPersonas.Name = "tspGestionarPersonas";
-            this.tspGestionarPersonas.Size = new System.Drawing.Size(180, 22);
+            this.tspGestionarPersonas.Size = new System.Drawing.Size(174, 22);
             this.tspGestionarPersonas.Text = "Gestionar Personas";
             this.tspGestionarPersonas.Visible = false;
             this.tspGestionarPersonas.Click += new System.EventHandler(this.tspGestionarPersonas_Click);
@@ -194,7 +200,7 @@ namespace SIGSE.FormsUI.Views
             // tspGestionarUsuarios
             // 
             this.tspGestionarUsuarios.Name = "tspGestionarUsuarios";
-            this.tspGestionarUsuarios.Size = new System.Drawing.Size(180, 22);
+            this.tspGestionarUsuarios.Size = new System.Drawing.Size(174, 22);
             this.tspGestionarUsuarios.Text = "Gestionar Usuarios";
             this.tspGestionarUsuarios.Visible = false;
             this.tspGestionarUsuarios.Click += new System.EventHandler(this.tspGestionarUsuarios_Click);
@@ -202,7 +208,7 @@ namespace SIGSE.FormsUI.Views
             // tspGestionarRoles
             // 
             this.tspGestionarRoles.Name = "tspGestionarRoles";
-            this.tspGestionarRoles.Size = new System.Drawing.Size(180, 22);
+            this.tspGestionarRoles.Size = new System.Drawing.Size(174, 22);
             this.tspGestionarRoles.Text = "Gestionar Roles";
             this.tspGestionarRoles.Visible = false;
             this.tspGestionarRoles.Click += new System.EventHandler(this.tspGestionarRoles_Click);
@@ -263,8 +269,7 @@ namespace SIGSE.FormsUI.Views
             // tsmProfesores
             // 
             this.tsmProfesores.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tspGestionarAlumnos,
-            this.tspInformes});
+            this.tspGestionarAlumnos});
             this.tsmProfesores.Name = "tsmProfesores";
             this.tsmProfesores.Size = new System.Drawing.Size(74, 20);
             this.tsmProfesores.Text = "Profesores";
@@ -273,18 +278,10 @@ namespace SIGSE.FormsUI.Views
             // tspGestionarAlumnos
             // 
             this.tspGestionarAlumnos.Name = "tspGestionarAlumnos";
-            this.tspGestionarAlumnos.Size = new System.Drawing.Size(175, 22);
+            this.tspGestionarAlumnos.Size = new System.Drawing.Size(180, 22);
             this.tspGestionarAlumnos.Text = "Gestionar Alumnos";
             this.tspGestionarAlumnos.Visible = false;
             this.tspGestionarAlumnos.Click += new System.EventHandler(this.tspGestionarAlumnos_Click);
-            // 
-            // tspInformes
-            // 
-            this.tspInformes.Name = "tspInformes";
-            this.tspInformes.Size = new System.Drawing.Size(175, 22);
-            this.tspInformes.Text = "Informes";
-            this.tspInformes.Visible = false;
-            this.tspInformes.Click += new System.EventHandler(this.tspInformes_Click);
             // 
             // msMenu
             // 
@@ -293,17 +290,73 @@ namespace SIGSE.FormsUI.Views
             this.tsmPerfil,
             this.tsmAdministrar,
             this.tsmParametrizacion,
-            this.tsmProfesores});
+            this.tsmProfesores,
+            this.tsmAuditoria,
+            this.tsmReportes,
+            this.toolStripMenuItem1});
             this.msMenu.Location = new System.Drawing.Point(20, 60);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Size = new System.Drawing.Size(446, 24);
+            this.msMenu.Size = new System.Drawing.Size(502, 24);
             this.msMenu.TabIndex = 15;
+            // 
+            // tsmAuditoria
+            // 
+            this.tsmAuditoria.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tspLoginLogout,
+            this.tspCiclos});
+            this.tsmAuditoria.Name = "tsmAuditoria";
+            this.tsmAuditoria.Size = new System.Drawing.Size(68, 20);
+            this.tsmAuditoria.Text = "Auditoria";
+            this.tsmAuditoria.Visible = false;
+            // 
+            // tspLoginLogout
+            // 
+            this.tspLoginLogout.Name = "tspLoginLogout";
+            this.tspLoginLogout.Size = new System.Drawing.Size(180, 22);
+            this.tspLoginLogout.Text = "Login-Logout";
+            this.tspLoginLogout.Click += new System.EventHandler(this.tspLoginLogout_Click);
+            // 
+            // tspCiclos
+            // 
+            this.tspCiclos.Name = "tspCiclos";
+            this.tspCiclos.Size = new System.Drawing.Size(180, 22);
+            this.tspCiclos.Text = "Ciclos";
+            this.tspCiclos.Click += new System.EventHandler(this.tspCiclos_Click);
+            // 
+            // tsmReportes
+            // 
+            this.tsmReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tspTablero,
+            this.tspMedidasAlumnos});
+            this.tsmReportes.Name = "tsmReportes";
+            this.tsmReportes.Size = new System.Drawing.Size(65, 20);
+            this.tsmReportes.Text = "Reportes";
+            this.tsmReportes.Visible = false;
+            // 
+            // tspTablero
+            // 
+            this.tspTablero.Name = "tspTablero";
+            this.tspTablero.Size = new System.Drawing.Size(180, 22);
+            this.tspTablero.Text = "Tablero";
+            this.tspTablero.Click += new System.EventHandler(this.tspTablero_Click);
+            // 
+            // tspMedidasAlumnos
+            // 
+            this.tspMedidasAlumnos.Name = "tspMedidasAlumnos";
+            this.tspMedidasAlumnos.Size = new System.Drawing.Size(180, 22);
+            this.tspMedidasAlumnos.Text = "Medidas Alumnos";
+            this.tspMedidasAlumnos.Click += new System.EventHandler(this.tspMedidasAlumnos_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
             // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 414);
+            this.ClientSize = new System.Drawing.Size(542, 414);
             this.Controls.Add(this.lblNombreApellido);
             this.Controls.Add(this.pbLogOut);
             this.Controls.Add(this.mpFooter);
@@ -350,7 +403,13 @@ namespace SIGSE.FormsUI.Views
         private System.Windows.Forms.ToolStripMenuItem tspGestionarTipoEntrenamientos;
         private System.Windows.Forms.ToolStripMenuItem tsmProfesores;
         private System.Windows.Forms.ToolStripMenuItem tspGestionarAlumnos;
-        private System.Windows.Forms.ToolStripMenuItem tspInformes;
         private System.Windows.Forms.MenuStrip msMenu;
+        private System.Windows.Forms.ToolStripMenuItem tsmAuditoria;
+        private System.Windows.Forms.ToolStripMenuItem tspLoginLogout;
+        private System.Windows.Forms.ToolStripMenuItem tspCiclos;
+        private System.Windows.Forms.ToolStripMenuItem tsmReportes;
+        private System.Windows.Forms.ToolStripMenuItem tspTablero;
+        private System.Windows.Forms.ToolStripMenuItem tspMedidasAlumnos;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

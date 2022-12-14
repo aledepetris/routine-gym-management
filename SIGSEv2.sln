@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32526.322
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIGSE.FormsUI", "SIGSE.FormsUI\SIGSE.FormsUI.csproj", "{397F83AA-6387-4FAA-8D2D-E1A1DA2FBEAC}"
 EndProject

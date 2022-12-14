@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SIGSE.FormsUI.Utilities;
 
 namespace SIGSE.FormsUI.Views
 {
@@ -138,6 +139,21 @@ namespace SIGSE.FormsUI.Views
                 cAlumnos.desasignarAlumno(this.alumno);
                 this.Close();
             }
+        }
+
+        private void pbInforme_Click(object sender, EventArgs e)
+        {
+            if (alumno.medidas.Count <= 0)
+            {
+                MetroMessageBox.Show(this, "Debe existir al menos una medida", "ATENCION!",
+                    System.Windows.Forms.MessageBoxButtons.OK,
+                    System.Windows.Forms.MessageBoxIcon.Warning,
+                    100);
+                return;
+            }
+
+            Navegar.OpenNewTab(new FrmMedidasAlumnos(alumno));
+
         }
     }
 }

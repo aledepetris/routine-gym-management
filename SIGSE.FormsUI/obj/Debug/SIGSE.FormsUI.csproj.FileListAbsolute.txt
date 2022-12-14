@@ -156,3 +156,5 @@ C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.Fo
 C:\Users\Usuario\Desktop\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmPlanEntrenamiento.resources
 C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmCiclo.resources
 C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmGestionarCiclo.resources
+C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmMedidasAlumnos.resources
+C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.FrmLoginLogout.resources

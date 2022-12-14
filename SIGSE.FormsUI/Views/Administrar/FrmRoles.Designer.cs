@@ -123,12 +123,18 @@ namespace SIGSE.FormsUI.Views
             treeNode46,
             treeNode47,
             treeNode48});
-            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("Consultar Informes");
-            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("Informes", new System.Windows.Forms.TreeNode[] {
-            treeNode50});
-            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("Profesores", new System.Windows.Forms.TreeNode[] {
-            treeNode49,
-            treeNode51});
+            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("Profesores", new System.Windows.Forms.TreeNode[] {
+            treeNode49});
+            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("Login-Logout");
+            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("Ciclos");
+            System.Windows.Forms.TreeNode treeNode53 = new System.Windows.Forms.TreeNode("Auditoria", new System.Windows.Forms.TreeNode[] {
+            treeNode51,
+            treeNode52});
+            System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("Tablero");
+            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("Medidas Alumnos");
+            System.Windows.Forms.TreeNode treeNode56 = new System.Windows.Forms.TreeNode("Reportes", new System.Windows.Forms.TreeNode[] {
+            treeNode54,
+            treeNode55});
             this.gridRoles = new System.Windows.Forms.ListView();
             this.IdRol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -416,17 +422,27 @@ namespace SIGSE.FormsUI.Views
             treeNode48.Text = "Consultar Alumnos";
             treeNode49.Name = "Gestionar Alumnos";
             treeNode49.Text = "Gestionar Alumnos";
-            treeNode50.Name = "Consultar Informes";
-            treeNode50.Text = "Consultar Informes";
-            treeNode51.Name = "Informes";
-            treeNode51.Text = "Informes";
-            treeNode52.Name = "Profesores";
-            treeNode52.Text = "Profesores";
+            treeNode50.Name = "Profesores";
+            treeNode50.Text = "Profesores";
+            treeNode51.Name = "Login-Logout";
+            treeNode51.Text = "Login-Logout";
+            treeNode52.Name = "Ciclos";
+            treeNode52.Text = "Ciclos";
+            treeNode53.Name = "Auditoria";
+            treeNode53.Text = "Auditoria";
+            treeNode54.Name = "Tablero";
+            treeNode54.Text = "Tablero";
+            treeNode55.Name = "Medidas Alumnos";
+            treeNode55.Text = "Medidas Alumnos";
+            treeNode56.Name = "Reportes";
+            treeNode56.Text = "Reportes";
             this.trvPermisos.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode2,
             treeNode18,
             treeNode44,
-            treeNode52});
+            treeNode50,
+            treeNode53,
+            treeNode56});
             this.trvPermisos.Size = new System.Drawing.Size(214, 179);
             this.trvPermisos.TabIndex = 57;
             this.trvPermisos.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.trvPermisos_AfterCheck);

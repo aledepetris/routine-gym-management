@@ -26,6 +26,41 @@ namespace SIGSE.FormsUI
             if (RolesManager.obtenerRolPorNombre(sigse, "Administrador") == null)
             {
 
+                if (PermisoManager.obtenerPermisoPorNombre(sigse, "Auditoria") == null)
+                {
+                    PermisoCompuesto permisosCompuesto;
+                    permisosCompuesto = new PermisoCompuesto("Auditoria");
+
+                    permisosCompuesto.agregarNodo(new PermisoSimple("Login-Logout"));
+                    permisosCompuesto.agregarNodo(new PermisoSimple("Ciclos"));
+
+                    PermisoManager.agregarPermiso(sigse, permisosCompuesto);
+                    rol.permisos.Add(permisosCompuesto);
+
+                    foreach (PermisoSimple simple in permisosCompuesto.permisos)
+                    {
+                        rol.permisos.Add(simple);
+                    }
+                }
+
+                if (PermisoManager.obtenerPermisoPorNombre(sigse, "Reportes") == null)
+                {
+                    PermisoCompuesto permisosCompuesto;
+                    permisosCompuesto = new PermisoCompuesto("Reportes");
+
+                    permisosCompuesto.agregarNodo(new PermisoSimple("Tablero"));
+                    permisosCompuesto.agregarNodo(new PermisoSimple("Medidas Alumnos"));
+                    
+                    PermisoManager.agregarPermiso(sigse, permisosCompuesto);
+                    rol.permisos.Add(permisosCompuesto);
+
+                    foreach (PermisoSimple simple in permisosCompuesto.permisos)
+                    {
+                        rol.permisos.Add(simple);
+                    }
+                }
+
+
                 if (PermisoManager.obtenerPermisoPorNombre(sigse, "Perfil") == null)
                 {
                     PermisoCompuesto permisosCompuesto;
@@ -327,7 +362,16 @@ namespace SIGSE.FormsUI
 
 
 /*
- DELETE
+  DELETE
+  FROM [SigseContext].[dbo].Cicloes
+
+  DELETE
+  FROM [SigseContext].[dbo].Semanas
+  
+  DELETE
+  FROM [SigseContext].[dbo].Dias
+
+  DELETE
   FROM [SigseContext].[dbo].Usuarios
 
   DELETE
@@ -344,4 +388,7 @@ namespace SIGSE.FormsUI
 
   DELETE
   FROM [SigseContext].[dbo].Personas
+
+  DELETE
+  FROM [SigseContext].[dbo].EjercicioIntensidads
  */

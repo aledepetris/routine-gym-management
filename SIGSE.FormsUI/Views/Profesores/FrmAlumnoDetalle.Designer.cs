@@ -34,10 +34,13 @@ namespace SIGSE.FormsUI.Views
             this.btnDesasignarAlumno = new System.Windows.Forms.PictureBox();
             this.btnSave = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.pbInforme = new System.Windows.Forms.PictureBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.btnAgregarMedida = new MetroFramework.Controls.MetroButton();
             this.btnEliminar = new MetroFramework.Controls.MetroButton();
             this.gridMedidas = new System.Windows.Forms.ListView();
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nroMedida = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.fecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.altura = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -66,10 +69,10 @@ namespace SIGSE.FormsUI.Views
             this.lblFooter = new MetroFramework.Controls.MetroLabel();
             this.mpFooter = new MetroFramework.Controls.MetroPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDesasignarAlumno)).BeginInit();
             this.metroPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInforme)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.mpFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -132,6 +135,8 @@ namespace SIGSE.FormsUI.Views
             // metroPanel1
             // 
             this.metroPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroPanel1.Controls.Add(this.metroLabel10);
+            this.metroPanel1.Controls.Add(this.pbInforme);
             this.metroPanel1.Controls.Add(this.metroLabel4);
             this.metroPanel1.Controls.Add(this.btnAgregarMedida);
             this.metroPanel1.Controls.Add(this.btnEliminar);
@@ -146,6 +151,29 @@ namespace SIGSE.FormsUI.Views
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel10.Location = new System.Drawing.Point(694, 0);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(60, 19);
+            this.metroLabel10.TabIndex = 49;
+            this.metroLabel10.Text = "Informe:";
+            // 
+            // pbInforme
+            // 
+            this.pbInforme.BackColor = System.Drawing.Color.Transparent;
+            this.pbInforme.Image = global::SIGSE.FormsUI.Properties.Resources.checklist;
+            this.pbInforme.Location = new System.Drawing.Point(713, 18);
+            this.pbInforme.Name = "pbInforme";
+            this.pbInforme.Size = new System.Drawing.Size(24, 23);
+            this.pbInforme.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbInforme.TabIndex = 48;
+            this.pbInforme.TabStop = false;
+            this.pbInforme.Click += new System.EventHandler(this.pbInforme_Click);
             // 
             // metroLabel4
             // 
@@ -162,7 +190,7 @@ namespace SIGSE.FormsUI.Views
             // 
             this.btnAgregarMedida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregarMedida.BackColor = System.Drawing.Color.Silver;
-            this.btnAgregarMedida.Location = new System.Drawing.Point(491, 18);
+            this.btnAgregarMedida.Location = new System.Drawing.Point(422, 18);
             this.btnAgregarMedida.Name = "btnAgregarMedida";
             this.btnAgregarMedida.Size = new System.Drawing.Size(130, 23);
             this.btnAgregarMedida.TabIndex = 36;
@@ -173,7 +201,7 @@ namespace SIGSE.FormsUI.Views
             // btnEliminar
             // 
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminar.Location = new System.Drawing.Point(627, 18);
+            this.btnEliminar.Location = new System.Drawing.Point(558, 18);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(130, 23);
             this.btnEliminar.TabIndex = 34;
@@ -206,6 +234,11 @@ namespace SIGSE.FormsUI.Views
             this.gridMedidas.TabIndex = 32;
             this.gridMedidas.UseCompatibleStateImageBehavior = false;
             this.gridMedidas.View = System.Windows.Forms.View.Details;
+            // 
+            // id
+            // 
+            this.id.Text = "#";
+            this.id.Width = 0;
             // 
             // nroMedida
             // 
@@ -540,11 +573,6 @@ namespace SIGSE.FormsUI.Views
             this.pictureBox2.TabIndex = 58;
             this.pictureBox2.TabStop = false;
             // 
-            // id
-            // 
-            this.id.Text = "#";
-            this.id.Width = 0;
-            // 
             // FrmAlumnoDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -564,6 +592,7 @@ namespace SIGSE.FormsUI.Views
             ((System.ComponentModel.ISupportInitialize)(this.btnDesasignarAlumno)).EndInit();
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInforme)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.mpFooter.ResumeLayout(false);
@@ -613,5 +642,7 @@ namespace SIGSE.FormsUI.Views
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ColumnHeader id;
+        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private System.Windows.Forms.PictureBox pbInforme;
     }
 }

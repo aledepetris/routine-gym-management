@@ -29,15 +29,9 @@ namespace SIGSE.Entities
             this.nombre = nombre;
         }
 
-        public override void agregarNodo(Permiso perm)
-        {
-            
-        }
+        public override void agregarNodo(Permiso perm) {}
 
-        public override void crearListaPermiso()
-        {
-            
-        }
+        public override void crearListaPermiso() {}
 
         public override IList<Permiso> obtenerNodos()
         {

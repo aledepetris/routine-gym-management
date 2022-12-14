@@ -36,10 +36,52 @@ namespace SIGSE.Bussines
                             context.Entry(al).State = System.Data.Entity.EntityState.Modified;
                             context.SaveChanges();
                         }
+
+                        if (ciclo.calcularFechaFin() <= DateTime.Today)
+                        {
+                            ciclo.estado = Entities.EstadoCiclo.COMPLETO;
+                            context.Entry(al).State = System.Data.Entity.EntityState.Modified;
+                            context.SaveChanges();
+                        }
+                    }
+
+                    if (ciclo.estado == Entities.EstadoCiclo.EN_CURSO)
+                    {
+                        if (ciclo.calcularFechaFin() <= DateTime.Today)
+                        {
+                            ciclo.estado = Entities.EstadoCiclo.COMPLETO;
+                        }
+                    }
+
+                    if (ciclo.estado == Entities.EstadoCiclo.CANCELADO)
+                    {
+                        foreach (Entities.Semana sem in ciclo.semanas)
+                        {
+                            sem.estado = Entities.EstadoSemana.CANCELADA;
+                        }
+                    }
+
+                    foreach (Entities.Semana sem in ciclo.semanas)
+                    {
+                       if (sem.estado == Entities.EstadoSemana.PENDIENTE)
+                       {
+                            if (sem.fecha_inicio <= DateTime.Today)
+                            {
+                                sem.estado = Entities.EstadoSemana.EN_CURSO;
+                            }                            
+                       }
+
+                       if (sem.estado == Entities.EstadoSemana.EN_CURSO)
+                       {
+                            if (sem.calcularFechaFin() <= DateTime.Today)
+                            {
+                                sem.estado = Entities.EstadoSemana.COMPLETA;
+                            }
+                        }
+
                     }
                 }
-            }
-            
+            }                        
         }
 
         public static List<Entities.Persona> obtenerPesonas(Context.SigseContext sigseContext)
