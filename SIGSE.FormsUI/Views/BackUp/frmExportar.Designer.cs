@@ -206,7 +206,9 @@ namespace SIGSE.FormsUI.Views.BackUp
             this.Controls.Add(this.txtServer);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "frmExportar";
+            this.Resizable = false;
             this.Text = "Backup Base de Datos";
             this.ResumeLayout(false);
             this.PerformLayout();

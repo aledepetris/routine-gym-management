@@ -186,7 +186,7 @@ namespace SIGSE.FormsUI.Views.BackUp
             this.btnRestaurar.UseStyleColors = true;
             this.btnRestaurar.Click += new System.EventHandler(this.btnBackup_Click);
             // 
-            // frmExportar
+            // frmImportar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -206,7 +206,9 @@ namespace SIGSE.FormsUI.Views.BackUp
             this.Controls.Add(this.txtServer);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "frmExportar";
+            this.MaximizeBox = false;
+            this.Name = "frmImportar";
+            this.Resizable = false;
             this.Text = "Backup Base de Datos";
             this.ResumeLayout(false);
             this.PerformLayout();

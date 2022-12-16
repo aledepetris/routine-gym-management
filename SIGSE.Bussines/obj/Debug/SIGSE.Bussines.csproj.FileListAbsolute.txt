@@ -52,3 +52,9 @@ C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.Bussines\o
 C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.Bussines\obj\Debug\SIGSE.Bussines.csproj.CopyComplete
 C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.Bussines\obj\Debug\SIGSE.Bussines.dll
 C:\Users\alejandro.depetris\Source\Repos\routine-gym-management\SIGSE.Bussines\obj\Debug\SIGSE.Bussines.pdb
+C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.Bussines\bin\Debug\EPPlus.dll
+C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.Bussines\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.Bussines\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.Bussines\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.Bussines\bin\Debug\EPPlus.xml
+C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.Bussines\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml

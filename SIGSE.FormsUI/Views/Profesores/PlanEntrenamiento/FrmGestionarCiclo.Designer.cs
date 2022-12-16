@@ -57,6 +57,7 @@ namespace SIGSE.FormsUI.Views
             this.lblAgregarEjercicio = new MetroFramework.Controls.MetroLabel();
             this.btnGuardar = new MetroFramework.Controls.MetroButton();
             this.panelForm = new System.Windows.Forms.Panel();
+            this.btnNota = new System.Windows.Forms.PictureBox();
             this.txtSeries = new MetroFramework.Controls.MetroTextBox();
             this.txtDescanso = new MetroFramework.Controls.MetroTextBox();
             this.lblEjercicio = new MetroFramework.Controls.MetroLabel();
@@ -71,15 +72,15 @@ namespace SIGSE.FormsUI.Views
             this.lbfecha_inicio = new MetroFramework.Controls.MetroLabel();
             this.frmCrearPlantilla = new MetroFramework.Controls.MetroButton();
             this.pbArrowDown = new System.Windows.Forms.PictureBox();
-            this.btnNota = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.PictureBox();
             this.btnModificar = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.PictureBox();
+            this.cbxFormato = new System.Windows.Forms.ComboBox();
             this.mpFooter.SuspendLayout();
             this.panelForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbArrowDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNota)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArrowDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnModificar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -246,7 +247,7 @@ namespace SIGSE.FormsUI.Views
             // 
             this.cbxPlantillas.FormattingEnabled = true;
             this.cbxPlantillas.ItemHeight = 23;
-            this.cbxPlantillas.Location = new System.Drawing.Point(309, 127);
+            this.cbxPlantillas.Location = new System.Drawing.Point(327, 127);
             this.cbxPlantillas.Name = "cbxPlantillas";
             this.cbxPlantillas.Size = new System.Drawing.Size(294, 29);
             this.cbxPlantillas.TabIndex = 71;
@@ -256,7 +257,7 @@ namespace SIGSE.FormsUI.Views
             // 
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.Location = new System.Drawing.Point(237, 73);
+            this.metroLabel6.Location = new System.Drawing.Point(255, 73);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(66, 25);
             this.metroLabel6.TabIndex = 72;
@@ -276,7 +277,7 @@ namespace SIGSE.FormsUI.Views
             this.btnCargarPlantilla.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCargarPlantilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCargarPlantilla.DisplayFocus = true;
-            this.btnCargarPlantilla.Location = new System.Drawing.Point(609, 127);
+            this.btnCargarPlantilla.Location = new System.Drawing.Point(627, 127);
             this.btnCargarPlantilla.MaximumSize = new System.Drawing.Size(300, 35);
             this.btnCargarPlantilla.Name = "btnCargarPlantilla";
             this.btnCargarPlantilla.Size = new System.Drawing.Size(142, 29);
@@ -292,7 +293,7 @@ namespace SIGSE.FormsUI.Views
             // 
             this.cbxEstadoSemana.FormattingEnabled = true;
             this.cbxEstadoSemana.ItemHeight = 23;
-            this.cbxEstadoSemana.Location = new System.Drawing.Point(309, 73);
+            this.cbxEstadoSemana.Location = new System.Drawing.Point(327, 73);
             this.cbxEstadoSemana.Name = "cbxEstadoSemana";
             this.cbxEstadoSemana.Size = new System.Drawing.Size(294, 29);
             this.cbxEstadoSemana.TabIndex = 77;
@@ -303,7 +304,7 @@ namespace SIGSE.FormsUI.Views
             this.btnCambiarEstado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCambiarEstado.BackColor = System.Drawing.Color.Silver;
             this.btnCambiarEstado.DisplayFocus = true;
-            this.btnCambiarEstado.Location = new System.Drawing.Point(609, 73);
+            this.btnCambiarEstado.Location = new System.Drawing.Point(627, 73);
             this.btnCambiarEstado.MaximumSize = new System.Drawing.Size(300, 35);
             this.btnCambiarEstado.Name = "btnCambiarEstado";
             this.btnCambiarEstado.Size = new System.Drawing.Size(142, 29);
@@ -355,7 +356,7 @@ namespace SIGSE.FormsUI.Views
             // 
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel8.Location = new System.Drawing.Point(769, 73);
+            this.metroLabel8.Location = new System.Drawing.Point(773, 73);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(144, 19);
             this.metroLabel8.TabIndex = 81;
@@ -364,7 +365,7 @@ namespace SIGSE.FormsUI.Views
             // lblTipoEntrenamiento
             // 
             this.lblTipoEntrenamiento.AutoSize = true;
-            this.lblTipoEntrenamiento.Location = new System.Drawing.Point(802, 95);
+            this.lblTipoEntrenamiento.Location = new System.Drawing.Point(807, 95);
             this.lblTipoEntrenamiento.Name = "lblTipoEntrenamiento";
             this.lblTipoEntrenamiento.Size = new System.Drawing.Size(79, 19);
             this.lblTipoEntrenamiento.TabIndex = 82;
@@ -425,6 +426,17 @@ namespace SIGSE.FormsUI.Views
             this.panelForm.Size = new System.Drawing.Size(682, 65);
             this.panelForm.TabIndex = 88;
             this.panelForm.Visible = false;
+            // 
+            // btnNota
+            // 
+            this.btnNota.BackColor = System.Drawing.Color.Transparent;
+            this.btnNota.Image = global::SIGSE.FormsUI.Properties.Resources.checklist;
+            this.btnNota.Location = new System.Drawing.Point(651, 33);
+            this.btnNota.Name = "btnNota";
+            this.btnNota.Size = new System.Drawing.Size(26, 29);
+            this.btnNota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnNota.TabIndex = 100;
+            this.btnNota.TabStop = false;
             // 
             // txtSeries
             // 
@@ -646,22 +658,11 @@ namespace SIGSE.FormsUI.Views
             this.pbArrowDown.Image = global::SIGSE.FormsUI.Properties.Resources.arrowdown;
             this.pbArrowDown.Location = new System.Drawing.Point(198, 73);
             this.pbArrowDown.Name = "pbArrowDown";
-            this.pbArrowDown.Size = new System.Drawing.Size(33, 28);
+            this.pbArrowDown.Size = new System.Drawing.Size(51, 28);
             this.pbArrowDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbArrowDown.TabIndex = 92;
             this.pbArrowDown.TabStop = false;
             this.pbArrowDown.Click += new System.EventHandler(this.pbArrowDown_Click);
-            // 
-            // btnNota
-            // 
-            this.btnNota.BackColor = System.Drawing.Color.Transparent;
-            this.btnNota.Image = global::SIGSE.FormsUI.Properties.Resources.checklist;
-            this.btnNota.Location = new System.Drawing.Point(651, 33);
-            this.btnNota.Name = "btnNota";
-            this.btnNota.Size = new System.Drawing.Size(26, 29);
-            this.btnNota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnNota.TabIndex = 100;
-            this.btnNota.TabStop = false;
             // 
             // btnAgregar
             // 
@@ -708,11 +709,24 @@ namespace SIGSE.FormsUI.Views
             this.btnEliminar.TabStop = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // cbxFormato
+            // 
+            this.cbxFormato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxFormato.FormattingEnabled = true;
+            this.cbxFormato.Items.AddRange(new object[] {
+            "xlsx",
+            "csv"});
+            this.cbxFormato.Location = new System.Drawing.Point(198, 107);
+            this.cbxFormato.Name = "cbxFormato";
+            this.cbxFormato.Size = new System.Drawing.Size(52, 21);
+            this.cbxFormato.TabIndex = 93;
+            // 
             // FrmGestionarCiclo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 528);
+            this.Controls.Add(this.cbxFormato);
             this.Controls.Add(this.pbArrowDown);
             this.Controls.Add(this.frmCrearPlantilla);
             this.Controls.Add(this.lbfecha_inicio);
@@ -749,8 +763,8 @@ namespace SIGSE.FormsUI.Views
             this.mpFooter.PerformLayout();
             this.panelForm.ResumeLayout(false);
             this.panelForm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbArrowDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNota)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArrowDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnModificar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -809,5 +823,6 @@ namespace SIGSE.FormsUI.Views
         private MetroFramework.Controls.MetroLabel lbfecha_inicio;
         private MetroFramework.Controls.MetroButton frmCrearPlantilla;
         private System.Windows.Forms.PictureBox pbArrowDown;
+        private System.Windows.Forms.ComboBox cbxFormato;
     }
 }

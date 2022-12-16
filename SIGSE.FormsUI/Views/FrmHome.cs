@@ -231,7 +231,7 @@ namespace SIGSE.FormsUI.Views
 
         private void tspTablero_Click(object sender, EventArgs e)
         {
-
+            Utilities.Navegar.OpenNewTab(new Informes.FrmTablero());
         }
 
         private void tspMedidasAlumnos_Click(object sender, EventArgs e)

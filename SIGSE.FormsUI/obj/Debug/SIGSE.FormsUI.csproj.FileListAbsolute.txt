@@ -320,3 +320,5 @@ C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.FormsUI\bi
 C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.FormsUI\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.BackUp.frmExportar.resources
 C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.BackUp.frmImportar.resources
+C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.FormsUI\bin\Debug\DotNetProjects.DataVisualization.Toolkit.dll
+C:\Users\alejandro.depetris\source\repos\routine-gym-management\SIGSE.FormsUI\obj\Debug\SIGSE.FormsUI.Views.Informes.FrmTablero.resources

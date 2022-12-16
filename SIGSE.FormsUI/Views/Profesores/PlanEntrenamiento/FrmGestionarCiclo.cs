@@ -1,5 +1,6 @@
 ﻿using MetroFramework;
 using OfficeOpenXml;
+using SIGSE.Bussines.TemplateReport;
 using SIGSE.Controller;
 using SIGSE.Entities;
 using System;
@@ -44,6 +45,8 @@ namespace SIGSE.FormsUI.Views
             cargarPlanillaEjercicio(diaCount, semanaCount);
 
             cargarComboEstadoSemana();
+            cbxFormato.SelectedIndex = 1;
+
         }
 
         private void actualizarDiaSemana()
@@ -301,21 +304,52 @@ namespace SIGSE.FormsUI.Views
 
         private void pbArrowDown_Click(object sender, EventArgs e)
         {
-            string ruta = Excel.RutinaSemanal.create(ciclo.semanas[semanaCount]);
+            string ruta;
 
-            ExcelPackage excel = new ExcelPackage(ruta);
-
-            SaveFileDialog saveFD = new SaveFileDialog();
-            saveFD.Title = "Save As";
-            saveFD.Filter = "Excel File (*.xlsx)| *.xlsx";
-            string nombre = alumno.nombrecompleto + "_" + "semana_" + ciclo.semanas[semanaCount].fecha_inicio.ToString("yyyy-MM-dd");
-            saveFD.FileName = nombre;
-            if (saveFD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (cbxFormato.Text == "xlsx")
             {
-                Stream stream = saveFD.OpenFile();
-                excel.SaveAs(stream);
-                stream.Close();
+                RutinaSemanalAbs rutina = new RutinaSemanalExcel();
+                ruta = rutina.crearRutinaAndReturnPath(ciclo.semanas[semanaCount]);
+
+                ExcelPackage excel = new ExcelPackage(ruta);
+
+                SaveFileDialog saveFD = new SaveFileDialog();
+                saveFD.Title = "Save As";
+                saveFD.Filter = "Excel File (*.xlsx)| *.xlsx";
+                string nombre = alumno.nombrecompleto + "_" + "semana_" + ciclo.semanas[semanaCount].fecha_inicio.ToString("yyyy-MM-dd");
+                saveFD.FileName = nombre;
+                if (saveFD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    Stream stream = saveFD.OpenFile();
+                    excel.SaveAs(stream);
+                    stream.Close();
+                }
             }
+            else
+            {
+                RutinaSemanalAbs rutina = new RutinaSemanalCsv();
+                ruta = rutina.crearRutinaAndReturnPath(ciclo.semanas[semanaCount]);
+
+                StreamReader csv_file = new StreamReader(ruta);
+
+                SaveFileDialog saveFD = new SaveFileDialog();
+                saveFD.Title = "Save As"; 
+                string filter = "CSV file (*.csv)|*.csv| All Files (*.*)|*.*";
+                saveFD.Filter = filter;
+                string nombre = alumno.nombrecompleto + "_" + "semana_" + ciclo.semanas[semanaCount].fecha_inicio.ToString("yyyy-MM-dd");
+                saveFD.FileName = nombre;
+
+                string selectedPath = "";
+                if (saveFD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    selectedPath = saveFD.FileName;
+                    Console.WriteLine(selectedPath);
+                    File.WriteAllText(selectedPath, csv_file.ReadToEnd().ToString());
+                }
+
+            }
+
+            Console.WriteLine(ruta);
 
         }
 

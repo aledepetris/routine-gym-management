@@ -7,27 +7,27 @@ using System.IO;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 using SIGSE.Entities;
+using SIGSE.Bussines.TemplateReport;
 
-namespace SIGSE.FormsUI.Excel
+namespace SIGSE.Bussines.TemplateReport
 {
-    public class RutinaSemanal
+    public class RutinaSemanalExcel : RutinaSemanalAbs
     {
-        public static string create(Semana sem)
-        {
-            // Creating an instance
-            // of ExcelPackage
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            ExcelPackage excel = new ExcelPackage();
+        ExcelPackage excel;
 
+        protected override void inicializarDocumento()
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            this.excel = new ExcelPackage();
+        }
+
+        protected override void generarDocumento(Semana sem)
+        {
             int count = 1;
             foreach (Dia dia in sem.dias)
             {
                 var workSheet = excel.Workbook.Worksheets.Add("Dia" + count.ToString());
-                workSheet.TabColor = System.Drawing.Color.Black;
-                workSheet.DefaultRowHeight = 12;
-                workSheet.Row(1).Height = 20;
-                workSheet.Row(1).Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-                workSheet.Row(1).Style.Font.Bold = true;
+
 
                 // Headers
                 workSheet.Cells[1, 1].Value = "#";
@@ -50,16 +50,31 @@ namespace SIGSE.FormsUI.Excel
                     recordIndex++;
                 }
 
+                count++;
+            }
+        }
+
+        protected override void ajustarTextos()
+        {
+            foreach (var workSheet in excel.Workbook.Worksheets)
+            {
+                workSheet.TabColor = System.Drawing.Color.Black;
+                workSheet.DefaultRowHeight = 12;
+                workSheet.Row(1).Height = 20;
+                workSheet.Row(1).Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                workSheet.Row(1).Style.Font.Bold = true;
+
                 workSheet.Column(1).AutoFit();
                 workSheet.Column(2).AutoFit();
                 workSheet.Column(3).AutoFit();
                 workSheet.Column(4).AutoFit();
                 workSheet.Column(5).AutoFit();
                 workSheet.Column(6).AutoFit();
-
-                count++;
             }
+        }
 
+        protected override string guardarAndObtenerRuta()
+        {
             string p_strPath = Directory.GetCurrentDirectory() + "\\rutina.xlsx";
 
             if (File.Exists(p_strPath))
@@ -73,6 +88,5 @@ namespace SIGSE.FormsUI.Excel
 
             return p_strPath;
         }
-
     }
 }
