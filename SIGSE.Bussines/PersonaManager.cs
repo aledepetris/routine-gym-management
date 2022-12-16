@@ -117,6 +117,16 @@ namespace SIGSE.Bussines
             sigseContext.SaveChanges();
         }
 
+        public static int modificarAlumnoAndReturnCicloId(Context.SigseContext sigseContext, Entities.Persona persona)
+        {
+            sigseContext.Entry(persona).State = System.Data.Entity.EntityState.Modified;
+            sigseContext.SaveChanges();
+
+            Entities.Alumno alumno = (Entities.Alumno)persona;
+
+            return alumno.planEntrenamiento.Last().idCiclo;
+        }
+
         public static void eliminarPersona(Context.SigseContext sigseContext, Entities.Persona persona)
         {
             sigseContext.personas.Remove(persona);

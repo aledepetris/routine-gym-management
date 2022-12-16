@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -49,8 +50,10 @@ namespace SIGSE.Controller
 
         public void modificarCiclo(Alumno alumno, Ciclo oCiclo, DateTime inicio, Objetivo objetivo, int cantSemanas, TipoEntrenamiento tipoEntrenamiento, int cantDias)
         {
-            CicloManager.modificarCiclo(context, alumno, oCiclo, inicio, objetivo, cantSemanas, tipoEntrenamiento, cantDias);
+            Ciclo cicloToPass = CicloManager.modificarCicloAndReturn(context, alumno, oCiclo, inicio, objetivo, cantSemanas, tipoEntrenamiento, cantDias);
             PersonaManager.actualizarCiclosAlumnos();
+            AuditoriaManager.actualizarAuditoriaCiclo(context, cicloToPass, sesion.currentUser.username);
+
         }
 
         public List<TipoEntrenamiento> obtenerListaTiposEntrenamientos(Objetivo objetivo, int cantDias)
@@ -71,8 +74,11 @@ namespace SIGSE.Controller
         public void agregarNuevoCiclo(Alumno alumno, Ciclo ciclo)
         {
             alumno.planEntrenamiento.Add(ciclo);
-            PersonaManager.modificarPersona(context, alumno);
+
+            int id = PersonaManager.modificarAlumnoAndReturnCicloId(context, alumno);
             PersonaManager.actualizarCiclosAlumnos();
+            AuditoriaManager.crearAuditoriaCiclo(context, alumno, ciclo, sesion.currentUser.username, id);
+
         }
 
         public List<Ejercicio> obtenerEjerciciosSegunTipoEntrenamiento(TipoEntrenamiento tipoEnt)
@@ -103,6 +109,29 @@ namespace SIGSE.Controller
         public void cambiarEstadoSemana(Ciclo ciclo, Semana semanaActual, EstadoSemana estado) 
         {
             CicloManager.cambiarEstadoSemana(context, ciclo ,semanaActual, estado);
+        }
+
+        public void agregarNuevoDiaPlantilla(PlantillaDia plantilla, List<EjercicioIntensidad> ejercicios)
+        {
+            plantilla.ejercicios = ejercicios;
+
+            context.plantilla_dias.Add(plantilla);
+            context.SaveChanges();
+        }
+
+        public List<PlantillaDia> obtenerPlantillas()
+        {
+            return context.plantilla_dias.ToList();
+        }
+
+        public List<EjercicioIntensidad> obtenerEjerciciosPlantilla(PlantillaDia plantilla)
+        {
+            PlantillaDia p = context.plantilla_dias
+                .Where(x => x.codigo == plantilla.codigo)
+                .Include(x => x.ejercicios)
+                .FirstOrDefault();
+
+            return p.ejercicios;
         }
 
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -40,6 +41,19 @@ namespace SIGSE.Controller
         public List<AuditoriaLogin> obtenerListaAuditoriaLogin()
         {
             return context.auditoria_login.ToList();
+        }
+
+        public List<AuditoriaCiclos> obtenerListaAuditoriaCiclos()
+        {
+            return context.auditoria_ciclos.ToList();
+        }
+
+        public AuditoriaCiclos obtenerCicloAuditado(int id)
+        {
+            return context.auditoria_ciclos
+                .Where(x => x.idAuditoria == id)
+                .Include(x => x.movimientosCiclo)
+                .FirstOrDefault();                
         }
     }
 }

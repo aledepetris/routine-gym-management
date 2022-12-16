@@ -46,7 +46,6 @@ namespace SIGSE.FormsUI.Views
             this.cbxPlantillas = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.btnElegirPlantilla = new MetroFramework.Controls.MetroButton();
             this.btnCargarPlantilla = new MetroFramework.Controls.MetroButton();
             this.cbxEstadoSemana = new MetroFramework.Controls.MetroComboBox();
             this.btnCambiarEstado = new MetroFramework.Controls.MetroButton();
@@ -54,15 +53,10 @@ namespace SIGSE.FormsUI.Views
             this.lblFooter = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.lblTipoEntrenamiento = new MetroFramework.Controls.MetroLabel();
-            this.btnAgregar = new System.Windows.Forms.PictureBox();
-            this.btnModificar = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnEliminar = new System.Windows.Forms.PictureBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.lblAgregarEjercicio = new MetroFramework.Controls.MetroLabel();
             this.btnGuardar = new MetroFramework.Controls.MetroButton();
             this.panelForm = new System.Windows.Forms.Panel();
-            this.btnNota = new System.Windows.Forms.PictureBox();
             this.txtSeries = new MetroFramework.Controls.MetroTextBox();
             this.txtDescanso = new MetroFramework.Controls.MetroTextBox();
             this.lblEjercicio = new MetroFramework.Controls.MetroLabel();
@@ -75,13 +69,21 @@ namespace SIGSE.FormsUI.Views
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.lbfecha_inicio = new MetroFramework.Controls.MetroLabel();
+            this.frmCrearPlantilla = new MetroFramework.Controls.MetroButton();
+            this.pbArrowDown = new System.Windows.Forms.PictureBox();
+            this.btnNota = new System.Windows.Forms.PictureBox();
+            this.btnAgregar = new System.Windows.Forms.PictureBox();
+            this.btnModificar = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnEliminar = new System.Windows.Forms.PictureBox();
             this.mpFooter.SuspendLayout();
+            this.panelForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArrowDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNota)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnModificar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
-            this.panelForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNota)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNextWeek
@@ -244,18 +246,17 @@ namespace SIGSE.FormsUI.Views
             // 
             this.cbxPlantillas.FormattingEnabled = true;
             this.cbxPlantillas.ItemHeight = 23;
-            this.cbxPlantillas.Location = new System.Drawing.Point(282, 127);
+            this.cbxPlantillas.Location = new System.Drawing.Point(309, 127);
             this.cbxPlantillas.Name = "cbxPlantillas";
             this.cbxPlantillas.Size = new System.Drawing.Size(294, 29);
             this.cbxPlantillas.TabIndex = 71;
             this.cbxPlantillas.UseSelectable = true;
-            this.cbxPlantillas.Visible = false;
             // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel6.Location = new System.Drawing.Point(210, 73);
+            this.metroLabel6.Location = new System.Drawing.Point(237, 73);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(66, 25);
             this.metroLabel6.TabIndex = 72;
@@ -270,29 +271,12 @@ namespace SIGSE.FormsUI.Views
             this.metroLabel7.TabIndex = 74;
             this.metroLabel7.Text = "Eliminar Ejercicio";
             // 
-            // btnElegirPlantilla
-            // 
-            this.btnElegirPlantilla.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnElegirPlantilla.BackColor = System.Drawing.Color.Silver;
-            this.btnElegirPlantilla.DisplayFocus = true;
-            this.btnElegirPlantilla.Location = new System.Drawing.Point(176, 127);
-            this.btnElegirPlantilla.MaximumSize = new System.Drawing.Size(300, 35);
-            this.btnElegirPlantilla.Name = "btnElegirPlantilla";
-            this.btnElegirPlantilla.Size = new System.Drawing.Size(100, 29);
-            this.btnElegirPlantilla.Style = MetroFramework.MetroColorStyle.White;
-            this.btnElegirPlantilla.TabIndex = 75;
-            this.btnElegirPlantilla.Text = "Elegir Plantilla";
-            this.btnElegirPlantilla.UseCustomBackColor = true;
-            this.btnElegirPlantilla.UseSelectable = true;
-            this.btnElegirPlantilla.UseStyleColors = true;
-            this.btnElegirPlantilla.Visible = false;
-            // 
             // btnCargarPlantilla
             // 
             this.btnCargarPlantilla.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCargarPlantilla.BackColor = System.Drawing.Color.Silver;
+            this.btnCargarPlantilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCargarPlantilla.DisplayFocus = true;
-            this.btnCargarPlantilla.Location = new System.Drawing.Point(582, 127);
+            this.btnCargarPlantilla.Location = new System.Drawing.Point(609, 127);
             this.btnCargarPlantilla.MaximumSize = new System.Drawing.Size(300, 35);
             this.btnCargarPlantilla.Name = "btnCargarPlantilla";
             this.btnCargarPlantilla.Size = new System.Drawing.Size(142, 29);
@@ -302,13 +286,13 @@ namespace SIGSE.FormsUI.Views
             this.btnCargarPlantilla.UseCustomBackColor = true;
             this.btnCargarPlantilla.UseSelectable = true;
             this.btnCargarPlantilla.UseStyleColors = true;
-            this.btnCargarPlantilla.Visible = false;
+            this.btnCargarPlantilla.Click += new System.EventHandler(this.btnCargarPlantilla_Click);
             // 
             // cbxEstadoSemana
             // 
             this.cbxEstadoSemana.FormattingEnabled = true;
             this.cbxEstadoSemana.ItemHeight = 23;
-            this.cbxEstadoSemana.Location = new System.Drawing.Point(282, 73);
+            this.cbxEstadoSemana.Location = new System.Drawing.Point(309, 73);
             this.cbxEstadoSemana.Name = "cbxEstadoSemana";
             this.cbxEstadoSemana.Size = new System.Drawing.Size(294, 29);
             this.cbxEstadoSemana.TabIndex = 77;
@@ -319,7 +303,7 @@ namespace SIGSE.FormsUI.Views
             this.btnCambiarEstado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCambiarEstado.BackColor = System.Drawing.Color.Silver;
             this.btnCambiarEstado.DisplayFocus = true;
-            this.btnCambiarEstado.Location = new System.Drawing.Point(582, 73);
+            this.btnCambiarEstado.Location = new System.Drawing.Point(609, 73);
             this.btnCambiarEstado.MaximumSize = new System.Drawing.Size(300, 35);
             this.btnCambiarEstado.Name = "btnCambiarEstado";
             this.btnCambiarEstado.Size = new System.Drawing.Size(142, 29);
@@ -371,7 +355,7 @@ namespace SIGSE.FormsUI.Views
             // 
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel8.Location = new System.Drawing.Point(742, 73);
+            this.metroLabel8.Location = new System.Drawing.Point(769, 73);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(144, 19);
             this.metroLabel8.TabIndex = 81;
@@ -380,56 +364,11 @@ namespace SIGSE.FormsUI.Views
             // lblTipoEntrenamiento
             // 
             this.lblTipoEntrenamiento.AutoSize = true;
-            this.lblTipoEntrenamiento.Location = new System.Drawing.Point(775, 95);
+            this.lblTipoEntrenamiento.Location = new System.Drawing.Point(802, 95);
             this.lblTipoEntrenamiento.Name = "lblTipoEntrenamiento";
             this.lblTipoEntrenamiento.Size = new System.Drawing.Size(79, 19);
             this.lblTipoEntrenamiento.TabIndex = 82;
             this.lblTipoEntrenamiento.Text = "- xxxxxxxxxx";
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.Image = global::SIGSE.FormsUI.Properties.Resources.plus_icon_blue;
-            this.btnAgregar.Location = new System.Drawing.Point(736, 195);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(33, 32);
-            this.btnAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAgregar.TabIndex = 84;
-            this.btnAgregar.TabStop = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.Image = global::SIGSE.FormsUI.Properties.Resources.pencil2;
-            this.btnModificar.Location = new System.Drawing.Point(736, 245);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(33, 32);
-            this.btnModificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnModificar.TabIndex = 83;
-            this.btnModificar.TabStop = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Silver;
-            this.pictureBox2.Location = new System.Drawing.Point(-4, 54);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(932, 10);
-            this.pictureBox2.TabIndex = 79;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.Image = global::SIGSE.FormsUI.Properties.Resources.trash;
-            this.btnEliminar.Location = new System.Drawing.Point(736, 299);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(33, 32);
-            this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEliminar.TabIndex = 73;
-            this.btnEliminar.TabStop = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // metroLabel9
             // 
@@ -486,17 +425,6 @@ namespace SIGSE.FormsUI.Views
             this.panelForm.Size = new System.Drawing.Size(682, 65);
             this.panelForm.TabIndex = 88;
             this.panelForm.Visible = false;
-            // 
-            // btnNota
-            // 
-            this.btnNota.BackColor = System.Drawing.Color.Transparent;
-            this.btnNota.Image = global::SIGSE.FormsUI.Properties.Resources.checklist;
-            this.btnNota.Location = new System.Drawing.Point(651, 33);
-            this.btnNota.Name = "btnNota";
-            this.btnNota.Size = new System.Drawing.Size(26, 29);
-            this.btnNota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnNota.TabIndex = 100;
-            this.btnNota.TabStop = false;
             // 
             // txtSeries
             // 
@@ -695,11 +623,98 @@ namespace SIGSE.FormsUI.Views
             this.lbfecha_inicio.TabIndex = 89;
             this.lbfecha_inicio.Text = "00/00/0000";
             // 
+            // frmCrearPlantilla
+            // 
+            this.frmCrearPlantilla.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.frmCrearPlantilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.frmCrearPlantilla.DisplayFocus = true;
+            this.frmCrearPlantilla.Location = new System.Drawing.Point(736, 456);
+            this.frmCrearPlantilla.MaximumSize = new System.Drawing.Size(300, 35);
+            this.frmCrearPlantilla.Name = "frmCrearPlantilla";
+            this.frmCrearPlantilla.Size = new System.Drawing.Size(162, 35);
+            this.frmCrearPlantilla.Style = MetroFramework.MetroColorStyle.White;
+            this.frmCrearPlantilla.TabIndex = 90;
+            this.frmCrearPlantilla.Text = "Crear Plantilla del Dia";
+            this.frmCrearPlantilla.UseCustomBackColor = true;
+            this.frmCrearPlantilla.UseSelectable = true;
+            this.frmCrearPlantilla.UseStyleColors = true;
+            this.frmCrearPlantilla.Click += new System.EventHandler(this.frmCrearPlantilla_Click);
+            // 
+            // pbArrowDown
+            // 
+            this.pbArrowDown.BackColor = System.Drawing.Color.Transparent;
+            this.pbArrowDown.Image = global::SIGSE.FormsUI.Properties.Resources.arrowdown;
+            this.pbArrowDown.Location = new System.Drawing.Point(198, 73);
+            this.pbArrowDown.Name = "pbArrowDown";
+            this.pbArrowDown.Size = new System.Drawing.Size(33, 28);
+            this.pbArrowDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbArrowDown.TabIndex = 92;
+            this.pbArrowDown.TabStop = false;
+            this.pbArrowDown.Click += new System.EventHandler(this.pbArrowDown_Click);
+            // 
+            // btnNota
+            // 
+            this.btnNota.BackColor = System.Drawing.Color.Transparent;
+            this.btnNota.Image = global::SIGSE.FormsUI.Properties.Resources.checklist;
+            this.btnNota.Location = new System.Drawing.Point(651, 33);
+            this.btnNota.Name = "btnNota";
+            this.btnNota.Size = new System.Drawing.Size(26, 29);
+            this.btnNota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnNota.TabIndex = 100;
+            this.btnNota.TabStop = false;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.Image = global::SIGSE.FormsUI.Properties.Resources.plus_icon_blue;
+            this.btnAgregar.Location = new System.Drawing.Point(736, 195);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(33, 32);
+            this.btnAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAgregar.TabIndex = 84;
+            this.btnAgregar.TabStop = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.Transparent;
+            this.btnModificar.Image = global::SIGSE.FormsUI.Properties.Resources.pencil2;
+            this.btnModificar.Location = new System.Drawing.Point(736, 245);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(33, 32);
+            this.btnModificar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnModificar.TabIndex = 83;
+            this.btnModificar.TabStop = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox2.Location = new System.Drawing.Point(-4, 54);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(932, 10);
+            this.pictureBox2.TabIndex = 79;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.Image = global::SIGSE.FormsUI.Properties.Resources.trash;
+            this.btnEliminar.Location = new System.Drawing.Point(736, 299);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(33, 32);
+            this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEliminar.TabIndex = 73;
+            this.btnEliminar.TabStop = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // FrmGestionarCiclo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 528);
+            this.Controls.Add(this.pbArrowDown);
+            this.Controls.Add(this.frmCrearPlantilla);
             this.Controls.Add(this.lbfecha_inicio);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.btnGuardar);
@@ -714,7 +729,6 @@ namespace SIGSE.FormsUI.Views
             this.Controls.Add(this.btnCambiarEstado);
             this.Controls.Add(this.cbxEstadoSemana);
             this.Controls.Add(this.btnCargarPlantilla);
-            this.Controls.Add(this.btnElegirPlantilla);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.metroLabel6);
@@ -730,15 +744,17 @@ namespace SIGSE.FormsUI.Views
             this.Name = "FrmGestionarCiclo";
             this.Resizable = false;
             this.Text = "Nombre Apellido   |   Ciclo: 01/01/2022 - 02/02/2022";
+            this.Activated += new System.EventHandler(this.FrmGestionarCiclo_Activated);
             this.mpFooter.ResumeLayout(false);
             this.mpFooter.PerformLayout();
+            this.panelForm.ResumeLayout(false);
+            this.panelForm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArrowDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNota)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnModificar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
-            this.panelForm.ResumeLayout(false);
-            this.panelForm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNota)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -764,7 +780,6 @@ namespace SIGSE.FormsUI.Views
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private System.Windows.Forms.PictureBox btnEliminar;
         private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroButton btnElegirPlantilla;
         private MetroFramework.Controls.MetroButton btnCargarPlantilla;
         private MetroFramework.Controls.MetroComboBox cbxEstadoSemana;
         private MetroFramework.Controls.MetroButton btnCambiarEstado;
@@ -792,5 +807,7 @@ namespace SIGSE.FormsUI.Views
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel lbfecha_inicio;
+        private MetroFramework.Controls.MetroButton frmCrearPlantilla;
+        private System.Windows.Forms.PictureBox pbArrowDown;
     }
 }

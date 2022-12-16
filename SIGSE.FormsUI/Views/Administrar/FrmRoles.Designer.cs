@@ -131,10 +131,13 @@ namespace SIGSE.FormsUI.Views
             treeNode51,
             treeNode52});
             System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("Tablero");
-            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("Medidas Alumnos");
-            System.Windows.Forms.TreeNode treeNode56 = new System.Windows.Forms.TreeNode("Reportes", new System.Windows.Forms.TreeNode[] {
-            treeNode54,
-            treeNode55});
+            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("Reportes", new System.Windows.Forms.TreeNode[] {
+            treeNode54});
+            System.Windows.Forms.TreeNode treeNode56 = new System.Windows.Forms.TreeNode("Resguardo");
+            System.Windows.Forms.TreeNode treeNode57 = new System.Windows.Forms.TreeNode("Restauracion");
+            System.Windows.Forms.TreeNode treeNode58 = new System.Windows.Forms.TreeNode("BackUp", new System.Windows.Forms.TreeNode[] {
+            treeNode56,
+            treeNode57});
             this.gridRoles = new System.Windows.Forms.ListView();
             this.IdRol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -432,17 +435,22 @@ namespace SIGSE.FormsUI.Views
             treeNode53.Text = "Auditoria";
             treeNode54.Name = "Tablero";
             treeNode54.Text = "Tablero";
-            treeNode55.Name = "Medidas Alumnos";
-            treeNode55.Text = "Medidas Alumnos";
-            treeNode56.Name = "Reportes";
-            treeNode56.Text = "Reportes";
+            treeNode55.Name = "Reportes";
+            treeNode55.Text = "Reportes";
+            treeNode56.Name = "Resguardo";
+            treeNode56.Text = "Resguardo";
+            treeNode57.Name = "Restauracion";
+            treeNode57.Text = "Restauracion";
+            treeNode58.Name = "BackUp";
+            treeNode58.Text = "BackUp";
             this.trvPermisos.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode2,
             treeNode18,
             treeNode44,
             treeNode50,
             treeNode53,
-            treeNode56});
+            treeNode55,
+            treeNode58});
             this.trvPermisos.Size = new System.Drawing.Size(214, 179);
             this.trvPermisos.TabIndex = 57;
             this.trvPermisos.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.trvPermisos_AfterCheck);

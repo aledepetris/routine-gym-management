@@ -67,6 +67,11 @@ namespace SIGSE.Context
         public virtual DbSet<EjercicioIntensidad> ejercicios_instesidad { get; set; }
         public virtual DbSet<Medida> medidas { get; set; }
         public virtual DbSet<AuditoriaLogin> auditoria_login { get; set; }
+        public virtual DbSet<AuditoriaCiclos> auditoria_ciclos { get; set; }
+        public virtual DbSet<MovimientosCiclo> movimientos_ciclo { get; set; }
+
+        public virtual DbSet<PlantillaDia> plantilla_dias { get; set; }
+
 
 
 
@@ -142,6 +147,17 @@ namespace SIGSE.Context
             modelBuilder.Entity<AuditoriaLogin>()
                 .HasKey(a => a.idLogin);
 
+            modelBuilder.Entity<AuditoriaCiclos>()
+                .HasKey(a => a.idAuditoria)
+                .HasMany(a => a.movimientosCiclo);
+
+            modelBuilder.Entity<MovimientosCiclo>()
+                .HasKey(a => a.id);
+
+            modelBuilder.Entity<PlantillaDia>()
+                .HasKey(a => a.codigo)
+                .HasMany(a => a.ejercicios);
+            
         }
 
     }

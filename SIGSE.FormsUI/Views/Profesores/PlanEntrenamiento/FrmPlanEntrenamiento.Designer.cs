@@ -83,7 +83,7 @@ namespace SIGSE.FormsUI.Views
             // 
             this.btnGestionarCiclo.BackColor = System.Drawing.Color.Transparent;
             this.btnGestionarCiclo.Image = global::SIGSE.FormsUI.Properties.Resources.checklist1;
-            this.btnGestionarCiclo.Location = new System.Drawing.Point(425, 252);
+            this.btnGestionarCiclo.Location = new System.Drawing.Point(305, 253);
             this.btnGestionarCiclo.Name = "btnGestionarCiclo";
             this.btnGestionarCiclo.Size = new System.Drawing.Size(64, 41);
             this.btnGestionarCiclo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -95,12 +95,13 @@ namespace SIGSE.FormsUI.Views
             // 
             this.btnEliminarCiclo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminarCiclo.BackColor = System.Drawing.Color.Silver;
-            this.btnEliminarCiclo.Location = new System.Drawing.Point(285, 256);
+            this.btnEliminarCiclo.Location = new System.Drawing.Point(375, 256);
             this.btnEliminarCiclo.Name = "btnEliminarCiclo";
             this.btnEliminarCiclo.Size = new System.Drawing.Size(130, 34);
             this.btnEliminarCiclo.TabIndex = 59;
             this.btnEliminarCiclo.Text = "Eliminar Ciclo";
             this.btnEliminarCiclo.UseSelectable = true;
+            this.btnEliminarCiclo.Visible = false;
             this.btnEliminarCiclo.Click += new System.EventHandler(this.btnEliminarCiclo_Click);
             // 
             // btnModificarCiclo

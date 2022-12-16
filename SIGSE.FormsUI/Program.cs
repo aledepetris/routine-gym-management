@@ -26,6 +26,24 @@ namespace SIGSE.FormsUI
             if (RolesManager.obtenerRolPorNombre(sigse, "Administrador") == null)
             {
 
+
+                if (PermisoManager.obtenerPermisoPorNombre(sigse, "BackUp") == null)
+                {
+                    PermisoCompuesto permisosCompuesto;
+                    permisosCompuesto = new PermisoCompuesto("BackUp");
+
+                    permisosCompuesto.agregarNodo(new PermisoSimple("Resguardo"));
+                    permisosCompuesto.agregarNodo(new PermisoSimple("Restauracion"));
+
+                    PermisoManager.agregarPermiso(sigse, permisosCompuesto);
+                    rol.permisos.Add(permisosCompuesto);
+
+                    foreach (PermisoSimple simple in permisosCompuesto.permisos)
+                    {
+                        rol.permisos.Add(simple);
+                    }
+                }
+
                 if (PermisoManager.obtenerPermisoPorNombre(sigse, "Auditoria") == null)
                 {
                     PermisoCompuesto permisosCompuesto;
@@ -192,6 +210,7 @@ namespace SIGSE.FormsUI
                         }
 
                     }
+
                     if (PermisoManager.obtenerPermisoPorNombre(sigse, "Gestionar Objetivos") == null)
                     {
                         PermisoCompuesto permisosCompuesto;
@@ -212,6 +231,7 @@ namespace SIGSE.FormsUI
                         }
 
                     }
+
                     if (PermisoManager.obtenerPermisoPorNombre(sigse, "Gestionar Tipos de Ejercicio") == null)
                     {
                         PermisoCompuesto permisosCompuesto;
@@ -358,37 +378,7 @@ namespace SIGSE.FormsUI
             Application.Run(FrmLogin.obtenerInstancia());
         }
     }
+
+
+
 }
-
-
-/*
-  DELETE
-  FROM [SigseContext].[dbo].Cicloes
-
-  DELETE
-  FROM [SigseContext].[dbo].Semanas
-  
-  DELETE
-  FROM [SigseContext].[dbo].Dias
-
-  DELETE
-  FROM [SigseContext].[dbo].Usuarios
-
-  DELETE
-  FROM [SigseContext].[dbo].UsuarioRols
-    
-  DELETE
-  FROM [SigseContext].[dbo].RolPermisoes
-
-  DELETE
-  FROM [SigseContext].[dbo].Rols
-
-  DELETE
-  FROM [SigseContext].[dbo].Permisoes
-
-  DELETE
-  FROM [SigseContext].[dbo].Personas
-
-  DELETE
-  FROM [SigseContext].[dbo].EjercicioIntensidads
- */

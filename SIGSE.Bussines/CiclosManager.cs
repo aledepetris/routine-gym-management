@@ -55,7 +55,7 @@ namespace SIGSE.Bussines
         }
 
 
-        public static void modificarCiclo(Context.SigseContext sigseContext, Entities.Alumno alumno, Entities.Ciclo oCiclo, DateTime inicio, Entities.Objetivo oObjetivo, int cantSemanas, Entities.TipoEntrenamiento oTipoEntrenamiento, int cantDias)
+        public static Entities.Ciclo modificarCicloAndReturn(Context.SigseContext sigseContext, Entities.Alumno alumno, Entities.Ciclo oCiclo, DateTime inicio, Entities.Objetivo oObjetivo, int cantSemanas, Entities.TipoEntrenamiento oTipoEntrenamiento, int cantDias)
         {
             oCiclo.tipo_entrenamiento = oTipoEntrenamiento;
             oCiclo.objetivo = oObjetivo;
@@ -87,7 +87,11 @@ namespace SIGSE.Bussines
             sigseContext.Entry(alumno).State = System.Data.Entity.EntityState.Modified;
             sigseContext.SaveChanges();
 
+            return oCiclo;
         }
+
+
+
 
         public static void agregarNuevoEjercicioAlCiclo(Context.SigseContext sigseContext, Entities.EjercicioIntensidad ej, Entities.Ciclo ciclo, int semana, int dia)
         {

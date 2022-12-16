@@ -12,11 +12,11 @@ namespace SIGSE.Entities
 
         public int codigo { get; set; }
         public string nombre { get; set; }
-        public Dia dia { get; set; }
+        public List<EjercicioIntensidad> ejercicios { get; set; }
 
         #endregion
 
-        PlantillaDia()
+        public PlantillaDia()
         {
 
         }

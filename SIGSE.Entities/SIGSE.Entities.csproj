@@ -51,7 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auditoria\AuditoriaCiclos.cs" />
     <Compile Include="Auditoria\AuditoriaLogin.cs" />
+    <Compile Include="Auditoria\MovimientosCiclo.cs" />
     <Compile Include="Ciclo.cs" />
     <Compile Include="Medida.cs" />
     <Compile Include="PlantillaDia.cs" />

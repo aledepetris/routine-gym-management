@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using SIGSE.Entities;
 using SIGSE.Controller;
 using SIGSE.FormsUI.Views;
+using System.IO;
+using OfficeOpenXml;
 
 namespace SIGSE.FormsUI.Views
 {
@@ -191,16 +193,22 @@ namespace SIGSE.FormsUI.Views
 
                     if (permiso.nombre == "Tablero" && tspTablero.Visible == false)
                     {
-                        tsmReportes.Visible = false;
-                        tspTablero.Visible = false;
+                        tsmReportes.Visible = true;
+                        tspTablero.Visible = true;
                     }
-
-                    if (permiso.nombre == "Medidas Alumnos" && tspMedidasAlumnos.Visible == false)
+                    
+                    if (permiso.nombre == "Resguardo" && tspResguardo.Visible == false)
                     {
-                        tsmReportes.Visible = false;
-                        tspMedidasAlumnos.Visible = false;
+                        tsmResguardoRestauracion.Visible = true;
+                        tspResguardo.Visible = true;
                     }
 
+                    if (permiso.nombre == "Restauracion" && tspRestauracion.Visible == false)
+                    {
+                        tsmResguardoRestauracion.Visible = true;
+                        tspRestauracion.Visible = true;
+                    }
+                    
                 }
             }
 
@@ -217,6 +225,7 @@ namespace SIGSE.FormsUI.Views
 
         private void tspCiclos_Click(object sender, EventArgs e)
         {
+            Utilities.Navegar.OpenNewTab(new FrmCiclosAuditoria());
 
         }
 
@@ -227,7 +236,17 @@ namespace SIGSE.FormsUI.Views
 
         private void tspMedidasAlumnos_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void tspResguardo_Click(object sender, EventArgs e)
+        {
+            Utilities.Navegar.OpenNewTab(new BackUp.frmExportar());
+        }
+
+        private void tspRestauracion_Click(object sender, EventArgs e)
+        {
+            Utilities.Navegar.OpenNewTab(new BackUp.frmImportar());
         }
     }
 }

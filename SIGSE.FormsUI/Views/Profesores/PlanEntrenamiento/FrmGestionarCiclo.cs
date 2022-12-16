@@ -1,4 +1,5 @@
 ﻿using MetroFramework;
+using OfficeOpenXml;
 using SIGSE.Controller;
 using SIGSE.Entities;
 using System;
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +39,7 @@ namespace SIGSE.FormsUI.Views
             actualizarDiaSemana();
             cargarComboEstadoSemana();
             cargarEjercicios();
+            cargarPlantillasDias();
             this.Text = _alumno.nombrecompleto + "   |   " + ciclo.fecha_inicio.ToShortDateString() + " - " + ciclo.calcularFechaFin().ToShortDateString();
             cargarPlanillaEjercicio(diaCount, semanaCount);
 
@@ -105,6 +108,12 @@ namespace SIGSE.FormsUI.Views
         {
             cbxEjercicios.DataSource = cCiclos.obtenerEjerciciosSegunTipoEntrenamiento(ciclo.tipo_entrenamiento);
             cbxEjercicios.DisplayMember = "nombre";
+        }
+
+        private void cargarPlantillasDias()
+        {
+            cbxPlantillas.DataSource = cCiclos.obtenerPlantillas();
+            cbxPlantillas.DisplayMember = "nombre";
         }
 
         private void cargarPlanillaEjercicio(int dd, int sem)
@@ -216,11 +225,6 @@ namespace SIGSE.FormsUI.Views
         }
 
 
-        private void cargarComboPlantilla()
-        {
-
-        }
-
         private void btnCambiarEstado_Click(object sender, EventArgs e)
         {
             try {
@@ -243,6 +247,76 @@ namespace SIGSE.FormsUI.Views
                 cargarComboEstadoSemana();
                 this.Text = alumno.nombrecompleto + "   |   " + ciclo.fecha_inicio.ToShortDateString() + " - " + ciclo.calcularFechaFin().ToShortDateString();
             }
+        }
+
+        private void frmCrearPlantilla_Click(object sender, EventArgs e)
+        {
+            if (gridEjercicios.Items.Count < 1)
+            {
+                MetroMessageBox.Show(this, "Debe existir al menos un Ejercicio en la lista", "ATENCION!",
+                                    System.Windows.Forms.MessageBoxButtons.OK,
+                                    System.Windows.Forms.MessageBoxIcon.Error,
+                                    100);
+                return;
+            };
+
+            Utilities.Navegar.OpenNewTab(new CrearPlantilla(ciclo.semanas[semanaCount].dias[diaCount].ejercicios));
+        }
+
+        private void FrmGestionarCiclo_Activated(object sender, EventArgs e)
+        {
+        }
+
+        private void btnCargarPlantilla_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MetroMessageBox.Show(this, "Está seguro que quiere cargar esta plantilla?", "ATENCION!",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                100);
+
+            if (dr == DialogResult.Yes)
+            {
+
+                PlantillaDia ptoPass = (PlantillaDia) cbxPlantillas.SelectedValue;
+                List<EjercicioIntensidad> ejerciciosPlantilla = cCiclos.obtenerEjerciciosPlantilla(ptoPass);
+
+                foreach (EjercicioIntensidad ej in ejerciciosPlantilla)
+                {
+                    EjercicioIntensidad newEj = new EjercicioIntensidad();
+                    newEj.ejercicio = ej.ejercicio;
+                    newEj.descanso = ej.descanso;
+                    newEj.notas = ej.notas;
+                    newEj.peso = ej.peso;
+                    newEj.repeticiones = ej.repeticiones;
+                    newEj.series = ej.series;
+                    cCiclos.agregarNuevoEjercicioAlCiclo(newEj, ciclo, semanaCount, diaCount);
+
+                }
+
+                cargarPlanillaEjercicio(diaCount, semanaCount);
+
+            }
+
+        }
+
+        private void pbArrowDown_Click(object sender, EventArgs e)
+        {
+            string ruta = Excel.RutinaSemanal.create(ciclo.semanas[semanaCount]);
+
+            ExcelPackage excel = new ExcelPackage(ruta);
+
+            SaveFileDialog saveFD = new SaveFileDialog();
+            saveFD.Title = "Save As";
+            saveFD.Filter = "Excel File (*.xlsx)| *.xlsx";
+            string nombre = alumno.nombrecompleto + "_" + "semana_" + ciclo.semanas[semanaCount].fecha_inicio.ToString("yyyy-MM-dd");
+            saveFD.FileName = nombre;
+            if (saveFD.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                Stream stream = saveFD.OpenFile();
+                excel.SaveAs(stream);
+                stream.Close();
+            }
+
         }
 
         private void cargarComboEstadoSemana()
