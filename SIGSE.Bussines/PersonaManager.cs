@@ -187,5 +187,25 @@ namespace SIGSE.Bussines
 
             return profesor1.alumnos;
         }
+
+        public static List<Entities.Alumno> obtenerTodosAlumnos(Context.SigseContext sigseContext)
+        {
+            return sigseContext.personas.OfType<Entities.Alumno>()
+                .Include(x => x.medidas)
+                .Include(x => x.planEntrenamiento.Select(o => o.tipo_entrenamiento))
+                .Include(x => x.planEntrenamiento.Select(o => o.objetivo))
+                .Include(x => x.planEntrenamiento
+                .Select(p => p.semanas
+                .Select(s => s.dias
+                .Select(d => d.ejercicios)))).ToList();
+        }
+
+        public static List<Entities.Profesor> obtenerProfesores(Context.SigseContext sigseContext)
+        {
+            return sigseContext.personas.OfType<Entities.Profesor>()
+                .Include(x => x.alumnos).ToList();
+        }
+        
+
     }
 }

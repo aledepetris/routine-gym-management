@@ -51,6 +51,8 @@ namespace SIGSE.FormsUI.Views
             this.txtIdPersona = new MetroFramework.Controls.MetroTextBox();
             this.mpFooter = new MetroFramework.Controls.MetroPanel();
             this.lblFooter = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.cbxSexo = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.mpFooter.SuspendLayout();
@@ -67,6 +69,8 @@ namespace SIGSE.FormsUI.Views
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbxSexo);
+            this.groupBox1.Controls.Add(this.metroLabel9);
             this.groupBox1.Controls.Add(this.metroLabel8);
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.dtpFechaNacimiento);
@@ -433,6 +437,28 @@ namespace SIGSE.FormsUI.Views
             this.lblFooter.UseCustomBackColor = true;
             this.lblFooter.UseCustomForeColor = true;
             // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(188, 71);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(40, 19);
+            this.metroLabel9.TabIndex = 36;
+            this.metroLabel9.Text = "Sexo:";
+            // 
+            // cbxSexo
+            // 
+            this.cbxSexo.FormattingEnabled = true;
+            this.cbxSexo.ItemHeight = 23;
+            this.cbxSexo.Items.AddRange(new object[] {
+            "Masculino\t",
+            "Femenino"});
+            this.cbxSexo.Location = new System.Drawing.Point(188, 93);
+            this.cbxSexo.Name = "cbxSexo";
+            this.cbxSexo.Size = new System.Drawing.Size(181, 29);
+            this.cbxSexo.TabIndex = 37;
+            this.cbxSexo.UseSelectable = true;
+            // 
             // FrmPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,5 +504,7 @@ namespace SIGSE.FormsUI.Views
         private MetroFramework.Controls.MetroDateTime dtpFechaNacimiento;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroTextBox txtEmail;
+        private MetroFramework.Controls.MetroComboBox cbxSexo;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
     }
 }

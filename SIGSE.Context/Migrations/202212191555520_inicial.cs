@@ -207,6 +207,7 @@
                     {
                         idPersona = c.Int(nullable: false, identity: true),
                         DNI = c.Int(nullable: false),
+                        sexo = c.String(),
                         nombre = c.String(),
                         apellido = c.String(),
                         mail = c.String(),

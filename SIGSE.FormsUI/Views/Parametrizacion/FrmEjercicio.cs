@@ -25,6 +25,9 @@ namespace SIGSE.FormsUI.Views
             ACCION = "A";
             txtIdEjercicio.Text = "#";
             cargarListViews();
+            txtNombre.Text = "Ejercicio ";
+            cbxForma.SelectedIndex = 0;
+            cbxModo.SelectedIndex = 0;
 
         }
 

@@ -13,7 +13,7 @@ namespace SIGSE.Context.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202212161606546_inicial"; }
+            get { return "202212191555520_inicial"; }
         }
         
         string IMigrationMetadata.Source

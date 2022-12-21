@@ -45,6 +45,11 @@ namespace SIGSE.FormsUI.Views
             txtTelefono.Text = persona.telefono.ToString();
             txtEmail.Text = persona.mail.ToString();
 
+            if (persona.sexo.ToString() == "Masculino")
+                cbxSexo.SelectedIndex = 0;
+            else
+                cbxSexo.SelectedIndex = 1;
+
             if (persona.GetType().Name.ToString() == "Alumno")
                 cbxTipoPersona.SelectedIndex = 0;
             else
@@ -100,7 +105,9 @@ namespace SIGSE.FormsUI.Views
             }
             else
                 nuevaPersona = gPersona;
-                        
+
+
+            nuevaPersona.sexo = cbxSexo.Text;
             nuevaPersona.DNI = dni;
             nuevaPersona.nombre = txtNombre.Text;
             nuevaPersona.apellido = txtApellido.Text;

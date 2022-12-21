@@ -336,6 +336,7 @@ namespace SIGSE.FormsUI
                 alumno.activo = true;
                 alumno.nombre = "Alejandro";
                 alumno.apellido = "Depetris";
+                alumno.sexo = "Masculino";
                 alumno.DNI = 36477909;
                 alumno.fechaInicio = DateTime.Today;
                 alumno.fechaNacimiento = DateTime.Today;
@@ -345,6 +346,7 @@ namespace SIGSE.FormsUI
 
                 profesor.nombre = "Celina";
                 profesor.apellido = "Reymundo";
+                profesor.sexo = "Femenino";
                 profesor.DNI = 32000000;
                 profesor.fechaNacimiento = DateTime.Today;
                 profesor.mail = "celirey@gmail.com";
@@ -371,6 +373,78 @@ namespace SIGSE.FormsUI
 
                 UsuarioManager.agregarUsuario(sigse, user);
                 #endregion cargaDatosUsuarios 
+            }
+
+            if (ObjetivoManager.obtenerObjetivoPorId(sigse, 1) == null)
+            {
+                ObjetivoManager.agregarObjetivos(sigse, new Objetivo("Fuerza", "-", 2, 4));
+                ObjetivoManager.agregarObjetivos(sigse, new Objetivo("Hipertrofia", "-", 4, 5));
+                ObjetivoManager.agregarObjetivos(sigse, new Objetivo("Bajar Peso", "-", 2, 3));
+            }
+
+            if (MusculoManager.obtenerMusculoPorId(sigse, 1) == null)
+            {
+                MusculoManager.agregarMusculos(sigse, new Musculo("Biceps"));
+                MusculoManager.agregarMusculos(sigse, new Musculo("Pantorrillas"));
+                MusculoManager.agregarMusculos(sigse, new Musculo("Triceps"));
+                MusculoManager.agregarMusculos(sigse, new Musculo("Gemelos"));
+                MusculoManager.agregarMusculos(sigse, new Musculo("Homoplatos"));
+            }
+
+            if (TipoEjercicioManager.obtenerTipoEjercicioPorId(sigse, 1) == null)
+            {
+                TipoEjercicio push = new TipoEjercicio("Push");
+                TipoEjercicio pull = new  TipoEjercicio("Pull");
+                TipoEjercicio torso = new TipoEjercicio("Torso");
+                TipoEjercicio pierna = new TipoEjercicio("Pierna");
+                TipoEjercicio cardio = new TipoEjercicio("Cardio");
+                TipoEjercicio musc = new TipoEjercicio("Musculos Aislados");
+
+                TipoEjercicioManager.agregarTipoEjercicios(sigse, push);
+                TipoEjercicioManager.agregarTipoEjercicios(sigse, pull);
+                TipoEjercicioManager.agregarTipoEjercicios(sigse, torso);
+                TipoEjercicioManager.agregarTipoEjercicios(sigse, pierna);
+                TipoEjercicioManager.agregarTipoEjercicios(sigse, cardio);
+                TipoEjercicioManager.agregarTipoEjercicios(sigse, musc);
+
+
+                List<TipoEjercicio> tipoEjercicios = new List<TipoEjercicio>();
+                tipoEjercicios.Clear();
+                tipoEjercicios.Add(push);
+                tipoEjercicios.Add(pull);
+                tipoEjercicios.Add(torso);
+                tipoEjercicios.Add(pierna);
+                tipoEjercicios.Add(musc);
+                TipoEntrenamientoManager.agregarTipoEntrenamientos(sigse, new TipoEntrenamiento("Fullbody", tipoEjercicios));
+
+
+                List<TipoEjercicio> tipoEjercicios1 = new List<TipoEjercicio>();
+                tipoEjercicios1.Clear();
+                tipoEjercicios1.Add(push);
+                tipoEjercicios1.Add(pull);
+                tipoEjercicios1.Add(torso);
+                tipoEjercicios1.Add(pierna);
+                tipoEjercicios1.Add(musc);
+                tipoEjercicios1.Add(cardio);
+                TipoEntrenamientoManager.agregarTipoEntrenamientos(sigse, new TipoEntrenamiento("Fullbody-Cardio", tipoEjercicios1));
+
+                List<TipoEjercicio> tipoEjercicios2 = new List<TipoEjercicio>();
+                tipoEjercicios2.Clear();
+                tipoEjercicios2.Add(push);
+                tipoEjercicios2.Add(pull);
+                TipoEntrenamientoManager.agregarTipoEntrenamientos(sigse, new TipoEntrenamiento("Push-Pull", tipoEjercicios2));
+
+                List<TipoEjercicio> tipoEjercicios3 = new List<TipoEjercicio>();
+                tipoEjercicios3.Clear();
+                tipoEjercicios3.Add(torso);
+                tipoEjercicios3.Add(pierna);
+                TipoEntrenamientoManager.agregarTipoEntrenamientos(sigse, new TipoEntrenamiento("Torso-Pierna", tipoEjercicios3));
+
+                List<TipoEjercicio> tipoEjercicios4 = new List<TipoEjercicio>();
+                tipoEjercicios4.Clear();
+                tipoEjercicios4.Add(musc);
+                TipoEntrenamientoManager.agregarTipoEntrenamientos(sigse, new TipoEntrenamiento("Musculos Aislados", tipoEjercicios4));
+
             }
 
             Application.EnableVisualStyles();
